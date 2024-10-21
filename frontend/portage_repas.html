@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA Portage Repas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">RPA Portage Repas</h1>
+
+        <p class="description">
+            Le RPA "Portage Repas" automatise la gestion des contrats de portage de repas, avec un focus particulier sur
+            la facturation automatique. Ses principales fonctions sont :
+        <ul>
+            <li>Connexion automatique à la plateforme de gestion des contrats.</li>
+            <li>Soumission des numéros de contrat extraits d'un fichier Excel.</li>
+            <li>Activation ou désactivation de la facturation automatique selon les informations du contrat.</li>
+            <li>Gestion des fenêtres modales pour validation des actions.</li>
+            <li>Enregistrement des contrats traités dans des fichiers JSON pour éviter les répétitions.</li>
+        </ul>
+        </p>
+
+        <div class="button-group">
+            <button id="startBtn" class="btn" data-url="/start-portage-repas">Start Portage Repas</button>
+            <button id="stopBtn" class="btn" data-url="/stop-portage-repas">Stop Portage Repas</button>
+            <button id="statusBtn" class="btn" data-url="/status-portage-repas">Check Status</button>
+        </div>
+
+        <div id="status" class="status-message">Status will be displayed here</div>
+        <div id="log-container" class="log-container"></div>
+        <h2>Logs du RPA</h2>
+        <button id="toggle-log-size" class="toggle-log-size">Agrandir</button>
+        <div id="log-content-wrapper" class="log-content-wrapper">
+            <pre id="log-content" class="log-content"></pre>
+        </div>
+    </div>
+    </div>
+
+    <script src="render.js"></script>
+</body>
+
+</html>

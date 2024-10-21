@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA Affranchigo</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">RPA Affranchigo</h1>
+
+        <p class="description">
+            Le RPA "Affranchigo" est un automate conçu pour gérer automatiquement les contrats sur le site de La Poste.
+            Il réalise les tâches suivantes :
+        <ul>
+            <li>Connexion automatique avec des identifiants préconfigurés.</li>
+            <li>Soumission et modification de contrats (Affranchigo forfait, liberté, etc.).</li>
+            <li>Gestion des annexes multisites et autres cas spécifiques.</li>
+            <li>Enregistrement des résultats et des statistiques dans des fichiers CSV.</li>
+        </ul>
+        </p>
+
+        <div class="button-group">
+            <button id="startAffranchigoBtn" class="btn" data-url="/start-affranchigo">Start Affranchigo</button>
+            <button id="stopAffranchigoBtn" class="btn" data-url="/stop-affranchigo">Stop Affranchigo</button>
+            <button id="statusAffranchigoBtn" class="btn" data-url="/status-affranchigo">Check Status</button>
+        </div>
+
+        <div id="status" class="status-message">Status will be displayed here</div>
+        <!-- Nouvelle div pour les logs -->
+        <div id="log-container" class="log-container">
+            <h2>Logs du RPA</h2>
+            <button id="toggle-log-size" class="toggle-log-size">Agrandir</button>
+            <div id="log-content-wrapper" class="log-content-wrapper">
+                <pre id="log-content" class="log-content"></pre>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="render.js"></script>
+</body>
+
+</html>

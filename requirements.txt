@@ -1,0 +1,7 @@
+selenium
+load_dotenv
+pandas
+openpyxl
+psutil
+flask
+pip

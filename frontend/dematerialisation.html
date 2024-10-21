@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA Extraction Odyssé</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">RPA Dématérialisation</h1>
+
+        <p class="description">
+            Le RPA "Dématérialisation" est conçu pour automatiser le traitement et la gestion des contrats Public via
+            une interface web.
+            Il réalise les tâches suivantes :
+        <ul>
+            <li>Connexion automatique à la plateforme de gestion des contrats.</li>
+            <li>Soumission des numéros de contrat et gestion de la facturation.</li>
+            <li>Gestion des contrats privés et publics avec des actions spécifiques.</li>
+            <li>Enregistrement des contrats traités et gestion des exceptions (erreurs, cas non modifiables).</li>
+        </ul>
+        </p>
+
+        <div class="button-group">
+            <button id="startDematerialisationBtn" class="btn" data-url="/start-dematerialisation">Start Extraction
+                Odyssé</button>
+            <button id="stopDematerialisationBtn" class="btn" data-url="/stop-dematerialisation">Stop Extraction
+                Odyssé</button>
+            <button id="statusDematerialisationBtn" class="btn" data-url="/status-dematerialisation">Check
+                Status</button>
+        </div>
+
+        <div id="status" class="status-message">Status will be displayed here</div>
+        <div id="log-container" class="log-container"></div>
+        <h2>Logs du RPA</h2>
+        <button id="toggle-log-size" class="toggle-log-size">Agrandir</button>
+        <div id="log-content-wrapper" class="log-content-wrapper">
+            <pre id="log-content" class="log-content"></pre>
+        </div>
+    </div>
+    </div>
+
+    <script src="render.js"></script>
+</body>
+
+</html>

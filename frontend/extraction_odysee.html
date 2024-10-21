@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA Extraction Odyssé</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">RPA Extraction Odyssé</h1>
+
+        <p class="description">
+            Le RPA "Extraction Odyssé" est un outil d'automatisation qui facilite l'extraction et la gestion des
+            informations des contrats.
+            Ses fonctions incluent :
+        <ul>
+            <li>Automatisation de l'extraction des informations de contrats en ligne.</li>
+            <li>Soumission et modification des contrats via des iframes dans l'interface web.</li>
+            <li>Enregistrement des informations extraites dans une base de données pour analyse.</li>
+            <li>Gestion efficace des processus WebDriver pour optimiser les ressources.</li>
+        </ul>
+        </p>
+
+        <div class="button-group">
+            <button id="startExtractionBtn" class="btn" data-url="/start-extraction">Start Extraction Odyssé</button>
+            <button id="stopExtractionBtn" class="btn" data-url="/stop-extraction">Stop Extraction Odyssé</button>
+            <button id="statusExtractionBtn" class="btn" data-url="/status-extraction">Check Status</button>
+        </div>
+
+        <div id="status" class="status-message">Status will be displayed here</div>
+        <div id="log-container" class="log-container"></div>
+        <h2>Logs du RPA</h2>
+        <button id="toggle-log-size" class="toggle-log-size">Agrandir</button>
+        <div id="log-content-wrapper" class="log-content-wrapper">
+            <pre id="log-content" class="log-content"></pre>
+        </div>
+    </div>
+    </div>
+
+    <script src="render.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA Seres</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">RPA Seres</h1>
+
+        <p class="description">
+            Le RPA "Seres" est un automate conçu pour gérer automatiquement les rejets AIFE sur le portail Seres.
+            Il réalise les tâches suivantes :
+        <ul>
+            <li>Connexion automatique au portail Seres.</li>
+            <li>Recherche et modification des factures rejetées.</li>
+            <li>Remplacement automatique des SIRET incorrects avec validation.</li>
+            <li>Enregistrement des résultats et des statistiques dans des fichiers CSV.</li>
+        </ul>
+        </p>
+
+        <div class="button-group">
+            <button id="startSeresBtn" class="btn" data-url="/start-seres">Start Seres</button>
+            <button id="stopSeresBtn" class="btn" data-url="/stop-seres">Stop Seres</button>
+            <button id="statusSeresBtn" class="btn" data-url="/status-seres">Check Status</button>
+        </div>
+
+        <div id="status" class="status-message">Status will be displayed here</div>
+        <!-- Nouvelle div pour les logs -->
+        <div id="log-container" class="log-container">
+            <h2>Logs du RPA Seres</h2>
+            <button id="toggle-log-size" class="toggle-log-size">Agrandir</button>
+            <div id="log-content-wrapper" class="log-content-wrapper">
+                <pre id="log-content" class="log-content"></pre>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="render.js"></script>
+</body>
+
+</html>
