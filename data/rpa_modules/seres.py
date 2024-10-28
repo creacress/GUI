@@ -308,40 +308,57 @@ class SeresRPA:
         except Exception as e:
             self.logger.error(f"Erreur lors du remplacement du SIRET : {e}")
 
-    def process_contract(self, numero_facture, siret_destinataire, driver, identifiant, mot_de_passe):
+    def process_contract(self, driver, numero_facture, siret_destinataire, identifiant, mot_de_passe):
         wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
         start_time = time.time()
-
+    
         try:
             if not driver:
                 raise Exception("Driver non initialisé")
             self.logger.info(f"Début du traitement du contrat {numero_facture}...")
-
-            # self.login(driver, wait, identifiant, mot_de_passe)
+    
+            # Connexion
+            self.login(driver, wait, identifiant, mot_de_passe)
+            
+            # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
+            
+            # Saisie et recherche du numéro de facture
             self.enter_num_facture(driver, numero_facture)
+            
+            # Sélection de la ligne de la facture
             self.select_row_by_facture(driver, numero_facture)
+            
+            # Attente de la modal
             self.wait_for_modal(driver)
-
-
+            
+            # Clic sur le bouton de consentement aux cookies si nécessaire
             self.click_cookie_consent_button(driver)
-            time.sleep(3)
-            # if self.verifier_SIRET(driver, SIRET):
-            self.remplacer_siret(driver, siret_destinataire)
-            time.sleep(2)
+            
+            # Remplacement du SIRET destinataire
+            if self.verifier_SIRET(driver, siret_destinataire):
+                self.remplacer_siret(driver, siret_destinataire)
+            
+            # Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
+            
+            # Clic sur le bouton de validation
             self.click_validate_button(driver)
-            time.sleep(2)
+            
+            # Clic sur le bouton de validation de la modale
             self.click_validate_button_modale(driver, numero_facture)
-            # Vérifier si la page d'erreur est présente
+            
+            # Vérifier la présence de la page d'erreur
             if self.is_error_page(driver):
                 self.logger.warning("Page d'erreur détectée. Relance du processus...")
                 driver.refresh()
-                self.logger.info(f"Contrat {numero_facture} traité avec succès.")
                 self.save_non_modifiable(numero_facture, "facture_error_cause_page_erreur.json")
+    
+            self.logger.info(f"Contrat {numero_facture} traité avec succès.")
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}")
             self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
+            
             # Réinitialisation du driver après l'erreur
             try:
                 driver.get(self.url)
@@ -349,10 +366,10 @@ class SeresRPA:
                 self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_facture}: {reset_error}")
                 driver.quit()  # Fermer le driver si la réinitialisation échoue
                 driver = None  # Forcer la recréation d'un nouveau driver pour le prochain contrat
-
-            end_time = time.time()
-            duration = int(end_time - start_time)
-            return (numero_facture, False, "Erreur", duration)
+    
+        end_time = time.time()
+        duration = int(end_time - start_time)
+        return (numero_facture, True, "Succès", duration) 
 
 
     def dictionnaire_siret(self, excel_path):
@@ -372,7 +389,7 @@ class SeresRPA:
             }
         return dictionnaire_siret
     
-    def process_single_contract(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
+    def process_single_contract(self, numero_facture, siret_info, identifiant, mot_de_passe):
         """
         Fonction qui traite un contrat individuel dans un thread séparé.
         """
@@ -380,10 +397,11 @@ class SeresRPA:
         try:
             driver = self.pool.get_driver()  # Récupère un WebDriver pour le contrat
             self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_facture}.")
-
+    
             # Appel à la fonction process_contract pour traiter le contrat
+            siret_destinataire = siret_info['siret_destinataire']  # Récupération du SIRET destinataire
             return self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-
+    
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}", exc_info=True)
             return (numero_facture, False, "Erreur", 0)
