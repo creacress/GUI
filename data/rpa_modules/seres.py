@@ -87,11 +87,6 @@ class SeresRPA:
             # Créer le répertoire pour les captures d'écran si nécessaire
             screenshot_filename = f"screenshots/erreur_{numero_facture}.png"
             os.makedirs(os.path.dirname(screenshot_filename), exist_ok=True)
-
-            # Prendre et sauvegarder le screenshot
-            driver.save_screenshot(screenshot_filename)
-            print(f"Screenshot sauvegardé sous {screenshot_filename}")
-
             # Charger les données JSON existantes ou créer un nouveau fichier si nécessaire
             if os.path.exists(json_filename):
                 with open(json_filename, "r") as json_file:
@@ -167,7 +162,7 @@ class SeresRPA:
                 self.logger.error("Une erreur est survenue : Message d'alerte trouvé.")
 
                 # Appeler la fonction save_non_modifiable pour sauvegarder le screenshot et le numéro de facture
-                self.save_non_modifiable(driver, numero_facture, "numero_facture_erreur.json")
+                self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
             
             except TimeoutException:
                 # Si l'erreur n'apparaît pas dans les 5 secondes, on considère que tout est ok
@@ -266,14 +261,10 @@ class SeresRPA:
 
             # Si aucune ligne correspondante n'est trouvée
             self.logger.error(f"La ligne avec le numéro facture {numero_facture} n'a pas été trouvée ou n'est pas cliquable.")
-            driver.save_screenshot(f"screenshot_error_{numero_facture}.png")
-
         except TimeoutException:
             self.logger.error(f"La ligne avec le numéro facture {numero_facture} n'a pas été trouvée ou n'est pas cliquable.")
-            driver.save_screenshot(f"screenshot_error_{numero_facture}.png")
         except Exception as e:
             self.logger.error(f"Erreur lors de la sélection de la ligne avec le numéro facture {numero_facture} : {e}")
-            driver.save_screenshot(f"screenshot_error_general_{numero_facture}.png")
 
 
     def wait_for_modal(self, driver):
@@ -317,7 +308,7 @@ class SeresRPA:
         except Exception as e:
             self.logger.error(f"Erreur lors du remplacement du SIRET : {e}")
 
-    def process_contract(self, numero_facture, siret, siret_destinataire, driver, identifiant, mot_de_passe):
+    def process_contract(self, numero_facture, siret_destinataire, driver, identifiant, mot_de_passe):
         wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
         start_time = time.time()
 
@@ -350,7 +341,7 @@ class SeresRPA:
                 self.save_non_modifiable(numero_facture, "facture_error_cause_page_erreur.json")
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}")
-            self.save_non_modifiable(numero_facture)
+            self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
             # Réinitialisation du driver après l'erreur
             try:
                 driver.get(self.url)
@@ -372,7 +363,7 @@ class SeresRPA:
         df = pd.read_excel(excel_path)
         dictionnaire_siret = {}
         for _, row in df.iterrows():
-            numero_facture = str(row['Numéro de facture'])
+            numero_facture = str(row['Contrat Nb'])
             siret = str(row['SIRET'])
             siret_destinataire = str(row['SIRET DESTINATAIRE'])
             dictionnaire_siret[numero_facture] = {
@@ -381,7 +372,7 @@ class SeresRPA:
             }
         return dictionnaire_siret
     
-    def process_single_contract(self, driver, numero_facture, siret, siret_destinataire, identifiant, mot_de_passe):
+    def process_single_contract(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
         """
         Fonction qui traite un contrat individuel dans un thread séparé.
         """
@@ -391,7 +382,7 @@ class SeresRPA:
             self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_facture}.")
 
             # Appel à la fonction process_contract pour traiter le contrat
-            return self.process_contract(driver, numero_facture, siret, siret_destinataire, identifiant, mot_de_passe)
+            return self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
 
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}", exc_info=True)
@@ -410,7 +401,7 @@ class SeresRPA:
                 except Exception as e:
                     self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_facture}: {e}")
 
-    def main(self, excel_path, progress_callback=None, max_workers=3):
+    def main(self, excel_path, progress_callback=None, max_workers=2):
         self.logger.debug("Démarrage du RPA Seres...")
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
@@ -432,7 +423,7 @@ class SeresRPA:
                 self.logger.debug(f"Préparation pour traiter le contrat suivant: {facture_numbers}")
                 
                 # Planification du traitement de chaque contrat dans un thread séparé
-                future = executor.submit(self.process_single_contract, numero_facture, siret, siret_destinataire, identifiant, mot_de_passe)
+                future = executor.submit(self.process_single_contract, numero_facture, dictionnaire_siret, identifiant, mot_de_passe)
                 futures.append(future)
 
             # Collecter les résultats des threads au fur et à mesure
@@ -453,20 +444,3 @@ class SeresRPA:
         """
         self.logger.info(f"Démarrage du RPA Seres avec le fichier {excel_path}")
         self.main(excel_path)
-
-        try:
-            for numero_facture in facture_numbers[:10]:
-                numero_facture = str(numero_facture)
-                siret_info = dictionnaire_siret.get(numero_facture)
-
-                if siret_info:
-                    siret = siret_info["SIRET"]
-                    siret_destinataire = siret_info["SIRET DESTINATAIRE"]
-
-                    driver = self.pool.get_driver(self.url)  # Obtenir un WebDriver pour traiter ce contrat
-                    self.process_contract(numero_facture, siret, siret_destinataire, driver, identifiant, mot_de_passe)
-                    self.pool.return_driver(driver)  # Retourner le WebDriver au pool après utilisation
-                else:
-                    self.logger.error(f"Numéro de contrat {numero_facture} introuvable.")
-        finally:
-            self.pool.close_all()
