@@ -10,7 +10,7 @@ from rpa_modules.debug import setup_logger
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 class WebDriverPool:
-    def __init__(self, initial_size=5, max_size=220, idle_timeout=300, logger=None):
+    def __init__(self, initial_size=5, max_size=20, idle_timeout=300, logger=None):
         """
         Pool de WebDrivers avec auto-ajustement dynamique de la taille du pool.
         :param initial_size: Taille initiale du pool (pré-chargement).
@@ -43,7 +43,7 @@ class WebDriverPool:
 
             service = Service(driver_path)
             options = Options()
-            #options.add_argument("--headless")  # Si tu veux rester en mode headless
+            options.add_argument("--headless")  # Si tu veux rester en mode headless
             options.add_argument("--disable-gpu")
             options.add_argument("--disable-software-rasterizer")
             options.add_argument('--ignore-certificate-errors')

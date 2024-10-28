@@ -3,7 +3,7 @@
 data/data_traitement
 
 frontend/node_modules
-
+data/rpa_modules/__pycache__
 .venv
 .env
 data/numeros_contrat_robot.json

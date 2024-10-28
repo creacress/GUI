@@ -50,12 +50,25 @@ class AffranchigoPremiumCase:
 
                 selectors["select_first_etablissement"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(3) > div.form-group.critere_psc > input-etb-prest > div > select")))
                 self.logger.debug("Sélecteur select_first_etablissement initialisé.")
+                
+                try:
+                    selectors["select_first_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[0\\]_v1"))) 
+                    self.logger.debug("Sélecteur select_first_role  (1er) initialisé.")
+                except:
+                    selectors["select_first_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[0\\]_v2"))) 
+                    self.logger.debug("Sélecteur select_first_role (2 ème) initialisé.")
 
-                selectors["select_first_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[0\\]_v1")))
-                self.logger.debug("Sélecteur select_first_role initialisé.")
-
-                selectors["select_first_time"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select")))
-                self.logger.debug("Sélecteur select_first_time initialisé.")
+                try:
+                    selectors["select_first_time"] = wait.until(EC.visibility_of_element_located((
+                        By.CSS_SELECTOR, "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select"
+                    )))
+                    self.logger.debug("Sélecteur select_first_time (1er) initialisé.")
+                except:
+                    self.logger.debug("Premier sélecteur invalide, tentative avec le second.")
+                    selectors["select_first_time"] = wait.until(EC.visibility_of_element_located((
+                        By.CSS_SELECTOR, "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(5) > div.form-group.critere_psc > input-component > div > select"
+                    )))
+                    self.logger.debug("Sélecteur select_first_time (2ème) initialisé.")
 
                 selectors["input_second_regate"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72239\\[1\\]")))
                 self.logger.debug("Sélecteur input_second_regate initialisé.")
@@ -63,11 +76,23 @@ class AffranchigoPremiumCase:
                 selectors["select_second_etablissement"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(3) > div.form-group.critere_psc > input-etb-prest > div > select")))
                 self.logger.debug("Sélecteur select_second_etablissement initialisé.")
 
-                selectors["select_second_time"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select")))
-                self.logger.debug("Sélecteur select_second_time initialisé.")
+                try:
 
-                selectors["select_second_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[1\\]_v2")))
-                self.logger.debug("Sélecteur select_second_role initialisé.")
+                    selectors["select_second_time"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select")))
+                    self.logger.debug("Sélecteur select_second_time (1er) initialisé.")
+                except:
+                    self.logger.debug("Premier sélecteur invalide, tentative avec le second.")
+                    selectors["select_second_time"] = wait.until(EC.visibility_of_element_located((
+                        By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(5) > div.form-group.critere_psc > input-component > div > select"
+                    )))
+                    self.logger.debug("Sélecteur select_second_time (2ème) initialisé.")
+                try:
+
+                    selectors["select_second_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[1\\]_v2")))
+                    self.logger.debug("Sélecteur select_second_role initialisé.")
+                except:
+                    selectors["select_second_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[1\\]_v1")))
+                    self.logger.debug("Sélecteur select_second_role initialisé.")
 
                 # Si tous les sélecteurs sont initialisés, on retourne le dictionnaire
                 return selectors
@@ -86,7 +111,9 @@ class AffranchigoPremiumCase:
     def select_time_in_selectors(self, numero_contrat):
         select_time_selectors = [
             "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select",
-            "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select"
+            "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(5) > div.form-group.critere_psc > input-component > div > select",
+            "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select",
+            "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(5) > div.form-group.critere_psc > input-component > div > select"
         ]
         try:
             WebDriverWait(self.driver, 10).until(
@@ -1369,7 +1396,7 @@ class AffranchigoPremiumCase:
 
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
             self.select_time_in_selectors(numero_contrat)
-            #self.submit_liberte(numero_contrat)
+            self.submit_liberte(numero_contrat)
 
         except TimeoutException:
             self.logger.error("Timeout lors de la tentative de clic sur radio_oui.")
