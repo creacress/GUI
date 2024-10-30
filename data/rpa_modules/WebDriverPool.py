@@ -43,7 +43,7 @@ class WebDriverPool:
 
             service = Service(driver_path)
             options = Options()
-            options.add_argument("--headless")  # Si tu veux rester en mode headless
+            #options.add_argument("--headless")  # Si tu veux rester en mode headless
             options.add_argument("--disable-gpu")
             options.add_argument("--disable-software-rasterizer")
             options.add_argument('--ignore-certificate-errors')
