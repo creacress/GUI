@@ -167,6 +167,7 @@ class SeresRPA:
         self.logger.error(f"Échec du clic sur le bouton de sauvegarde pour le numéro facture {numero_facture} avec les sélecteurs fournis.")
         self.save_non_modifiable(numero_facture, "sauvegarde_button_erreur.json")
 
+
     def click_validate_button_modale(self, driver, numero_facture):
         try:
             time.sleep(5)
