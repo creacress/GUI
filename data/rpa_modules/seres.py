@@ -231,9 +231,7 @@ class SeresRPA:
 
             # Attendre que le tableau soit visible
             wait = WebDriverWait(driver, 20)
-
-            # Attendre un peu après la saisie du numéro facture pour que le tableau se mette à jour
-            time.sleep(5)
+            time.sleep(5)  # Attendre que le tableau se mette à jour après la saisie du numéro de facture
 
             # Rechercher le tableau contenant les documents
             table = wait.until(EC.presence_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]")))
@@ -242,36 +240,33 @@ class SeresRPA:
             rows = table.find_elements(By.XPATH, ".//tr[not(contains(@class, 'jqgfirstrow'))]")
             self.logger.debug(f"Nombre de lignes trouvées dans le tableau : {len(rows)}")
 
-            # Comparaison pour vérifier que le numéro facture est contenu dans la cellule (en ignorant les zéros)
+            # Comparaison pour vérifier que le numéro facture est contenu dans la cellule
             for row in rows:
                 try:
-                    # On tente de récupérer la cellule qui contient le numéro facture
                     cells = row.find_elements(By.TAG_NAME, "td")
-
-                    # Boucle sur chaque cellule pour voir si le numéro facture est présent dans l'une d'elles
                     for cell in cells:
                         if numero_facture in cell.text:
                             self.logger.info(f"Ligne trouvée avec le numéro facture {cell.text}")
-
-                            # Faire défiler jusqu'à l'élément si nécessaire
                             driver.execute_script("arguments[0].scrollIntoView(true);", row)
-
-                            # Utiliser un clic JavaScript pour contourner les éventuels problèmes d'interaction
                             driver.execute_script("arguments[0].click();", row)
-
                             self.logger.info(f"Ligne avec le numéro facture {numero_facture} sélectionnée et cliquée avec succès.")
-                            return
+                            return True  # Contrat trouvé et traité avec succès
 
                 except Exception as e:
                     self.logger.error(f"Erreur lors de la vérification des cellules dans la ligne : {e}")
                     continue
 
-            # Si aucune ligne correspondante n'est trouvée
+            # Aucun contrat trouvé, log et retourne False
             self.logger.error(f"La ligne avec le numéro facture {numero_facture} n'a pas été trouvée ou n'est pas cliquable.")
+            return False
+
         except TimeoutException:
             self.logger.error(f"La ligne avec le numéro facture {numero_facture} n'a pas été trouvée ou n'est pas cliquable.")
+            return False
         except Exception as e:
             self.logger.error(f"Erreur lors de la sélection de la ligne avec le numéro facture {numero_facture} : {e}")
+            return False
+
 
 
     def wait_for_modal(self, driver):
@@ -316,9 +311,9 @@ class SeresRPA:
             self.logger.error(f"Erreur lors du remplacement du SIRET : {e}")
 
     def process_contract(self, driver, numero_facture, siret_destinataire, identifiant, mot_de_passe):
-        wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
+        wait = WebDriverWait(driver, 20)
         start_time = time.time()
-    
+
         try:
             if not driver:
                 raise Exception("Driver non initialisé")
@@ -326,56 +321,58 @@ class SeresRPA:
 
             # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
-            
 
             # Saisie et recherche du numéro de facture
             self.enter_num_facture(driver, numero_facture)
-            
-            # Sélection de la ligne de la facture
-            self.select_row_by_facture(driver, numero_facture)
-            
+
+            # Sélection de la ligne de la facture - si non trouvée, arrêter et passer au contrat suivant
+            if not self.select_row_by_facture(driver, numero_facture):
+                self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au contrat suivant.")
+                return numero_facture, False, "Contrat non trouvé", 0
+
             # Attente de la modal
             self.wait_for_modal(driver)
-            
-            # Remplacement du SIRET destinataire
-            #if self.verifier_SIRET(driver, siret_destinataire):
-            self.remplacer_siret(driver, siret_destinataire)
 
+            # Remplacement du SIRET destinataire
+            self.remplacer_siret(driver, siret_destinataire)
             time.sleep(2)
 
+            # Clic sur le bouton de sauvegarde
             self.click_sauvegarde_button(driver, numero_facture)
-            
+
             # Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
-            
+
             # Clic sur le bouton de validation
             self.click_validate_button(driver, numero_facture)
             time.sleep(3)
+
             # Clic sur le bouton de validation de la modale
             self.click_validate_button_modale(driver, numero_facture)
-            
+
             # Vérifier la présence de la page d'erreur
             if self.is_error_page(driver):
                 self.logger.warning("Page d'erreur détectée. Relance du processus...")
                 driver.refresh()
                 self.save_non_modifiable(numero_facture, "facture_error_cause_page_erreur.json")
-    
+
             self.logger.info(f"Contrat {numero_facture} traité avec succès.")
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}")
             self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
-            
+
             # Réinitialisation du driver après l'erreur
             try:
                 driver.get(self.url)
             except Exception as reset_error:
                 self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_facture}: {reset_error}")
-                driver.quit()  # Fermer le driver si la réinitialisation échoue
-                driver = None  # Forcer la recréation d'un nouveau driver pour le prochain contrat
-    
+                driver.quit()
+                driver = None
+
         end_time = time.time()
         duration = int(end_time - start_time)
-        return (numero_facture, True, "Succès", duration) 
+        return numero_facture, True, "Succès", duration
+
 
 
     def dictionnaire_siret(self, excel_path):
@@ -395,39 +392,8 @@ class SeresRPA:
             }
         return dictionnaire_siret
     
-    def process_single_contract(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
-        """
-        Fonction qui traite un contrat individuel dans un thread séparé.
-        """
-        driver = None
+    def main(self, excel_path):
 
-        wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
-
-        try:
-            driver = self.pool.get_driver()  # Récupère un WebDriver pour le contrat
-            self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_facture}, avec le siret suivant {siret_destinataire}")
-    
-            return self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-    
-        except Exception as e:
-            self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}", exc_info=True)
-            return (numero_facture, False, "Erreur", 0)
-        
-        finally:
-            if driver:
-                try:
-                    driver.get(self.url) # Revenir à l'URL de départ
-                except Exception as e:
-                    self.logger.error(f"Erreur lors du retour à l'URL pour {numero_facture}: {e}")
-                
-                # Toujours retourner le WebDriver dans le pool après le traitement
-                try:
-                    self.pool.return_driver(driver)
-    
-                except Exception as e:
-                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_facture}: {e}")
-
-    def main(self, excel_path, progress_callback=None, max_workers=1):
         self.logger.debug("Démarrage du RPA Seres...")
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
@@ -441,31 +407,21 @@ class SeresRPA:
         if not identifiant or not mot_de_passe:
             self.logger.error("Identifiant ou mot de passe manquant.")
             return
-        
-        # Utilisation d'un ThreadPoolExecutor pour le traitement multi-threading
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = []
-            for numero_facture in facture_numbers:
 
-                siret_info = dictionnaire_siret.get(numero_facture)
+        driver = self.pool.get_driver()  # Récupération d'un seul WebDriver pour tous les contrats
 
-                if siret_info:
-                    siret_destinataire = siret_info["SIRET DESTINATAIRE"]
-                
-                # Planification du traitement de chaque contrat dans un thread séparé
-                future = executor.submit(self.process_single_contract, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-                futures.append(future)
+        for numero_facture in facture_numbers:
+            siret_info = dictionnaire_siret.get(numero_facture)
+            siret_destinataire = siret_info.get("SIRET DESTINATAIRE") if siret_info else None
+            if siret_destinataire:
+                numero_facture, result, contrat_type, duration = self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
+                if result:
+                    self.logger.info(f"Contrat {numero_facture} traité avec succès.")
+                else:
+                    self.logger.warning(f"Échec du traitement du contrat {numero_facture}.")
 
-            # Collecter les résultats des threads au fur et à mesure
-            for future in as_completed(futures):
-                try:
-                    numero_facture, result, contrat_type, duration = future.result()
-                    if result:
-                        self.logger.info(f"Contrat {numero_facture} traité avec succès.")
-                    else:
-                        self.logger.warning(f"Échec du traitement du contrat {numero_facture}.")
-                except Exception as e:
-                    self.logger.error(f"Erreur dans le thread de traitement: {e}")
+        # Retour du WebDriver au pool une fois le traitement terminé
+        self.pool.return_driver(driver)
 
 
     def start(self, excel_path="data/data_traitement/Feuille de traitement problème SIRET - Rejets SERES.xlsx"):
