@@ -438,7 +438,6 @@ class SeresRPA:
         return dictionnaire_siret
     
     def main(self, excel_path):
-
         self.logger.debug("Démarrage du RPA Seres...")
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
@@ -453,20 +452,48 @@ class SeresRPA:
             self.logger.error("Identifiant ou mot de passe manquant.")
             return
 
-        driver = self.pool.get_driver()  # Récupération d'un seul WebDriver pour tous les contrats
+        # Initialisation du WebDriver
+        driver = self.pool.get_driver()
 
-        for numero_facture in facture_numbers:
+        for i, numero_facture in enumerate(facture_numbers):
+            self.logger.info(f"Traitement du contrat numéro {i + 1}/{len(facture_numbers)} : {numero_facture}")
+
+            # Récupérer les informations de SIRET pour le contrat actuel
             siret_info = dictionnaire_siret.get(numero_facture)
             siret_destinataire = siret_info.get("SIRET DESTINATAIRE") if siret_info else None
-            if siret_destinataire:
-                numero_facture, result, contrat_type, duration = self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-                if result:
-                    self.logger.info(f"Contrat {numero_facture} traité avec succès.")
-                else:
-                    self.logger.warning(f"Échec du traitement du contrat {numero_facture}.")
 
-        # Retour du WebDriver au pool une fois le traitement terminé
+            if siret_destinataire:
+                try:
+                    # Processus du contrat individuel avec des logs détaillés
+                    numero_facture, result, contrat_type, duration = self.process_contract(
+                        driver, numero_facture, siret_destinataire, identifiant, mot_de_passe
+                    )
+                    
+                    if result:
+                        self.logger.info(f"Contrat {numero_facture} traité avec succès en {duration} secondes.")
+                        self.pool.return_driver(driver)
+
+                    else:
+                        self.logger.warning(f"Échec du traitement du contrat {numero_facture}.")
+                        self.pool.return_driver(driver)
+                except Exception as e:
+                    self.logger.error(f"Erreur inattendue lors du traitement du contrat {numero_facture} : {e}")
+
+                finally:
+                    # Réinitialisation du WebDriver à la page d'accueil pour le contrat suivant
+                    try:
+                        driver.get(self.url)
+                        self.logger.debug("Réinitialisation du WebDriver pour le contrat suivant.")
+                        time.sleep(2)  # Ajout d'une petite attente pour s'assurer que la page est rechargée
+                    except Exception as reset_error:
+                        self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_facture}: {reset_error}")
+                        driver.quit()
+                        driver = self.pool.get_driver()  # Créer un nouveau WebDriver en cas d'erreur de réinitialisation
+
+        # Retourner le WebDriver au pool après traitement de tous les contrats
         self.pool.return_driver(driver)
+        self.logger.info("Traitement de tous les contrats terminé.")
+
 
 
     def start(self, excel_path="data/data_traitement/Feuille de traitement problème SIRET - Rejets SERES.xlsx"):
