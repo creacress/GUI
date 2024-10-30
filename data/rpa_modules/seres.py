@@ -139,6 +139,7 @@ class SeresRPA:
             self.save_non_modifiable(numero_facture, "validation_button_erreur.json")
     
     def click_sauvegarde_button(self, driver, numero_facture):
+        
         try:
             # Localiser le bouton à l'aide du sélecteur CSS
             validate_button = driver.find_element(By.CSS_SELECTOR, "#indexation-inner > div:nth-child(5) > button.btn.btn-primary")
@@ -166,7 +167,7 @@ class SeresRPA:
                 self.logger.error("Une erreur est survenue : Message d'alerte trouvé.")
 
                 # Appeler la fonction save_non_modifiable pour sauvegarder le screenshot et le numéro de facture
-                self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
+                self.save_non_modifiable(numero_facture, "numero_SE_manquant.json")
             
             except TimeoutException:
                 # Si l'erreur n'apparaît pas dans les 5 secondes, on considère que tout est ok
@@ -212,6 +213,7 @@ class SeresRPA:
 
             # Effacer le champ et entrer le numéro de facture
             input_numfacture.clear()
+            time.sleep(1)  # Attendre un court moment pour éviter d'éventuels conflits
             input_numfacture.send_keys(numero_facture)
             time.sleep(1)  # Attendre un court moment pour éviter d'éventuels conflits
 
