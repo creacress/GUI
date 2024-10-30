@@ -67,11 +67,11 @@ class SeresRPA:
             # Étape : Vérification que la page est bien chargée
             self.check_page_loaded(driver)
 
-            input_identifiant = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#login")))
+            input_identifiant = wait.until(EC.presence_of_element_located((By.ID, "login")))
             input_identifiant.clear()
             input_identifiant.send_keys(identifiant)
 
-            input_mot_de_passe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#acct_pass")))
+            input_mot_de_passe = wait.until(EC.presence_of_element_located((By.ID, "acct_pass")))
             input_mot_de_passe.clear()
             input_mot_de_passe.send_keys(mot_de_passe)
 
@@ -116,16 +116,6 @@ class SeresRPA:
         except Exception:
             return False
     
-    def click_cookie_consent_button(self, driver):
-        try:
-            # Localiser le bouton à l'aide du sélecteur CSS
-            consent_button = driver.find_element(By.CSS_SELECTOR, "#cookieConsentContainer > a")
-            # Scroller jusqu'au bouton si nécessaire et cliquer
-            ActionChains(driver).move_to_element(consent_button).click().perform()
-            self.logger.info("Bouton de consentement cliqué avec succès.")
-        except Exception as e:
-            self.logger.error(f"Erreur lors du clic sur le bouton : {e}")
-    
     def write_comment(self, driver, comment_text):
         try:
             # Localiser la zone de texte par son sélecteur CSS
@@ -137,7 +127,7 @@ class SeresRPA:
         except Exception as e:
             self.logger.error(f"Erreur lors de l'écriture du commentaire : {e}")
     
-    def click_validate_button(self, driver):
+    def click_validate_button(self, driver, numero_facture):
         try:
             # Localiser le bouton à l'aide du sélecteur CSS
             validate_button = driver.find_element(By.CSS_SELECTOR, "#validate")
@@ -146,9 +136,23 @@ class SeresRPA:
             self.logger.info("Bouton de validation cliqué avec succès.")
         except Exception as e:
             self.logger.error(f"Erreur lors du clic sur le bouton de validation Valider: {e}")
+            self.save_non_modifiable(numero_facture, "validation_button_erreur.json")
+    
+    def click_sauvegarde_button(self, driver, numero_facture):
+        try:
+            # Localiser le bouton à l'aide du sélecteur CSS
+            validate_button = driver.find_element(By.CSS_SELECTOR, "#indexation-inner > div:nth-child(5) > button.btn.btn-primary")
+            # Scroller jusqu'au bouton si nécessaire et cliquer
+            ActionChains(driver).move_to_element(validate_button).click().perform()
+            self.logger.info("Bouton de sauvegarde cliqué avec succès.")
+        except Exception as e:
+            self.logger.error(f"Erreur lors du clic sur le bouton de sauvegarde : {e}")
+            self.save_non_modifiable(numero_facture, "sauvegarde_button_erreur.json")
+
     
     def click_validate_button_modale(self, driver, numero_facture):
         try:
+            time.sleep(5)
             # Localiser le bouton à l'aide du sélecteur CSS
             validate_button = driver.find_element(By.CSS_SELECTOR, "body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary")
             # Scroller jusqu'au bouton si nécessaire et cliquer
@@ -156,7 +160,7 @@ class SeresRPA:
             self.logger.info("Bouton de validation cliqué avec succès.")
              # Attendre la potentielle apparition de l'alerte (timeout après 5 secondes)
             try:
-                WebDriverWait(driver, 5).until(
+                WebDriverWait(driver, 20).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, "div.alert.alert-danger.alert-dismissable.message"))
                 )
                 self.logger.error("Une erreur est survenue : Message d'alerte trouvé.")
@@ -169,6 +173,8 @@ class SeresRPA:
                 self.logger.info("Pas d'erreur détectée après le clic.")
         except Exception as e:
             self.logger.error(f"Erreur lors du clic sur le bouton de validation Modale : {e}")
+            self.save_non_modifiable(numero_facture, "validation_modale_button_erreur.json")
+
 
     def click_rejets_aife(self, driver):
         """
@@ -198,6 +204,7 @@ class SeresRPA:
         Saisit le numéro de facture dans le champ de recherche et lance la recherche.
         """
         try:
+            time.sleep(5)
             self.logger.info(f"Saisie du numéro facture : {numero_facture}")
             WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "gs_NUMFACTURE"))
@@ -316,13 +323,11 @@ class SeresRPA:
             if not driver:
                 raise Exception("Driver non initialisé")
             self.logger.info(f"Début du traitement du contrat {numero_facture}...")
-    
-            # Connexion
-            self.login(driver, wait, identifiant, mot_de_passe)
-            
+
             # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
             
+
             # Saisie et recherche du numéro de facture
             self.enter_num_facture(driver, numero_facture)
             
@@ -332,19 +337,20 @@ class SeresRPA:
             # Attente de la modal
             self.wait_for_modal(driver)
             
-            # Clic sur le bouton de consentement aux cookies si nécessaire
-            self.click_cookie_consent_button(driver)
-            
             # Remplacement du SIRET destinataire
-            if self.verifier_SIRET(driver, siret_destinataire):
-                self.remplacer_siret(driver, siret_destinataire)
+            #if self.verifier_SIRET(driver, siret_destinataire):
+            self.remplacer_siret(driver, siret_destinataire)
+
+            time.sleep(2)
+
+            self.click_sauvegarde_button(driver, numero_facture)
             
             # Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
             
             # Clic sur le bouton de validation
-            self.click_validate_button(driver)
-            
+            self.click_validate_button(driver, numero_facture)
+            time.sleep(3)
             # Clic sur le bouton de validation de la modale
             self.click_validate_button_modale(driver, numero_facture)
             
@@ -377,29 +383,30 @@ class SeresRPA:
         Lit un fichier Excel et construit un dictionnaire avec les numéros de contrat,
         SIRET destinataire, et SIRET payeur.
         """
-        df = pd.read_excel(excel_path)
+        df = pd.read_excel(excel_path, dtype={'SIRET DESTINATAIRE': str})
         dictionnaire_siret = {}
         for _, row in df.iterrows():
             numero_facture = str(row['Contrat Nb'])
             siret = str(row['SIRET'])
-            siret_destinataire = str(row['SIRET DESTINATAIRE'])
+            siret_destinataire = row['SIRET DESTINATAIRE']
             dictionnaire_siret[numero_facture] = {
                 "SIRET": siret,
-                "siret_destinataire": siret_destinataire
+                "SIRET DESTINATAIRE": siret_destinataire
             }
         return dictionnaire_siret
     
-    def process_single_contract(self, numero_facture, siret_info, identifiant, mot_de_passe):
+    def process_single_contract(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
         """
         Fonction qui traite un contrat individuel dans un thread séparé.
         """
         driver = None
+
+        wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
+
         try:
             driver = self.pool.get_driver()  # Récupère un WebDriver pour le contrat
-            self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_facture}.")
+            self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_facture}, avec le siret suivant {siret_destinataire}")
     
-            # Appel à la fonction process_contract pour traiter le contrat
-            siret_destinataire = siret_info['siret_destinataire']  # Récupération du SIRET destinataire
             return self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
     
         except Exception as e:
@@ -409,17 +416,18 @@ class SeresRPA:
         finally:
             if driver:
                 try:
-                    driver.get(self.url)  # Revenir à l'URL de départ
+                    driver.get(self.url) # Revenir à l'URL de départ
                 except Exception as e:
                     self.logger.error(f"Erreur lors du retour à l'URL pour {numero_facture}: {e}")
                 
                 # Toujours retourner le WebDriver dans le pool après le traitement
                 try:
                     self.pool.return_driver(driver)
+    
                 except Exception as e:
                     self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_facture}: {e}")
 
-    def main(self, excel_path, progress_callback=None, max_workers=2):
+    def main(self, excel_path, progress_callback=None, max_workers=1):
         self.logger.debug("Démarrage du RPA Seres...")
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
@@ -437,11 +445,15 @@ class SeresRPA:
         # Utilisation d'un ThreadPoolExecutor pour le traitement multi-threading
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
-            for numero_facture in facture_numbers[:10]:
-                self.logger.debug(f"Préparation pour traiter le contrat suivant: {facture_numbers}")
+            for numero_facture in facture_numbers:
+
+                siret_info = dictionnaire_siret.get(numero_facture)
+
+                if siret_info:
+                    siret_destinataire = siret_info["SIRET DESTINATAIRE"]
                 
                 # Planification du traitement de chaque contrat dans un thread séparé
-                future = executor.submit(self.process_single_contract, numero_facture, dictionnaire_siret, identifiant, mot_de_passe)
+                future = executor.submit(self.process_single_contract, numero_facture, siret_destinataire, identifiant, mot_de_passe)
                 futures.append(future)
 
             # Collecter les résultats des threads au fur et à mesure

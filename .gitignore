@@ -10,3 +10,9 @@ data/numeros_contrat_robot.json
 data/data_traitement/Transfert des S3C - 14 octobre 2024 - fichier Alexis.xlsx
 data/driver/Play/OFL.txt
 frontend/node_modules/.bin/electron
+numero_facture_erreur.json
+sauvegarde_button_erreur.json
+validation_button_erreur.json
+validation_modale_button_erreur.json
+data/numeros_contrat_seres.json
+central_rpa.log

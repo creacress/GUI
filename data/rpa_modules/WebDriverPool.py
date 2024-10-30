@@ -10,7 +10,7 @@ from rpa_modules.debug import setup_logger
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 class WebDriverPool:
-    def __init__(self, initial_size=5, max_size=20, idle_timeout=300, logger=None):
+    def __init__(self, initial_size=1, max_size=20, idle_timeout=300, logger=None):
         """
         Pool de WebDrivers avec auto-ajustement dynamique de la taille du pool.
         :param initial_size: Taille initiale du pool (pré-chargement).
@@ -58,7 +58,7 @@ class WebDriverPool:
             driver = webdriver.Edge(service=service, options=options)
 
             # Naviguer vers l'URL directement après la création
-            driver.get("https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV")
+            driver.get("https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD")
             driver.last_used_time = time.time()
 
             self.logger.debug("WebDriver instance created and navigated to URL successfully")
@@ -97,7 +97,7 @@ class WebDriverPool:
             if driver:
                 try:
                     # Naviguer vers l'URL de départ avant de remettre le driver dans le pool
-                    start_url = "https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV"
+                    start_url = "https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD"
                     self.logger.debug(f"Retour à l'URL de départ {start_url} avant de retourner le WebDriver au pool.")
                     
                     driver.get(start_url)
@@ -107,9 +107,6 @@ class WebDriverPool:
                     if status != "complete":
                         raise Exception(f"WebDriver status non 'complete', status actuel : {status}")
                     
-                    # Nettoyage des cookies
-                    driver.delete_all_cookies()
-
                     # Remettre le WebDriver dans le pool
                     self.pool.put(driver)
                     self.logger.debug(f"WebDriver remis dans le pool. Taille actuelle du pool : {self.pool.qsize()}")
