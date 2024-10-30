@@ -201,24 +201,51 @@ class SeresRPA:
 
     def enter_num_facture(self, driver, numero_facture):
         """
-        Saisit le numéro de facture dans le champ de recherche et lance la recherche.
+        Saisit le numéro de facture dans le champ de recherche, lance la recherche et nettoie le champ.
         """
         try:
-            time.sleep(5)
+            # Attendre que le champ de saisie soit visible
             self.logger.info(f"Saisie du numéro facture : {numero_facture}")
-            WebDriverWait(driver, 10).until(
+            input_numfacture = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.ID, "gs_NUMFACTURE"))
             )
-            input_numfacture = driver.find_element(By.ID, "gs_NUMFACTURE")
+
+            # Effacer le champ et entrer le numéro de facture
+            input_numfacture.clear()
             input_numfacture.send_keys(numero_facture)
-            time.sleep(2)
+            time.sleep(1)  # Attendre un court moment pour éviter d'éventuels conflits
+
+            # Essayer d'appuyer sur Entrée et valider si la recherche s'est bien lancée
             input_numfacture.send_keys(Keys.ENTER)
-            time.sleep(2)
-            self.logger.info(f"Numéro facture {numero_facture} saisi et recherche lancée.")
+            self.logger.debug("Appui sur Entrée pour lancer la recherche.")
+            
+            # Alternative : si ENTER ne fonctionne pas, essayer avec un clic sur un bouton de recherche
+            try:
+                search_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+                search_button.click()
+                self.logger.debug("Clic sur le bouton de recherche en complément de l'appui sur Entrée.")
+            except Exception:
+                self.logger.warning("Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.")
+            
+            # Vérification : attendre un changement dans la table de résultats
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]//tr"))
+            )
+            
+            self.logger.info(f"Numéro facture {numero_facture} saisi et recherche lancée avec succès.")
+        
         except TimeoutException:
             self.logger.error("Le champ de saisie pour 'NUMFACTURE' n'a pas été trouvé.")
         except Exception as e:
             self.logger.error(f"Erreur lors de la saisie du numéro facture : {e}")
+        finally:
+            # Nettoyage du champ de saisie après le traitement
+            try:
+                input_numfacture.clear()
+                self.logger.debug("Champ de saisie nettoyé après le traitement.")
+            except Exception as e:
+                self.logger.warning(f"Impossible de nettoyer le champ après le traitement : {e}")
+
 
     def select_row_by_facture(self, driver, numero_facture):
         """
