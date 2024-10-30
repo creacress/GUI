@@ -139,16 +139,6 @@ class SeresRPA:
             self.save_non_modifiable(numero_facture, "validation_button_erreur.json")
     
     def click_sauvegarde_button(self, driver, numero_facture):
-        
-        try:
-            # Localiser le bouton à l'aide du sélecteur CSS
-            validate_button = driver.find_element(By.CSS_SELECTOR, "#indexation-inner > div:nth-child(5) > button.btn.btn-primary")
-            # Scroller jusqu'au bouton si nécessaire et cliquer
-            ActionChains(driver).move_to_element(validate_button).click().perform()
-            self.logger.info("Bouton de sauvegarde cliqué avec succès.")
-        except Exception as e:
-            self.logger.error(f"Erreur lors du clic sur le bouton de sauvegarde : {e}")
-            self.save_non_modifiable(numero_facture, "sauvegarde_button_erreur.json")
         """
         Essaie de cliquer sur le bouton de sauvegarde avec deux sélecteurs différents.
         """
