@@ -140,7 +140,7 @@ class SeresRPA:
     
     def click_sauvegarde_button(self, driver, numero_facture):
         """
-        Essaie de cliquer sur le bouton de sauvegarde avec deux sélecteurs différents.
+        Essaie de cliquer sur le bouton de sauvegarde avec deux sélecteurs différents sans générer d'erreur si un sélecteur est introuvable.
         """
         selectors = [
             "#indexation-inner > div:nth-child(5) > button.btn.btn-primary",
@@ -148,25 +148,25 @@ class SeresRPA:
         ]
 
         for selector in selectors:
-            try:
-                # Localiser le bouton en utilisant le sélecteur actuel
-                self.logger.debug(f"Essai du sélecteur : {selector}")
-                validate_button = driver.find_element(By.CSS_SELECTOR, selector)
-                
-                # Scroller jusqu'au bouton si nécessaire et cliquer
+            self.logger.debug(f"Essai du sélecteur : {selector}")
+            
+            # Utiliser find_elements pour éviter une erreur si le sélecteur ne correspond à aucun élément
+            buttons = driver.find_elements(By.CSS_SELECTOR, selector)
+            
+            # Vérifier si le bouton est trouvé avant d'essayer de cliquer
+            if buttons:
+                validate_button = buttons[0]  # Prendre le premier bouton trouvé
                 ActionChains(driver).move_to_element(validate_button).click().perform()
                 self.logger.info("Bouton de sauvegarde cliqué avec succès.")
-                return  # Sortie si le clic est réussi
+                return  # Sortie de la fonction si le clic est réussi
 
-            except Exception as e:
-                self.logger.warning(f"Erreur lors du clic sur le bouton de sauvegarde avec le sélecteur {selector}: {e}")
+            else:
+                self.logger.debug(f"Aucun bouton trouvé avec le sélecteur {selector}")
 
         # Si aucun des sélecteurs n'a fonctionné, log et enregistrer l'erreur
         self.logger.error(f"Échec du clic sur le bouton de sauvegarde pour le numéro facture {numero_facture} avec les sélecteurs fournis.")
         self.save_non_modifiable(numero_facture, "sauvegarde_button_erreur.json")
 
-
-    
     def click_validate_button_modale(self, driver, numero_facture):
         try:
             time.sleep(5)
