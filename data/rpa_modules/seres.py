@@ -229,25 +229,26 @@ class SeresRPA:
         try:
             self.logger.info(f"Sélection de la ligne avec le numéro facture : {numero_facture}...")
 
-            # Attendre que le tableau soit visible
+            # Attendre que le tableau contenant les documents soit visible
             wait = WebDriverWait(driver, 20)
-            time.sleep(5)  # Attendre que le tableau se mette à jour après la saisie du numéro de facture
-
-            # Rechercher le tableau contenant les documents
-            table = wait.until(EC.presence_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]")))
+            table = wait.until(EC.visibility_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]")))
+            time.sleep(2)  # Ajout d'un délai court pour s'assurer que les lignes sont chargées
 
             # Récupérer toutes les lignes du tableau (exclure la première ligne si elle est un header)
             rows = table.find_elements(By.XPATH, ".//tr[not(contains(@class, 'jqgfirstrow'))]")
             self.logger.debug(f"Nombre de lignes trouvées dans le tableau : {len(rows)}")
 
-            # Comparaison pour vérifier que le numéro facture est contenu dans la cellule
+            # Comparaison pour vérifier que le numéro de facture est contenu dans une cellule
             for row in rows:
                 try:
                     cells = row.find_elements(By.TAG_NAME, "td")
                     for cell in cells:
-                        if numero_facture in cell.text:
+                        # Vérifie si le texte du numéro de facture est contenu dans la cellule, avec strip pour éviter les espaces en trop
+                        if numero_facture.strip() in cell.text.strip():
                             self.logger.info(f"Ligne trouvée avec le numéro facture {cell.text}")
-                            driver.execute_script("arguments[0].scrollIntoView(true);", row)
+                            
+                            # S'assurer que l'élément est visible et défiler jusqu'à l'élément si nécessaire
+                            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", row)
                             driver.execute_script("arguments[0].click();", row)
                             self.logger.info(f"Ligne avec le numéro facture {numero_facture} sélectionnée et cliquée avec succès.")
                             return True  # Contrat trouvé et traité avec succès
@@ -261,13 +262,11 @@ class SeresRPA:
             return False
 
         except TimeoutException:
-            self.logger.error(f"La ligne avec le numéro facture {numero_facture} n'a pas été trouvée ou n'est pas cliquable.")
+            self.logger.error(f"Le tableau des documents ou la ligne avec le numéro facture {numero_facture} n'a pas été trouvée.")
             return False
         except Exception as e:
             self.logger.error(f"Erreur lors de la sélection de la ligne avec le numéro facture {numero_facture} : {e}")
             return False
-
-
 
     def wait_for_modal(self, driver):
         """
