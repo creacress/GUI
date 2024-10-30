@@ -143,8 +143,8 @@ class SeresRPA:
         Essaie de cliquer sur le bouton de sauvegarde avec deux sélecteurs différents sans générer d'erreur si un sélecteur est introuvable.
         """
         selectors = [
-            "#indexation-inner > div:nth-child(5) > button.btn.btn-primary",
-            "#indexation-inner > div:nth-child(4) > button.btn.btn-primary"
+            "#indexation-inner > div:nth-child(4) > button.btn.btn-primary",
+            "#indexation-inner > div:nth-child(5) > button.btn.btn-primary"
         ]
 
         for selector in selectors:
@@ -400,8 +400,6 @@ class SeresRPA:
                 self.logger.warning("Page d'erreur détectée. Relance du processus...")
                 driver.refresh()
                 self.save_non_modifiable(numero_facture, "facture_error_cause_page_erreur.json")
-
-            self.logger.info(f"Contrat {numero_facture} traité avec succès.")
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}")
             self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
