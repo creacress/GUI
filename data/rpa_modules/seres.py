@@ -18,21 +18,6 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 load_dotenv()
 # Siret destinataire corrigé selon Prmedi
 
-def process_contract_task(numero_facture, siret_destinataire, identifiant, mot_de_passe, url, pool):
-        """
-        Fonction pour traiter un contrat dans un processus séparé.
-        """
-        driver = None
-        try:
-            driver = pool.get_driver()  # Récupère un WebDriver pour ce contrat
-            result = pool.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-            return result
-        except Exception as e:
-            print(f"Erreur lors du traitement du contrat {numero_facture} : {e}")
-            return numero_facture, False, "Erreur", 0
-        finally:
-            if driver:
-                pool.return_driver(driver)
 class SeresRPA:
     def __init__(self, pool, logger=None):
         """
@@ -56,6 +41,22 @@ class SeresRPA:
                 numeros_contrat = list(data.values())
 
         return numeros_contrat
+
+    def process_contract_task(numero_facture, siret_destinataire, identifiant, mot_de_passe, url, pool):
+            """
+            Fonction pour traiter un contrat dans un processus séparé.
+            """
+            driver = None
+            try:
+                driver = pool.get_driver()  # Récupère un WebDriver pour ce contrat
+                result = pool.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
+                return result
+            except Exception as e:
+                print(f"Erreur lors du traitement du contrat {numero_facture} : {e}")
+                return numero_facture, False, "Erreur", 0
+            finally:
+                if driver:
+                    pool.return_driver(driver)
 
     def check_page_loaded(self, driver):
         try:
@@ -453,7 +454,7 @@ class SeresRPA:
         return dictionnaire_siret
     
 
-    def main(excel_path, pool):
+    def main(self, excel_path, pool):
         """
         Fonction principale pour traiter tous les contrats en parallèle.
         """
@@ -483,7 +484,7 @@ class SeresRPA:
                 if siret_destinataire:
                     # Lancer chaque contrat dans un processus séparé sans `self`
                     future = executor.submit(
-                        process_contract_task,
+                        self.process_contract_task,
                         numero_facture,
                         siret_destinataire,
                         identifiant,
