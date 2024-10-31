@@ -436,8 +436,6 @@ class SeresRPA:
             }
         return dictionnaire_siret
     
-    from concurrent.futures import ProcessPoolExecutor, as_completed
-
     def process_single_contract(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
         """
         Fonction qui traite un contrat individuel dans un processus séparé.
@@ -458,13 +456,18 @@ class SeresRPA:
         finally:
             if driver:
                 try:
-                    driver.get(self.url)  # Réinitialiser le WebDriver
+                    driver.get(self.url)  # Réinitialiser le WebDriver pour le prochain contrat
                     self.pool.return_driver(driver)
                 except Exception as e:
                     self.logger.error(f"Erreur lors du retour du WebDriver pour {numero_facture}: {e}")
 
     def main(self, excel_path):
+        """
+        Fonction principale pour traiter tous les contrats en parallèle
+        """
         self.logger.debug("Démarrage du RPA Seres avec multiprocessing...")
+        
+        # Extraction des numéros de contrat depuis le fichier Excel
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
 
@@ -478,8 +481,11 @@ class SeresRPA:
             self.logger.error("Identifiant ou mot de passe manquant.")
             return
 
+        # Définition du nombre de processus
+        num_processes = min(5, os.cpu_count() * 2)  # Ajustez en fonction de votre machine
+
         # Utilisation de ProcessPoolExecutor pour le traitement multi-processus
-        with ProcessPoolExecutor() as executor:
+        with ProcessPoolExecutor(max_workers=num_processes) as executor:
             futures = []
             for numero_facture in facture_numbers:
                 siret_info = dictionnaire_siret.get(numero_facture)
