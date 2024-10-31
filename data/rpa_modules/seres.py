@@ -513,4 +513,4 @@ class SeresRPA:
         Démarre le traitement du RPA Seres.
         """
         self.logger.info(f"Démarrage du RPA Seres avec le fichier {excel_path}")
-        self.main(excel_path)
+        self.main(excel_path, self.pool)  # Correction ici
