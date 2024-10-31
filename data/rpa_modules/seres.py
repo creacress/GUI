@@ -17,8 +17,23 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 load_dotenv()
 # Siret destinataire corrigé selon Prmedi
-
+def process_contract_task(numero_facture, siret_destinataire, identifiant, mot_de_passe, url, pool):
+            """
+            Fonction pour traiter un contrat dans un processus séparé.
+            """
+            driver = None
+            try:
+                driver = pool.get_driver()  # Récupère un WebDriver pour ce contrat
+                result = pool.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
+                return result
+            except Exception as e:
+                print(f"Erreur lors du traitement du contrat {numero_facture} : {e}")
+                return numero_facture, False, "Erreur", 0
+            finally:
+                if driver:
+                    pool.return_driver(driver)
 class SeresRPA:
+
     def __init__(self, pool, logger=None):
         """
         Initialise la classe avec un WebDriverPool, un logger et les identifiants.
@@ -42,21 +57,7 @@ class SeresRPA:
 
         return numeros_contrat
 
-    def process_contract_task(numero_facture, siret_destinataire, identifiant, mot_de_passe, url, pool):
-            """
-            Fonction pour traiter un contrat dans un processus séparé.
-            """
-            driver = None
-            try:
-                driver = pool.get_driver()  # Récupère un WebDriver pour ce contrat
-                result = pool.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-                return result
-            except Exception as e:
-                print(f"Erreur lors du traitement du contrat {numero_facture} : {e}")
-                return numero_facture, False, "Erreur", 0
-            finally:
-                if driver:
-                    pool.return_driver(driver)
+    
 
     def check_page_loaded(self, driver):
         try:
@@ -471,8 +472,8 @@ class SeresRPA:
         # Extraire les contrats depuis le fichier
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
-        dictionnaire_siret = pool.dictionnaire_siret(excel_path)
-        facture_numbers = pool.process_json_files(json_path)
+        dictionnaire_siret = self.dictionnaire_siret(excel_path)
+        facture_numbers = self.process_json_files(json_path)
 
         # Utilisation de ProcessPoolExecutor pour le traitement multi-processus
         with ProcessPoolExecutor() as executor:
@@ -484,13 +485,13 @@ class SeresRPA:
                 if siret_destinataire:
                     # Lancer chaque contrat dans un processus séparé sans `self`
                     future = executor.submit(
-                        self.process_contract_task,
+                        process_contract_task,
                         numero_facture,
                         siret_destinataire,
                         identifiant,
                         mot_de_passe,
-                        pool.url,  # URL de démarrage
-                        pool
+                        self.url,  # URL de démarrage
+                        self.pool
                     )
                     futures.append(future)
 
