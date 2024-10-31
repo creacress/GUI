@@ -17,6 +17,22 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 load_dotenv()
 # Siret destinataire corrigé selon Prmedi
+
+def process_contract_task(numero_facture, siret_destinataire, identifiant, mot_de_passe, url, pool):
+        """
+        Fonction pour traiter un contrat dans un processus séparé.
+        """
+        driver = None
+        try:
+            driver = pool.get_driver()  # Récupère un WebDriver pour ce contrat
+            result = pool.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
+            return result
+        except Exception as e:
+            print(f"Erreur lors du traitement du contrat {numero_facture} : {e}")
+            return numero_facture, False, "Erreur", 0
+        finally:
+            if driver:
+                pool.return_driver(driver)
 class SeresRPA:
     def __init__(self, pool, logger=None):
         """
@@ -436,69 +452,44 @@ class SeresRPA:
             }
         return dictionnaire_siret
     
-    def process_single_contract(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
+
+    def main(excel_path, pool):
         """
-        Fonction qui traite un contrat individuel dans un processus séparé.
+        Fonction principale pour traiter tous les contrats en parallèle.
         """
-        driver = None
+        logger = setup_logger("SeresRPA")
+        logger.debug("Démarrage du RPA Seres avec multiprocessing...")
 
-        try:
-            driver = self.pool.get_driver()  # Récupère un WebDriver pour le contrat
-            self.logger.debug(f"WebDriver récupéré pour le contrat {numero_facture}")
-
-            # Lancer le traitement du contrat
-            return self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-
-        except Exception as e:
-            self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}", exc_info=True)
-            return numero_facture, False, "Erreur", 0
-        
-        finally:
-            if driver:
-                try:
-                    driver.get(self.url)  # Réinitialiser le WebDriver pour le prochain contrat
-                    self.pool.return_driver(driver)
-                except Exception as e:
-                    self.logger.error(f"Erreur lors du retour du WebDriver pour {numero_facture}: {e}")
-
-    def main(self, excel_path):
-        """
-        Fonction principale pour traiter tous les contrats en parallèle
-        """
-        self.logger.debug("Démarrage du RPA Seres avec multiprocessing...")
-        
-        # Extraction des numéros de contrat depuis le fichier Excel
-        json_path = 'data/numeros_contrat_seres.json'
-        extract_contrat_numbers_to_json(excel_path, json_path)
-
-        dictionnaire_siret = self.dictionnaire_siret(excel_path)
-        facture_numbers = self.process_json_files(json_path)
-
+        # Charger les variables d'environnement au début
         identifiant = os.getenv("IDENTIFIANT_SERES")
         mot_de_passe = os.getenv("MOT_DE_PASSE_SERES")
-
         if not identifiant or not mot_de_passe:
-            self.logger.error("Identifiant ou mot de passe manquant.")
+            logger.error("Identifiant ou mot de passe manquant.")
             return
 
-        # Définition du nombre de processus
-        num_processes = min(5, os.cpu_count() * 2)  # Ajustez en fonction de votre machine
+        # Extraire les contrats depuis le fichier
+        json_path = 'data/numeros_contrat_seres.json'
+        extract_contrat_numbers_to_json(excel_path, json_path)
+        dictionnaire_siret = pool.dictionnaire_siret(excel_path)
+        facture_numbers = pool.process_json_files(json_path)
 
         # Utilisation de ProcessPoolExecutor pour le traitement multi-processus
-        with ProcessPoolExecutor(max_workers=num_processes) as executor:
+        with ProcessPoolExecutor() as executor:
             futures = []
             for numero_facture in facture_numbers:
                 siret_info = dictionnaire_siret.get(numero_facture)
                 siret_destinataire = siret_info["SIRET DESTINATAIRE"] if siret_info else None
 
                 if siret_destinataire:
-                    # Lancer chaque contrat dans un processus séparé
+                    # Lancer chaque contrat dans un processus séparé sans `self`
                     future = executor.submit(
-                        self.process_single_contract,
+                        process_contract_task,
                         numero_facture,
                         siret_destinataire,
                         identifiant,
-                        mot_de_passe
+                        mot_de_passe,
+                        pool.url,  # URL de démarrage
+                        pool
                     )
                     futures.append(future)
 
@@ -507,13 +498,14 @@ class SeresRPA:
                 try:
                     numero_facture, result, contrat_type, duration = future.result()
                     if result:
-                        self.logger.info(f"Contrat {numero_facture} traité avec succès en {duration} secondes.")
+                        logger.info(f"Contrat {numero_facture} traité avec succès en {duration} secondes.")
                     else:
-                        self.logger.warning(f"Échec du traitement du contrat {numero_facture}.")
+                        logger.warning(f"Échec du traitement du contrat {numero_facture}.")
                 except Exception as e:
-                    self.logger.error(f"Erreur dans le processus de traitement : {e}")
+                    logger.error(f"Erreur dans le processus de traitement : {e}")
 
-        self.logger.info("Traitement de tous les contrats terminé.")
+        logger.info("Traitement de tous les contrats terminé.")
+
 
     def start(self, excel_path="data/data_traitement/Feuille de traitement problème SIRET - Rejets SERES.xlsx"):
         """
