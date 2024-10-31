@@ -14,7 +14,7 @@ logger = setup_logger('central_rpa.log')
 sys.path.append(os.path.join(os.path.dirname(__file__), 'rpa_modules'))
 
 # Initialisation du pool de WebDrivers (pool partagé entre tous les RPAs)
-pool = WebDriverPool(initial_size=1, max_size=20, idle_timeout=300, logger=logger)
+pool = WebDriverPool(initial_size=1, max_size=270, idle_timeout=300, logger=logger)
 
 def main_rpa(rpa_name):
     """

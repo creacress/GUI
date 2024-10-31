@@ -10,7 +10,7 @@ from rpa_modules.debug import setup_logger
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 class WebDriverPool:
-    def __init__(self, initial_size=1, max_size=20, idle_timeout=300, logger=None):
+    def __init__(self, initial_size=1, max_size=270, idle_timeout=300, logger=None):
         """
         Pool de WebDrivers avec auto-ajustement dynamique de la taille du pool.
         :param initial_size: Taille initiale du pool (pré-chargement).
