@@ -51,6 +51,7 @@ class SeresRPA:
                 "Durée (s)": duration
             })
 
+
     def log_error(self, numero_facture, message):
         """
         Log une erreur et l'ajoute à la liste des logs d'erreurs.
@@ -451,16 +452,23 @@ class SeresRPA:
         wait = WebDriverWait(driver, 20)
         start_time = time.time()
 
+        # Initialisation des variables critiques
+        success = False
+        message = "Erreur inattendue"
+        duration = 0
+
         try:
             self.logger.info(f"Début du traitement du contrat {numero_facture}.")
 
             # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
             self.enter_num_facture(driver, numero_facture)
-            # Sélection de la ligne de la facture - si non trouvée, arrêter et passer au contrat suivant
+
+            # Sélection de la ligne de la facture
             if not self.select_row_by_facture(driver, numero_facture):
-                self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au contrat suivant.")
-                return numero_facture, False, "Contrat non trouvé", 0
+                message = "Contrat non trouvé"
+                self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au suivant.")
+                return numero_facture, success, message, duration
 
             # Attente de la modal
             self.wait_for_modal(driver)
@@ -482,20 +490,21 @@ class SeresRPA:
             # Clic sur le bouton de validation de la modale
             self.click_validate_button_modale(driver, numero_facture)
 
+            # Vérification de la page d'erreur
             if self.is_error_page(driver):
                 raise Exception("Page d'erreur détectée.")
 
+            # Succès
             success = True
             message = "Succès"
         except Exception as e:
-            success = False
             message = str(e)
             self.log_error(numero_facture, message)
         finally:
+            # Calcul de la durée et mise à jour des métriques
             duration = int(time.time() - start_time)
             self.update_metrics(success, duration, numero_facture, message)
             return numero_facture, success, message, duration
-
 
     def dictionnaire_siret(self, excel_path):
         """
@@ -520,23 +529,27 @@ class SeresRPA:
         Traite un contrat spécifique dans un thread et met à jour les métriques.
         """
         driver = self.pool.get_driver()
-        start_time = time.time()
+
+        # Initialisation des variables critiques
+        success = False
+        message = "Erreur inattendue"
+        duration = 0
 
         try:
             # Appel de la méthode principale de traitement
             numero_facture, success, message, duration = self.process_contract(
                 driver, numero_facture, siret_destinataire, identifiant, mot_de_passe
             )
-            # Mise à jour des métriques après traitement
-            self.update_metrics(success, duration, numero_facture, message)
-            return numero_facture, success, message, duration
         except Exception as e:
             # Gestion des erreurs inattendues
-            self.log_error(numero_facture, f"Erreur inattendue : {e}")
-            return numero_facture, False, str(e), 0
+            message = f"Erreur inattendue : {e}"
+            self.log_error(numero_facture, message)
         finally:
-            # Toujours retourner le driver au pool, même en cas d'erreur
+            # Toujours retourner le driver au pool
             self.pool.return_driver(driver)
+
+        return numero_facture, success, message, duration
+
 
     def main(self, excel_path):
         """
