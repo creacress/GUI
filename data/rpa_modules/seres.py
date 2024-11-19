@@ -457,12 +457,6 @@ class SeresRPA:
             # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
             self.enter_num_facture(driver, numero_facture)
-            if not self.select_row_by_facture(driver, numero_facture):
-                raise Exception("Contrat introuvable.")
-
-            # Saisie et recherche du numéro de facture
-            self.enter_num_facture(driver, numero_facture)
-
             # Sélection de la ligne de la facture - si non trouvée, arrêter et passer au contrat suivant
             if not self.select_row_by_facture(driver, numero_facture):
                 self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au contrat suivant.")
