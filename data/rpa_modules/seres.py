@@ -454,11 +454,35 @@ class SeresRPA:
             if not self.select_row_by_facture(driver, numero_facture):
                 raise Exception("Contrat introuvable.")
 
+            # Clic sur la div "Rejets AIFE"
+            self.click_rejets_aife(driver)
+
+            # Saisie et recherche du numéro de facture
+            self.enter_num_facture(driver, numero_facture)
+
+            # Sélection de la ligne de la facture - si non trouvée, arrêter et passer au contrat suivant
+            if not self.select_row_by_facture(driver, numero_facture):
+                self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au contrat suivant.")
+                return numero_facture, False, "Contrat non trouvé", 0
+
+            # Attente de la modal
             self.wait_for_modal(driver)
+
+            # Remplacement du SIRET destinataire
             self.remplacer_siret(driver, siret_destinataire)
+            time.sleep(2)
+
+            # Clic sur le bouton de sauvegarde
             self.click_sauvegarde_button(driver, numero_facture)
+
+            # Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
+
+            # Clic sur le bouton de validation
             self.click_validate_button(driver, numero_facture)
+            time.sleep(3)
+
+            # Clic sur le bouton de validation de la modale
             self.click_validate_button_modale(driver, numero_facture)
 
             if self.is_error_page(driver):
@@ -533,11 +557,11 @@ class SeresRPA:
         # Préparer les données depuis le fichier Excel et JSON
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
-        dictionnaire_siret = self.pool.dictionnaire_siret(excel_path)
-        facture_numbers = self.pool.process_json_files(json_path)
+        dictionnaire_siret = self.dictionnaire_siret(excel_path)
+        facture_numbers = self.process_json_files(json_path)
 
         # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
-        with ThreadPoolExecutor(max_workers=5) as executor:  # Ajustez max_workers selon les besoins
+        with ThreadPoolExecutor(max_workers=2) as executor:  # Ajustez max_workers selon les besoins
             futures = []
             for numero_facture in facture_numbers[:10]:
                 # Récupération des informations SIRET pour chaque contrat
@@ -568,10 +592,12 @@ class SeresRPA:
 
         self.logger.info("Traitement de tous les contrats terminé.")
 
-    def start(self, excel_path="data\data_traitement\Rejet SERES - Correction SIRET destinataire - 20241118.xlsx"):
+    def start(self, excel_path="data/data_traitement/Rejet SERES - Correction SIRET destinataire - 20241118.xlsx"):
         """
         Démarre le traitement du RPA Seres avec tableau de bord et logs.
         """
         self.logger.info(f"Démarrage du RPA Seres avec le fichier : {excel_path}")
-        threading.Thread(target=self.start_dashboard).start()  # Lancement du tableau de bord
+        threading.Thread(target=self.start_dashboard).start()
+        self.logger.info(f"Démarrage du tableau de board  dans http://127.0.0.1:8050")
+          # Lancement du tableau de bord
         self.main(excel_path)  # Démarrage du traitement principal
