@@ -224,35 +224,30 @@ class SeresRPA:
             self.logger.error(f"Erreur lors du clic sur le bouton de validation Valider: {e}")
             self.save_non_modifiable(numero_facture, "validation_button_erreur.json")
     
-    def click_sauvegarde_button(self, driver, numero_facture):
+    def click_button_by_text(self, driver, button_text):
         """
-        Essaie de cliquer sur le bouton de sauvegarde avec deux sélecteurs différents sans générer d'erreur si un sélecteur est introuvable.
+        Clique sur un bouton contenant un texte spécifique.
         """
-        selectors = [
-            "#indexation-inner > div:nth-child(4) > button.btn.btn-primary",
-            "#indexation-inner > div:nth-child(5) > button.btn.btn-primary"
-        ]
+        try:
+            self.logger.debug(f"Recherche du bouton avec le texte '{button_text}'...")
+            
+            # Localiser les boutons contenant le texte spécifié
+            buttons = driver.find_elements(By.XPATH, f"//button[contains(text(), '{button_text}')]")
 
-        for selector in selectors:
-            self.logger.debug(f"Essai du sélecteur : {selector}")
-            
-            # Utiliser find_elements pour éviter une erreur si le sélecteur ne correspond à aucun élément
-            buttons = driver.find_elements(By.CSS_SELECTOR, selector)
-            
-            # Vérifier si le bouton est trouvé avant d'essayer de cliquer
             if buttons:
-                validate_button = buttons[0]  # Prendre le premier bouton trouvé
-                ActionChains(driver).move_to_element(validate_button).click().perform()
-                self.logger.info("Bouton de sauvegarde cliqué avec succès.")
-                return  # Sortie de la fonction si le clic est réussi
-
+                for button in buttons:
+                    # Vérifier si le bouton est visible et interactif
+                    if button.is_displayed() and button.is_enabled():
+                        self.logger.info(f"Bouton '{button_text}' trouvé et cliqué.")
+                        ActionChains(driver).move_to_element(button).click().perform()
+                        return
+                self.logger.warning(f"Aucun bouton visible avec le texte '{button_text}'.")
             else:
-                self.logger.debug(f"Aucun bouton trouvé avec le sélecteur {selector}")
-
-        # Si aucun des sélecteurs n'a fonctionné, log et enregistrer l'erreur
-        self.logger.error(f"Échec du clic sur le bouton de sauvegarde pour le numéro facture {numero_facture} avec les sélecteurs fournis.")
-        self.save_non_modifiable(numero_facture, "sauvegarde_button_erreur.json")
-
+                self.logger.error(f"Aucun bouton trouvé avec le texte '{button_text}'.")
+                raise Exception(f"Bouton '{button_text}' introuvable.")
+        except Exception as e:
+            self.logger.error(f"Erreur lors du clic sur le bouton '{button_text}' : {e}")
+            raise
 
     def click_validate_button_modale(self, driver, numero_facture):
         try:
@@ -460,37 +455,38 @@ class SeresRPA:
         try:
             self.logger.info(f"Début du traitement du contrat {numero_facture}.")
 
-            # Clic sur la div "Rejets AIFE"
+            # Étape 1 : Clic sur "Rejets AIFE"
             self.click_rejets_aife(driver)
+
+            # Étape 2 : Saisie du numéro de facture
             self.enter_num_facture(driver, numero_facture)
 
-            # Sélection de la ligne de la facture
+            # Étape 3 : Sélection de la ligne de la facture
             if not self.select_row_by_facture(driver, numero_facture):
                 message = "Contrat non trouvé"
                 self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au suivant.")
                 return numero_facture, success, message, duration
 
-            # Attente de la modal
+            # Étape 4 : Attente de la modal
             self.wait_for_modal(driver)
 
-            # Remplacement du SIRET destinataire
+            # Étape 5 : Remplacement du SIRET destinataire
             self.remplacer_siret(driver, siret_destinataire)
-            time.sleep(2)
 
-            # Clic sur le bouton de sauvegarde
-            self.click_sauvegarde_button(driver, numero_facture)
+            # Étape 6 : Clic sur le bouton "Sauvegarder"
+            self.click_button_by_text(driver, "Sauvegarder")
 
-            # Écriture d'un commentaire
+            # Étape 7 : Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
 
-            # Clic sur le bouton de validation
-            self.click_validate_button(driver, numero_facture)
-            time.sleep(3)
+            # Étape 8 : Validation
+            self.click_button_by_text(driver, "Valider")
+            time.sleep(3)  # Assurez-vous que la validation prend effet avant la prochaine étape
 
-            # Clic sur le bouton de validation de la modale
-            self.click_validate_button_modale(driver, numero_facture)
+            # Étape 9 : Validation de la modale (si nécessaire)
+            self.click_button_by_text(driver, "Confirmer")
 
-            # Vérification de la page d'erreur
+            # Étape 10 : Vérification de la page d'erreur
             if self.is_error_page(driver):
                 raise Exception("Page d'erreur détectée.")
 
@@ -505,6 +501,8 @@ class SeresRPA:
             duration = int(time.time() - start_time)
             self.update_metrics(success, duration, numero_facture, message)
             return numero_facture, success, message, duration
+
+
 
     def dictionnaire_siret(self, excel_path):
         """
