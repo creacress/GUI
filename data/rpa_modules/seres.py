@@ -249,27 +249,37 @@ class SeresRPA:
             self.logger.error(f"Erreur lors du clic sur le bouton '{button_text}' : {e}")
             raise
 
-    def click_validate_button_modale(self, driver, numero_facture):
+    def click_and_validate_modal(self, driver, main_button_text, modal_button_text):
+        """
+        Gère le clic sur un bouton principal et le clic sur un bouton dans une modale qui s'affiche ensuite.
+        
+        :param driver: Instance du WebDriver.
+        :param main_button_text: Texte du bouton principal qui ouvre la modale.
+        :param modal_button_text: Texte du bouton à cliquer dans la modale.
+        """
         try:
-            # Attendre que la modale soit visible
-            self.logger.info("Attente de l'apparition de la modale pour validation...")
-            modal = WebDriverWait(driver, 10).until(
-                EC.visibility_of_element_located((By.CSS_SELECTOR, "body > div.bootbox.modal.fade.in"))
+            # Étape 1 : Clic sur le bouton principal
+            self.logger.info(f"Tentative de clic sur le bouton principal '{main_button_text}'...")
+            self.click_button_by_text(driver, main_button_text)
+
+            # Étape 2 : Attendre l'apparition de la modale
+            self.logger.info(f"Attente de l'apparition de la modale après clic sur '{main_button_text}'...")
+            WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH, f"//div[contains(@class, 'modal') and contains(@style, 'display: block')]"))
             )
 
-            # Vérifier que le bouton de validation est présent et interactif
-            validate_button = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.CSS_SELECTOR, "body > div.bootbox.modal.fade.in > div > div > div.modal-footer > button.btn.btn-primary"))
-            )
+            # Étape 3 : Clic sur le bouton dans la modale
+            self.logger.info(f"Tentative de clic sur le bouton '{modal_button_text}' dans la modale...")
+            self.click_button_by_text(driver, modal_button_text)
 
-            # Cliquer sur le bouton de validation
-            validate_button.click()
-            self.logger.info("Bouton de validation cliqué avec succès.")
-
+            self.logger.info("Clic sur le bouton dans la modale réussi.")
         except TimeoutException:
-            self.logger.error(f"Timeout : Le bouton de validation de la modale pour le contrat {numero_facture} n'a pas été trouvé.")
+            self.logger.error(f"Modale après le clic sur '{main_button_text}' n'est pas apparue.")
+            raise
         except Exception as e:
-            self.logger.error(f"Erreur lors du clic sur le bouton de validation Modale : {e}")
+            self.logger.error(f"Erreur lors de la gestion de la modale : {e}")
+            raise
+
 
 
 
@@ -466,30 +476,25 @@ class SeresRPA:
                 message = "Contrat non trouvé"
                 self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au suivant.")
                 return numero_facture, success, message, duration
-
+            time.sleep(2)
             # Étape 4 : Attente de la modal
             self.wait_for_modal(driver)
-
+            time.sleep(2)
             # Étape 5 : Remplacement du SIRET destinataire
             self.remplacer_siret(driver, siret_destinataire)
-
-            # Étape 6 : Clic sur le bouton "Sauvegarder"
-            self.click_button_by_text(driver, "Sauvegarder")
-
+            time.sleep(2)
             # Étape 7 : Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
-
-            # Étape 8 : Validation
-            self.click_button_by_text(driver, "Valider")
-            time.sleep(3)  # Assurez-vous que la validation prend effet avant la prochaine étape
-
-            # Étape 9 : Validation de la modale (si nécessaire)
-            self.click_button_by_text(driver, "Confirmer")
+            time.sleep(2)
+            # Étape 6 : Clic sur le bouton "Sauvegarder"
+            self.click_button_by_text(driver, "Sauvegarder")
+            time.sleep(2)
+            # Étape 8 : Gestion du bouton "Valider" et clic sur la modale
+            self.click_and_validate_modal(driver, "Valider", "Confirmer")
 
             # Étape 10 : Vérification de la page d'erreur
             if self.is_error_page(driver):
                 raise Exception("Page d'erreur détectée.")
-
             # Succès
             success = True
             message = "Succès"
