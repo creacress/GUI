@@ -13,19 +13,101 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from rpa_modules.debug import setup_logger
 from selenium.webdriver.common.action_chains import ActionChains
 from rpa_modules.data_processing import extract_contrat_numbers_to_json
+from dash import Dash, dcc, html
+from dash.dependencies import Input, Output
+import plotly.express as px
 
 load_dotenv()
 # Siret destinataire corrigé selon Prmedi
 class SeresRPA:
 
     def __init__(self, pool, logger=None):
-        """
-        Initialise la classe avec un WebDriverPool, un logger et les identifiants.
-        """
         self.pool = pool
         self.logger = logger or setup_logger("seres_case.log")
         self.url = "https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD"
-        self.file_lock = threading.Lock()
+        self.processed_count = 0
+        self.success_count = 0
+        self.failure_count = 0
+        self.total_duration = 0
+        self.error_logs = []
+        self.lock = threading.Lock()
+    
+    def update_metrics(self, success, duration, numero_facture, message):
+        """
+        Met à jour les métriques et les résultats pour le tableau de bord.
+        """
+        with self.lock:
+            self.processed_count += 1
+            if success:
+                self.success_count += 1
+            else:
+                self.failure_count += 1
+            self.total_duration += duration
+            self.results.append({
+                "Numéro de Contrat": numero_facture,
+                "Statut": "Succès" if success else "Échec",
+                "Message": message,
+                "Durée (s)": duration
+            })
+
+    def log_error(self, numero_facture, message):
+        """
+        Log une erreur et l'ajoute à la liste des logs d'erreurs.
+        """
+        self.logger.error(message)
+        self.error_logs.append({"NumeroFacture": numero_facture, "Error": message})
+    
+    def start_dashboard(self):
+        """
+        Initialise un tableau de bord Dash pour le suivi en temps réel.
+        """
+        app = Dash(__name__)
+
+        app.layout = html.Div([
+            html.H1("Tableau de bord SeresRPA"),
+            dash_table.DataTable(
+                id="result-table",
+                columns=[
+                    {"name": "Numéro de Contrat", "id": "Numéro de Contrat"},
+                    {"name": "Statut", "id": "Statut"},
+                    {"name": "Message", "id": "Message"},
+                    {"name": "Durée (s)", "id": "Durée (s)"}
+                ],
+                data=[],
+                style_table={"overflowX": "auto"},
+                style_cell={"textAlign": "left"},
+                style_header={"fontWeight": "bold"},
+            ),
+            dcc.Graph(id="success-failure-pie"),
+            html.Div([
+                html.H4("Nombre total de contrats traités :"),
+                html.P(id="total-count"),
+                html.H4("Temps moyen de traitement :"),
+                html.P(id="average-duration"),
+            ]),
+            dcc.Interval(id="interval-component", interval=1000, n_intervals=0)
+        ])
+
+        @app.callback(
+            [Output("result-table", "data"),
+             Output("success-failure-pie", "figure"),
+             Output("total-count", "children"),
+             Output("average-duration", "children")],
+            [Input("interval-component", "n_intervals")]
+        )
+        def update_dashboard(n):
+            total = self.processed_count
+            average_duration = self.total_duration / total if total > 0 else 0
+            pie_fig = px.pie(
+                names=["Succès", "Échecs"],
+                values=[self.success_count, self.failure_count],
+                title="Répartition des contrats traités"
+            )
+            with self.lock:
+                return self.results, pie_fig, f"{total}", f"{average_duration:.2f} secondes"
+
+        app.run_server(debug=True, use_reloader=False)
+
     
     def process_json_files(self, file_path):
         """
@@ -359,66 +441,40 @@ class SeresRPA:
             self.logger.error(f"Erreur lors du remplacement du SIRET : {e}")
 
     def process_contract(self, driver, numero_facture, siret_destinataire, identifiant, mot_de_passe):
+        """
+        Traite un contrat spécifique avec Selenium.
+        """
         wait = WebDriverWait(driver, 20)
         start_time = time.time()
 
         try:
-            if not driver:
-                raise Exception("Driver non initialisé")
-            self.logger.info(f"Début du traitement du contrat {numero_facture}...")
+            self.logger.info(f"Début du traitement du contrat {numero_facture}.")
 
-            # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
-
-            # Saisie et recherche du numéro de facture
             self.enter_num_facture(driver, numero_facture)
-
-            # Sélection de la ligne de la facture - si non trouvée, arrêter et passer au contrat suivant
             if not self.select_row_by_facture(driver, numero_facture):
-                self.logger.warning(f"Contrat {numero_facture} non trouvé. Passage au contrat suivant.")
-                return numero_facture, False, "Contrat non trouvé", 0
+                raise Exception("Contrat introuvable.")
 
-            # Attente de la modal
             self.wait_for_modal(driver)
-
-            # Remplacement du SIRET destinataire
             self.remplacer_siret(driver, siret_destinataire)
-            time.sleep(2)
-
-            # Clic sur le bouton de sauvegarde
             self.click_sauvegarde_button(driver, numero_facture)
-
-            # Écriture d'un commentaire
             self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
-
-            # Clic sur le bouton de validation
             self.click_validate_button(driver, numero_facture)
-            time.sleep(3)
-
-            # Clic sur le bouton de validation de la modale
             self.click_validate_button_modale(driver, numero_facture)
 
-            # Vérifier la présence de la page d'erreur
             if self.is_error_page(driver):
-                self.logger.warning("Page d'erreur détectée. Relance du processus...")
-                driver.refresh()
-                self.save_non_modifiable(numero_facture, "facture_error_cause_page_erreur.json")
+                raise Exception("Page d'erreur détectée.")
+
+            success = True
+            message = "Succès"
         except Exception as e:
-            self.logger.error(f"Erreur lors du traitement du contrat {numero_facture}: {e}")
-            self.save_non_modifiable(numero_facture, "numero_facture_erreur.json")
-
-            # Réinitialisation du driver après l'erreur
-            try:
-                driver.get(self.url)
-            except Exception as reset_error:
-                self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_facture}: {reset_error}")
-                driver.quit()
-                driver = None
-
-        end_time = time.time()
-        duration = int(end_time - start_time)
-        return numero_facture, True, "Succès", duration
-
+            success = False
+            message = str(e)
+            self.log_error(numero_facture, message)
+        finally:
+            duration = int(time.time() - start_time)
+            self.update_metrics(success, duration, numero_facture, message)
+            return numero_facture, success, message, duration
 
 
     def dictionnaire_siret(self, excel_path):
@@ -441,47 +497,56 @@ class SeresRPA:
 
     def process_contract_task(self, numero_facture, siret_destinataire, identifiant, mot_de_passe):
         """
-        Fonction pour traiter un contrat dans un thread.
+        Traite un contrat spécifique dans un thread et met à jour les métriques.
         """
-        driver = self.pool.get_driver()  # Récupère un WebDriver pour ce contrat
+        driver = self.pool.get_driver()
+        start_time = time.time()
+
         try:
-            self.logger.debug(f"Début du traitement du contrat {numero_facture}...")
-            result = self.process_contract(driver, numero_facture, siret_destinataire, identifiant, mot_de_passe)
-            return numero_facture, True, result, 0
+            # Appel de la méthode principale de traitement
+            numero_facture, success, message, duration = self.process_contract(
+                driver, numero_facture, siret_destinataire, identifiant, mot_de_passe
+            )
+            # Mise à jour des métriques après traitement
+            self.update_metrics(success, duration, numero_facture, message)
+            return numero_facture, success, message, duration
         except Exception as e:
-            self.logger.error(f"Erreur lors du traitement du contrat {numero_facture} : {e}")
-            return numero_facture, False, f"Erreur: {e}", 0
+            # Gestion des erreurs inattendues
+            self.log_error(numero_facture, f"Erreur inattendue : {e}")
+            return numero_facture, False, str(e), 0
         finally:
-            self.pool.return_driver(driver)  # Retourner le WebDriver au pool après le traitement
+            # Toujours retourner le driver au pool, même en cas d'erreur
+            self.pool.return_driver(driver)
 
     def main(self, excel_path):
         """
-        Fonction principale pour traiter tous les contrats en parallèle
+        Fonction principale pour gérer le traitement des contrats avec multi-threading.
         """
-        self.logger.debug("Démarrage du RPA Seres avec multithreading...")
+        self.logger.info("Démarrage du RPA Seres avec multithreading...")
 
-        # Charger les variables d'environnement au début
+        # Charger les identifiants depuis les variables d'environnement
         identifiant = os.getenv("IDENTIFIANT_SERES")
         mot_de_passe = os.getenv("MOT_DE_PASSE_SERES")
         if not identifiant or not mot_de_passe:
-            self.logger.error("Identifiant ou mot de passe manquant.")
+            self.logger.error("Identifiant ou mot de passe manquant. Arrêt du processus.")
             return
 
-        # Extraire les contrats depuis le fichier
+        # Préparer les données depuis le fichier Excel et JSON
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
-        dictionnaire_siret = self.pool.dictionnaire_siret(excel_path)
-        facture_numbers = self.pool.process_json_files(json_path)
+        facture_numbers = self.process_json_files(json_path)
+        dictionnaire_siret = self.dictionnaire_siret(excel_path)
 
-        # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
-        with ThreadPoolExecutor(max_workers=5) as executor:  # Ajustez max_workers selon les besoins
+        # Initialisation du pool de threads
+        with ThreadPoolExecutor(max_workers=5) as executor:
             futures = []
             for numero_facture in facture_numbers:
+                # Récupération des informations SIRET pour chaque contrat
                 siret_info = dictionnaire_siret.get(numero_facture)
                 siret_destinataire = siret_info["SIRET DESTINATAIRE"] if siret_info else None
 
                 if siret_destinataire:
-                    # Lancer chaque contrat dans un thread séparé
+                    # Création de threads pour traiter chaque contrat
                     future = executor.submit(
                         self.process_contract_task,
                         numero_facture,
@@ -491,22 +556,23 @@ class SeresRPA:
                     )
                     futures.append(future)
 
-            # Collecter les résultats au fur et à mesure de l'achèvement des contrats
+            # Récupération des résultats au fur et à mesure
             for future in as_completed(futures):
                 try:
-                    numero_facture, result, contrat_type, duration = future.result()
-                    if result:
-                        self.logger.info(f"Contrat {numero_facture} traité avec succès en {duration} secondes.")
+                    numero_facture, success, message, duration = future.result()
+                    if success:
+                        self.logger.info(f"Contrat {numero_facture} traité avec succès en {duration:.2f} secondes.")
                     else:
-                        self.logger.warning(f"Échec du traitement du contrat {numero_facture}.")
+                        self.logger.warning(f"Échec du traitement du contrat {numero_facture} : {message}")
                 except Exception as e:
-                    self.logger.error(f"Erreur dans le thread de traitement : {e}")
+                    self.logger.error(f"Erreur dans un thread de traitement : {e}")
 
         self.logger.info("Traitement de tous les contrats terminé.")
 
     def start(self, excel_path="data/data_traitement/Feuille de traitement problème SIRET - Rejets SERES.xlsx"):
         """
-        Démarre le traitement du RPA Seres.
+        Démarre le traitement du RPA Seres avec tableau de bord et logs.
         """
-        self.logger.info(f"Démarrage du RPA Seres avec le fichier {excel_path}")
-        self.main(excel_path)
+        self.logger.info(f"Démarrage du RPA Seres avec le fichier : {excel_path}")
+        threading.Thread(target=self.start_dashboard).start()  # Lancement du tableau de bord
+        self.main(excel_path)  # Démarrage du traitement principal
