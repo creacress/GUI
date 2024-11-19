@@ -280,9 +280,6 @@ class SeresRPA:
             self.logger.error(f"Erreur lors de la gestion de la modale : {e}")
             raise
 
-
-
-
     def click_rejets_aife(self, driver):
         """
         Fonction pour cliquer sur la div "Rejets AIFE".
@@ -490,7 +487,7 @@ class SeresRPA:
             self.click_button_by_text(driver, "Sauvegarder")
             time.sleep(2)
             # Étape 8 : Gestion du bouton "Valider" et clic sur la modale
-            self.click_and_validate_modal(driver, "Valider", "Confirmer")
+            self.click_and_validate_modal(driver, "Valider", "Valider")
 
             # Étape 10 : Vérification de la page d'erreur
             if self.is_error_page(driver):
