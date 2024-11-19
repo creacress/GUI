@@ -255,28 +255,26 @@ class SeresRPA:
 
     def click_validate_button_modale(self, driver, numero_facture):
         try:
-            time.sleep(5)
-            # Localiser le bouton à l'aide du sélecteur CSS
-            validate_button = driver.find_element(By.CSS_SELECTOR, "body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary")
-            # Scroller jusqu'au bouton si nécessaire et cliquer
-            ActionChains(driver).move_to_element(validate_button).click().perform()
-            self.logger.info("Bouton de validation cliqué avec succès.")
-             # Attendre la potentielle apparition de l'alerte (timeout après 5 secondes)
-            try:
-                WebDriverWait(driver, 20).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, "div.alert.alert-danger.alert-dismissable.message"))
-                )
-                self.logger.error("Une erreur est survenue : Message d'alerte trouvé.")
+            # Attendre que la modale soit visible
+            self.logger.info("Attente de l'apparition de la modale pour validation...")
+            modal = WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.CSS_SELECTOR, "body > div.bootbox.modal.fade.in"))
+            )
 
-                # Appeler la fonction save_non_modifiable pour sauvegarder le screenshot et le numéro de facture
-                self.save_non_modifiable(numero_facture, "numero_SE_manquant.json")
-            
-            except TimeoutException:
-                # Si l'erreur n'apparaît pas dans les 5 secondes, on considère que tout est ok
-                self.logger.info("Pas d'erreur détectée après le clic.")
+            # Vérifier que le bouton de validation est présent et interactif
+            validate_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "body > div.bootbox.modal.fade.in > div > div > div.modal-footer > button.btn.btn-primary"))
+            )
+
+            # Cliquer sur le bouton de validation
+            validate_button.click()
+            self.logger.info("Bouton de validation cliqué avec succès.")
+
+        except TimeoutException:
+            self.logger.error(f"Timeout : Le bouton de validation de la modale pour le contrat {numero_facture} n'a pas été trouvé.")
         except Exception as e:
             self.logger.error(f"Erreur lors du clic sur le bouton de validation Modale : {e}")
-            self.save_non_modifiable(numero_facture, "validation_modale_button_erreur.json")
+
 
 
     def click_rejets_aife(self, driver):
@@ -307,48 +305,54 @@ class SeresRPA:
         Saisit le numéro de facture dans le champ de recherche, lance la recherche et nettoie le champ.
         """
         try:
-            # Attendre que le champ de saisie soit visible
             self.logger.info(f"Saisie du numéro facture : {numero_facture}")
+
+            # Attendre que le champ soit interactif (cliquable)
             input_numfacture = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.ID, "gs_NUMFACTURE"))
+                EC.element_to_be_clickable((By.ID, "gs_NUMFACTURE"))
             )
 
             # Effacer le champ et entrer le numéro de facture
             input_numfacture.clear()
-            time.sleep(1)  # Attendre un court moment pour éviter d'éventuels conflits
             input_numfacture.send_keys(numero_facture)
-            time.sleep(1)  # Attendre un court moment pour éviter d'éventuels conflits
 
-            # Essayer d'appuyer sur Entrée et valider si la recherche s'est bien lancée
+            # Valider la recherche avec Entrée
             input_numfacture.send_keys(Keys.ENTER)
             self.logger.debug("Appui sur Entrée pour lancer la recherche.")
-            
-            # Alternative : si ENTER ne fonctionne pas, essayer avec un clic sur un bouton de recherche
+
+            # Alternative : Si ENTER échoue, essayer de cliquer sur le bouton de recherche
             try:
-                search_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+                search_button = WebDriverWait(driver, 5).until(
+                    EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
+                )
                 search_button.click()
                 self.logger.debug("Clic sur le bouton de recherche en complément de l'appui sur Entrée.")
-            except Exception:
+            except TimeoutException:
                 self.logger.warning("Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.")
-            
-            # Vérification : attendre un changement dans la table de résultats
+
+            # Vérifier que les résultats sont chargés (table avec des lignes)
             WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]//tr"))
             )
-            
+
             self.logger.info(f"Numéro facture {numero_facture} saisi et recherche lancée avec succès.")
-        
+
         except TimeoutException:
-            self.logger.error("Le champ de saisie pour 'NUMFACTURE' n'a pas été trouvé.")
+            self.logger.error("Le champ de saisie pour 'NUMFACTURE' n'a pas été trouvé ou n'est pas interactif.")
         except Exception as e:
             self.logger.error(f"Erreur lors de la saisie du numéro facture : {e}")
+            if "element not interactable" in str(e):
+                self.logger.warning("Nouvelle tentative après 'element not interactable'.")
+                time.sleep(1)  # Attendre brièvement avant de relancer
+                self.enter_num_facture(driver, numero_facture)
         finally:
-            # Nettoyage du champ de saisie après le traitement
+            # Nettoyer le champ après le traitement
             try:
                 input_numfacture.clear()
                 self.logger.debug("Champ de saisie nettoyé après le traitement.")
             except Exception as e:
                 self.logger.warning(f"Impossible de nettoyer le champ après le traitement : {e}")
+
 
 
     def select_row_by_facture(self, driver, numero_facture):
