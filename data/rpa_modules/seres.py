@@ -29,6 +29,7 @@ class SeresRPA:
         self.success_count = 0
         self.failure_count = 0
         self.total_duration = 0
+        self.results = []
         self.error_logs = []
         self.lock = threading.Lock()
     
@@ -449,13 +450,11 @@ class SeresRPA:
         try:
             self.logger.info(f"Début du traitement du contrat {numero_facture}.")
 
+            # Clic sur la div "Rejets AIFE"
             self.click_rejets_aife(driver)
             self.enter_num_facture(driver, numero_facture)
             if not self.select_row_by_facture(driver, numero_facture):
                 raise Exception("Contrat introuvable.")
-
-            # Clic sur la div "Rejets AIFE"
-            self.click_rejets_aife(driver)
 
             # Saisie et recherche du numéro de facture
             self.enter_num_facture(driver, numero_facture)
@@ -561,7 +560,7 @@ class SeresRPA:
         facture_numbers = self.process_json_files(json_path)
 
         # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
-        with ThreadPoolExecutor(max_workers=2) as executor:  # Ajustez max_workers selon les besoins
+        with ThreadPoolExecutor(max_workers=1) as executor:  # Ajustez max_workers selon les besoins
             futures = []
             for numero_facture in facture_numbers[:10]:
                 # Récupération des informations SIRET pour chaque contrat

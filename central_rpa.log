@@ -1,46 +1,26 @@
-2024-11-19 10:53:39 - central_logger - DEBUG - WebDriverPool initialized with max_size=20
-2024-11-19 10:53:39 - central_logger - DEBUG - Creating a new WebDriver instance
-2024-11-19 10:53:42 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
-2024-11-19 10:53:42 - central_logger - INFO - Nom du RPA reçu: Seres
-2024-11-19 10:53:42 - central_logger - INFO - Démarrage du RPA Seres avec le fichier : data/data_traitement/Rejet SERES - Correction SIRET destinataire - 20241118.xlsx
-2024-11-19 10:53:42 - central_logger - INFO - Démarrage du tableau de board  dans http://127.0.0.1:8050
-2024-11-19 10:53:42 - central_logger - INFO - Démarrage du RPA Seres avec multithreading...
-2024-11-19 10:53:43 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats...
-2024-11-19 10:53:43 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-19 10:53:43 - central_logger - INFO - Début du traitement du contrat PF20240000070204.
-2024-11-19 10:53:43 - central_logger - DEBUG - Creating a new WebDriver instance
-2024-11-19 10:53:43 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:53:44 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-19 10:53:44 - central_logger - INFO - Saisie du numéro facture : PF20240000070204
-2024-11-19 10:53:47 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-19 10:53:47 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
-2024-11-19 10:53:47 - central_logger - INFO - Numéro facture PF20240000070204 saisi et recherche lancée avec succès.
-2024-11-19 10:53:47 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
-2024-11-19 10:53:47 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000070204...
-2024-11-19 10:53:47 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
-2024-11-19 10:53:47 - central_logger - DEBUG - Nouvelle instance WebDriver créée (taille actuelle : 2)
-2024-11-19 10:53:47 - central_logger - INFO - Début du traitement du contrat PF20240000083132.
-2024-11-19 10:53:47 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:53:48 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-19 10:53:48 - central_logger - INFO - Saisie du numéro facture : PF20240000083132
-2024-11-19 10:53:49 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-19 10:53:49 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000070204
-2024-11-19 10:53:49 - central_logger - INFO - Ligne avec le numéro facture PF20240000070204 sélectionnée et cliquée avec succès.
-2024-11-19 10:53:49 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:53:50 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-19 10:53:50 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
-2024-11-19 10:53:50 - central_logger - INFO - Numéro facture PF20240000083132 saisi et recherche lancée avec succès.
-2024-11-19 10:53:50 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
-2024-11-19 10:53:50 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000083132...
-2024-11-19 10:53:52 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-19 10:53:52 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000083132
-2024-11-19 10:53:52 - central_logger - INFO - Ligne avec le numéro facture PF20240000083132 sélectionnée et cliquée avec succès.
-2024-11-19 10:53:52 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:53:59 - central_logger - ERROR - Le bouton 'Rejets AIFE' n'a pas été trouvé sur la page.
-2024-11-19 10:53:59 - central_logger - INFO - Saisie du numéro facture : PF20240000070204
-2024-11-19 10:54:03 - central_logger - ERROR - Le bouton 'Rejets AIFE' n'a pas été trouvé sur la page.
-2024-11-19 10:54:03 - central_logger - INFO - Saisie du numéro facture : PF20240000083132
-2024-11-19 10:54:04 - central_logger - ERROR - Erreur lors de la saisie du numéro facture : Message: element not interactable
+2024-11-19 13:08:59 - central_logger - DEBUG - WebDriverPool initialized with max_size=20
+2024-11-19 13:08:59 - central_logger - DEBUG - Creating a new WebDriver instance
+2024-11-19 13:09:01 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
+2024-11-19 13:09:01 - central_logger - INFO - Nom du RPA reçu: Seres
+2024-11-19 13:09:01 - central_logger - INFO - Démarrage du RPA Seres avec le fichier : data/data_traitement/Rejet SERES - Correction SIRET destinataire - 20241118.xlsx
+2024-11-19 13:09:01 - central_logger - INFO - Démarrage du tableau de board  dans http://127.0.0.1:8050
+2024-11-19 13:09:01 - central_logger - INFO - Démarrage du RPA Seres avec multithreading...
+2024-11-19 13:09:02 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats...
+2024-11-19 13:09:02 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2024-11-19 13:09:02 - central_logger - INFO - Début du traitement du contrat PF20240000070204.
+2024-11-19 13:09:02 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
+2024-11-19 13:09:03 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
+2024-11-19 13:09:03 - central_logger - INFO - Saisie du numéro facture : PF20240000070204
+2024-11-19 13:09:05 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
+2024-11-19 13:09:05 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
+2024-11-19 13:09:05 - central_logger - INFO - Numéro facture PF20240000070204 saisi et recherche lancée avec succès.
+2024-11-19 13:09:05 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
+2024-11-19 13:09:05 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000070204...
+2024-11-19 13:09:07 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
+2024-11-19 13:09:07 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000070204
+2024-11-19 13:09:08 - central_logger - INFO - Ligne avec le numéro facture PF20240000070204 sélectionnée et cliquée avec succès.
+2024-11-19 13:09:08 - central_logger - INFO - Saisie du numéro facture : PF20240000070204
+2024-11-19 13:09:09 - central_logger - ERROR - Erreur lors de la saisie du numéro facture : Message: element not interactable
   (Session info: MicrosoftEdge=130.0.2849.56)
 Stacktrace:
 	GetHandleVerifier [0x00007FF762A7CEF5+12997]
@@ -69,24 +49,21 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFF3CBC7374+20]
 	RtlUserThreadStart [0x00007FFF3D29CC91+33]
 
-2024-11-19 10:54:04 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
-2024-11-19 10:54:04 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000083132...
-2024-11-19 10:54:06 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-19 10:54:06 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000083132
-2024-11-19 10:54:06 - central_logger - INFO - Ligne avec le numéro facture PF20240000083132 sélectionnée et cliquée avec succès.
-2024-11-19 10:54:06 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-19 10:54:06 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-19 10:54:08 - central_logger - INFO - SIRET remplacé par 13001044000019.
-2024-11-19 10:54:09 - central_logger - ERROR - Le champ de saisie pour 'NUMFACTURE' n'a pas été trouvé.
-2024-11-19 10:54:09 - central_logger - WARNING - Impossible de nettoyer le champ après le traitement : cannot access local variable 'input_numfacture' where it is not associated with a value
-2024-11-19 10:54:09 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000070204...
-2024-11-19 10:54:10 - central_logger - DEBUG - Essai du sélecteur : #indexation-inner > div:nth-child(4) > button.btn.btn-primary
-2024-11-19 10:54:10 - central_logger - DEBUG - Aucun bouton trouvé avec le sélecteur #indexation-inner > div:nth-child(4) > button.btn.btn-primary
-2024-11-19 10:54:10 - central_logger - DEBUG - Essai du sélecteur : #indexation-inner > div:nth-child(5) > button.btn.btn-primary
-2024-11-19 10:54:10 - central_logger - INFO - Bouton de sauvegarde cliqué avec succès.
-2024-11-19 10:54:10 - central_logger - INFO - Commentaire écrit avec succès.
-2024-11-19 10:54:11 - central_logger - INFO - Bouton de validation cliqué avec succès.
-2024-11-19 10:54:19 - central_logger - ERROR - Erreur lors du clic sur le bouton de validation Modale : Message: no such element: Unable to locate element: {"method":"css selector","selector":"body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary"}
+2024-11-19 13:09:09 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
+2024-11-19 13:09:09 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000070204...
+2024-11-19 13:09:11 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
+2024-11-19 13:09:11 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000070204
+2024-11-19 13:09:11 - central_logger - INFO - Ligne avec le numéro facture PF20240000070204 sélectionnée et cliquée avec succès.
+2024-11-19 13:09:11 - central_logger - INFO - Attente de l'apparition de la modal...
+2024-11-19 13:09:11 - central_logger - INFO - Modal apparue et prête à être utilisée.
+2024-11-19 13:09:13 - central_logger - INFO - SIRET remplacé par 18008904700013.
+2024-11-19 13:09:15 - central_logger - DEBUG - Essai du sélecteur : #indexation-inner > div:nth-child(4) > button.btn.btn-primary
+2024-11-19 13:09:15 - central_logger - DEBUG - Aucun bouton trouvé avec le sélecteur #indexation-inner > div:nth-child(4) > button.btn.btn-primary
+2024-11-19 13:09:15 - central_logger - DEBUG - Essai du sélecteur : #indexation-inner > div:nth-child(5) > button.btn.btn-primary
+2024-11-19 13:09:15 - central_logger - INFO - Bouton de sauvegarde cliqué avec succès.
+2024-11-19 13:09:15 - central_logger - INFO - Commentaire écrit avec succès.
+2024-11-19 13:09:16 - central_logger - INFO - Bouton de validation cliqué avec succès.
+2024-11-19 13:09:24 - central_logger - ERROR - Erreur lors du clic sur le bouton de validation Modale : Message: no such element: Unable to locate element: {"method":"css selector","selector":"body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary"}
   (Session info: MicrosoftEdge=130.0.2849.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Stacktrace:
 	GetHandleVerifier [0x00007FF762A7CEF5+12997]
@@ -113,74 +90,51 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFF3CBC7374+20]
 	RtlUserThreadStart [0x00007FFF3D29CC91+33]
 
-2024-11-19 10:54:19 - central_logger - ERROR - Erreur inattendue : 'SeresRPA' object has no attribute 'results'
-2024-11-19 10:54:19 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-19 10:54:19 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-19 10:54:19 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-19 10:54:19 - central_logger - WARNING - Échec du traitement du contrat PF20240000083132 : 'SeresRPA' object has no attribute 'results'
-2024-11-19 10:54:19 - central_logger - INFO - Début du traitement du contrat PF20240000095003.
-2024-11-19 10:54:19 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:54:20 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-19 10:54:20 - central_logger - INFO - Saisie du numéro facture : PF20240000095003
-2024-11-19 10:54:22 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-19 10:54:22 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
-2024-11-19 10:54:22 - central_logger - INFO - Numéro facture PF20240000095003 saisi et recherche lancée avec succès.
-2024-11-19 10:54:22 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
-2024-11-19 10:54:22 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000095003...
-2024-11-19 10:54:24 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-19 10:54:24 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000095003
-2024-11-19 10:54:24 - central_logger - INFO - Ligne avec le numéro facture PF20240000095003 sélectionnée et cliquée avec succès.
-2024-11-19 10:54:24 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:54:29 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000070204 n'a pas été trouvée.
-2024-11-19 10:54:29 - central_logger - WARNING - Contrat PF20240000070204 non trouvé. Passage au contrat suivant.
-2024-11-19 10:54:29 - central_logger - ERROR - Erreur inattendue : cannot access local variable 'success' where it is not associated with a value
-2024-11-19 10:54:29 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-19 10:54:30 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-19 10:54:30 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-19 10:54:30 - central_logger - WARNING - Échec du traitement du contrat PF20240000070204 : cannot access local variable 'success' where it is not associated with a value
-2024-11-19 10:54:30 - central_logger - INFO - Début du traitement du contrat PF20240000070111.
-2024-11-19 10:54:30 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:54:30 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-19 10:54:30 - central_logger - INFO - Saisie du numéro facture : PF20240000070111
-2024-11-19 10:54:32 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-19 10:54:32 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
-2024-11-19 10:54:32 - central_logger - INFO - Numéro facture PF20240000070111 saisi et recherche lancée avec succès.
-2024-11-19 10:54:33 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
-2024-11-19 10:54:33 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000070111...
-2024-11-19 10:54:34 - central_logger - ERROR - Le bouton 'Rejets AIFE' n'a pas été trouvé sur la page.
-2024-11-19 10:54:34 - central_logger - INFO - Saisie du numéro facture : PF20240000095003
-2024-11-19 10:54:35 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-19 10:54:35 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000070111
-2024-11-19 10:54:35 - central_logger - INFO - Ligne avec le numéro facture PF20240000070111 sélectionnée et cliquée avec succès.
-2024-11-19 10:54:35 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-19 10:54:35 - central_logger - ERROR - Erreur lors de la saisie du numéro facture : Message: element not interactable
-  (Session info: MicrosoftEdge=130.0.2849.56)
-Stacktrace:
-	GetHandleVerifier [0x00007FF762A7CEF5+12997]
-	Microsoft::Applications::Events::EventProperty::empty [0x00007FF762CFBD24+1897988]
-	(No symbol) [0x00007FF76282F005]
-	(No symbol) [0x00007FF762870D1C]
-	(No symbol) [0x00007FF76286F830]
-	(No symbol) [0x00007FF762897F4A]
-	(No symbol) [0x00007FF76286C09D]
-	(No symbol) [0x00007FF76286BF6D]
-	(No symbol) [0x00007FF762898230]
-	(No symbol) [0x00007FF76286C09D]
-	(No symbol) [0x00007FF7628B2887]
-	(No symbol) [0x00007FF762897BB3]
-	(No symbol) [0x00007FF76286B5AC]
-	(No symbol) [0x00007FF76286AA8D]
-	(No symbol) [0x00007FF76286B171]
-	Microsoft::Applications::Events::EventProperty::empty [0x00007FF762C29E04+1038052]
-	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF7629A095F+56655]
-	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF762993103+1267]
-	Microsoft::Applications::Events::EventProperty::empty [0x00007FF762C28B8D+1033325]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF762A19761+327729]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF762A15BE4+312500]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF762A15D19+312809]
-	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF762A0C28C+273244]
-	BaseThreadInitThunk [0x00007FFF3CBC7374+20]
-	RtlUserThreadStart [0x00007FFF3D29CC91+33]
-
-2024-11-19 10:54:35 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
-2024-11-19 10:54:35 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000095003...
+2024-11-19 13:09:24 - central_logger - ERROR - Erreur inattendue : 'SeresRPA' object has no attribute 'results'
+2024-11-19 13:09:24 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
+2024-11-19 13:09:24 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
+2024-11-19 13:09:24 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2024-11-19 13:09:24 - central_logger - WARNING - Échec du traitement du contrat PF20240000070204 : 'SeresRPA' object has no attribute 'results'
+2024-11-19 13:09:24 - central_logger - INFO - Début du traitement du contrat PF20240000083132.
+2024-11-19 13:09:24 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
+2024-11-19 13:09:24 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
+2024-11-19 13:09:24 - central_logger - INFO - Saisie du numéro facture : PF20240000083132
+2024-11-19 13:09:27 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
+2024-11-19 13:09:27 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
+2024-11-19 13:09:27 - central_logger - INFO - Numéro facture PF20240000083132 saisi et recherche lancée avec succès.
+2024-11-19 13:09:27 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
+2024-11-19 13:09:27 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000083132...
+2024-11-19 13:09:29 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 0
+2024-11-19 13:09:29 - central_logger - ERROR - La ligne avec le numéro facture PF20240000083132 n'a pas été trouvée ou n'est pas cliquable.
+2024-11-19 13:09:29 - central_logger - ERROR - Contrat introuvable.
+2024-11-19 13:09:29 - central_logger - ERROR - Erreur inattendue : 'SeresRPA' object has no attribute 'results'
+2024-11-19 13:09:29 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
+2024-11-19 13:09:29 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
+2024-11-19 13:09:29 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2024-11-19 13:09:29 - central_logger - WARNING - Échec du traitement du contrat PF20240000083132 : 'SeresRPA' object has no attribute 'results'
+2024-11-19 13:09:29 - central_logger - INFO - Début du traitement du contrat PF20240000095003.
+2024-11-19 13:09:29 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
+2024-11-19 13:09:29 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
+2024-11-19 13:09:29 - central_logger - INFO - Saisie du numéro facture : PF20240000095003
+2024-11-19 13:09:31 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
+2024-11-19 13:09:31 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
+2024-11-19 13:09:31 - central_logger - INFO - Numéro facture PF20240000095003 saisi et recherche lancée avec succès.
+2024-11-19 13:09:32 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
+2024-11-19 13:09:32 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000095003...
+2024-11-19 13:09:34 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 0
+2024-11-19 13:09:34 - central_logger - ERROR - La ligne avec le numéro facture PF20240000095003 n'a pas été trouvée ou n'est pas cliquable.
+2024-11-19 13:09:34 - central_logger - ERROR - Contrat introuvable.
+2024-11-19 13:09:34 - central_logger - ERROR - Erreur inattendue : 'SeresRPA' object has no attribute 'results'
+2024-11-19 13:09:34 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
+2024-11-19 13:09:34 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
+2024-11-19 13:09:34 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2024-11-19 13:09:34 - central_logger - WARNING - Échec du traitement du contrat PF20240000095003 : 'SeresRPA' object has no attribute 'results'
+2024-11-19 13:09:34 - central_logger - INFO - Début du traitement du contrat PF20240000070111.
+2024-11-19 13:09:34 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
+2024-11-19 13:09:34 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
+2024-11-19 13:09:34 - central_logger - INFO - Saisie du numéro facture : PF20240000070111
+2024-11-19 13:09:36 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
+2024-11-19 13:09:36 - central_logger - WARNING - Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.
+2024-11-19 13:09:36 - central_logger - INFO - Numéro facture PF20240000070111 saisi et recherche lancée avec succès.
+2024-11-19 13:09:37 - central_logger - DEBUG - Champ de saisie nettoyé après le traitement.
+2024-11-19 13:09:37 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000070111...
