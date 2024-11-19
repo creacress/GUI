@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from rpa_modules.debug import setup_logger
 from selenium.webdriver.common.action_chains import ActionChains
 from rpa_modules.data_processing import extract_contrat_numbers_to_json
-from dash import Dash, dcc, html
+from dash import Dash, dcc, html, dash_table
 from dash.dependencies import Input, Output
 import plotly.express as px
 
@@ -539,7 +539,7 @@ class SeresRPA:
         # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
         with ThreadPoolExecutor(max_workers=5) as executor:  # Ajustez max_workers selon les besoins
             futures = []
-            for numero_facture in facture_numbers:
+            for numero_facture in facture_numbers[:10]:
                 # Récupération des informations SIRET pour chaque contrat
                 siret_info = dictionnaire_siret.get(numero_facture)
                 siret_destinataire = siret_info["SIRET DESTINATAIRE"] if siret_info else None
@@ -568,7 +568,7 @@ class SeresRPA:
 
         self.logger.info("Traitement de tous les contrats terminé.")
 
-    def start(self, excel_path="data/data_traitement/Feuille de traitement problème SIRET - Rejets SERES.xlsx"):
+    def start(self, excel_path="data\data_traitement\Rejet SERES - Correction SIRET destinataire - 20241118.xlsx"):
         """
         Démarre le traitement du RPA Seres avec tableau de bord et logs.
         """
