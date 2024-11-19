@@ -123,7 +123,6 @@ class SeresRPA:
 
         return numeros_contrat
 
-    
 
     def check_page_loaded(self, driver):
         try:
@@ -534,11 +533,11 @@ class SeresRPA:
         # Préparer les données depuis le fichier Excel et JSON
         json_path = 'data/numeros_contrat_seres.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
-        facture_numbers = self.process_json_files(json_path)
-        dictionnaire_siret = self.dictionnaire_siret(excel_path)
+        dictionnaire_siret = self.pool.dictionnaire_siret(excel_path)
+        facture_numbers = self.pool.process_json_files(json_path)
 
-        # Initialisation du pool de threads
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
+        with ThreadPoolExecutor(max_workers=5) as executor:  # Ajustez max_workers selon les besoins
             futures = []
             for numero_facture in facture_numbers:
                 # Récupération des informations SIRET pour chaque contrat
