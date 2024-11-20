@@ -314,10 +314,9 @@ class SeresRPA:
             self.logger.info(f"Saisie du numéro facture : {numero_facture}")
 
             # Attendre que le champ soit interactif (cliquable)
-            input_numfacture = WebDriverWait(driver, 10).until(
+            input_numfacture = WebDriverWait(driver, 5).until(
                 EC.element_to_be_clickable((By.ID, "gs_NUMFACTURE"))
             )
-
             # Effacer le champ et entrer le numéro de facture
             input_numfacture.clear()
             input_numfacture.send_keys(numero_facture)
@@ -326,18 +325,8 @@ class SeresRPA:
             input_numfacture.send_keys(Keys.ENTER)
             self.logger.debug("Appui sur Entrée pour lancer la recherche.")
 
-            # Alternative : Si ENTER échoue, essayer de cliquer sur le bouton de recherche
-            try:
-                search_button = WebDriverWait(driver, 5).until(
-                    EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
-                )
-                search_button.click()
-                self.logger.debug("Clic sur le bouton de recherche en complément de l'appui sur Entrée.")
-            except TimeoutException:
-                self.logger.warning("Le bouton de recherche n'a pas été trouvé, uniquement Entrée utilisé.")
-
             # Vérifier que les résultats sont chargés (table avec des lignes)
-            WebDriverWait(driver, 10).until(
+            WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]//tr"))
             )
 
@@ -351,15 +340,6 @@ class SeresRPA:
                 self.logger.warning("Nouvelle tentative après 'element not interactable'.")
                 time.sleep(1)  # Attendre brièvement avant de relancer
                 self.enter_num_facture(driver, numero_facture)
-        finally:
-            # Nettoyer le champ après le traitement
-            try:
-                input_numfacture.clear()
-                self.logger.debug("Champ de saisie nettoyé après le traitement.")
-            except Exception as e:
-                self.logger.warning(f"Impossible de nettoyer le champ après le traitement : {e}")
-
-
 
     def select_row_by_facture(self, driver, numero_facture):
         """
@@ -371,7 +351,7 @@ class SeresRPA:
             self.logger.info(f"Sélection de la ligne avec le numéro facture : {numero_facture}...")
 
             # Attendre que le tableau contenant les documents soit visible
-            wait = WebDriverWait(driver, 20)
+            wait = WebDriverWait(driver, 10)
             table = wait.until(EC.visibility_of_element_located((By.XPATH, "//table[contains(@id, 'list-documents')]")))
             time.sleep(2)  # Ajout d'un délai court pour s'assurer que les lignes sont chargées
 
@@ -467,9 +447,11 @@ class SeresRPA:
 
             # Étape 1 : Clic sur "Rejets AIFE"
             self.click_rejets_aife(driver)
+            time.sleep(2)
 
             # Étape 2 : Saisie du numéro de facture
             self.enter_num_facture(driver, numero_facture)
+            time.sleep(2)
 
             # Étape 3 : Sélection de la ligne de la facture
             if not self.select_row_by_facture(driver, numero_facture):
@@ -506,7 +488,6 @@ class SeresRPA:
             duration = int(time.time() - start_time)
             self.update_metrics(success, duration, numero_facture, message)
             return numero_facture, success, message, duration
-
 
 
     def dictionnaire_siret(self, excel_path):
@@ -574,7 +555,7 @@ class SeresRPA:
         facture_numbers = self.process_json_files(json_path)
 
         # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
-        with ThreadPoolExecutor(max_workers=1) as executor:  # Ajustez max_workers selon les besoins
+        with ThreadPoolExecutor(max_workers=3) as executor:  # Ajustez max_workers selon les besoins
             futures = []
             for numero_facture in facture_numbers[:10]:
                 # Récupération des informations SIRET pour chaque contrat
