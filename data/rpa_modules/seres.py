@@ -249,13 +249,13 @@ class SeresRPA:
             self.logger.error(f"Erreur lors du clic sur le bouton '{button_text}' : {e}")
             raise
 
-    def click_and_validate_modal(self, driver, main_button_text, modal_button_text):
+    def click_and_validate_modal(self, driver, main_button_text, modal_button_selector):
         """
         Gère le clic sur un bouton principal et le clic sur un bouton dans une modale qui s'affiche ensuite.
         
         :param driver: Instance du WebDriver.
         :param main_button_text: Texte du bouton principal qui ouvre la modale.
-        :param modal_button_text: Texte du bouton à cliquer dans la modale.
+        :param modal_button_selector: Sélecteur CSS du bouton dans la modale.
         """
         try:
             # Étape 1 : Clic sur le bouton principal
@@ -265,20 +265,23 @@ class SeresRPA:
             # Étape 2 : Attendre l'apparition de la modale
             self.logger.info(f"Attente de l'apparition de la modale après clic sur '{main_button_text}'...")
             WebDriverWait(driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, f"//div[contains(@class, 'modal') and contains(@style, 'display: block')]"))
+                EC.visibility_of_element_located((By.CSS_SELECTOR, "div.bootbox.modal.fade.bootbox-confirm.in"))
             )
 
             # Étape 3 : Clic sur le bouton dans la modale
-            self.logger.info(f"Tentative de clic sur le bouton '{modal_button_text}' dans la modale...")
-            self.click_button_by_text(driver, modal_button_text)
-
+            self.logger.info(f"Tentative de clic sur le bouton dans la modale avec le sélecteur '{modal_button_selector}'...")
+            modal_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, modal_button_selector))
+            )
+            modal_button.click()
             self.logger.info("Clic sur le bouton dans la modale réussi.")
         except TimeoutException:
-            self.logger.error(f"Modale après le clic sur '{main_button_text}' n'est pas apparue.")
+            self.logger.error(f"Modale après le clic sur '{main_button_text}' n'est pas apparue ou le bouton n'est pas cliquable.")
             raise
         except Exception as e:
             self.logger.error(f"Erreur lors de la gestion de la modale : {e}")
             raise
+
 
     def click_rejets_aife(self, driver):
         """
