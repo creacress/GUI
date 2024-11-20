@@ -490,7 +490,7 @@ class SeresRPA:
             self.click_button_by_text(driver, "Sauvegarder")
             time.sleep(2)
             # Étape 8 : Gestion du bouton "Valider" et clic sur la modale
-            self.click_and_validate_modal(driver, "Valider", "Valider")
+            self.click_and_validate_modal(driver, "Valider", "body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary")
 
             # Étape 10 : Vérification de la page d'erreur
             if self.is_error_page(driver):
