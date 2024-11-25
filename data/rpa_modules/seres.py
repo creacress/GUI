@@ -213,16 +213,6 @@ class SeresRPA:
         except Exception as e:
             self.logger.error(f"Erreur lors de l'écriture du commentaire : {e}")
     
-    def click_validate_button(self, driver, numero_facture):
-        try:
-            # Localiser le bouton à l'aide du sélecteur CSS
-            validate_button = driver.find_element(By.CSS_SELECTOR, "#validate")
-            # Scroller jusqu'au bouton si nécessaire et cliquer
-            ActionChains(driver).move_to_element(validate_button).click().perform()
-            self.logger.info("Bouton de validation cliqué avec succès.")
-        except Exception as e:
-            self.logger.error(f"Erreur lors du clic sur le bouton de validation Valider: {e}")
-            self.save_non_modifiable(numero_facture, "validation_button_erreur.json")
     
     def click_button_by_text(self, driver, button_text):
         """
@@ -261,13 +251,13 @@ class SeresRPA:
             # Étape 1 : Clic sur le bouton principal
             self.logger.info(f"Tentative de clic sur le bouton principal '{main_button_text}'...")
             self.click_button_by_text(driver, main_button_text)
-
+            time.sleep(2)
             # Étape 2 : Attendre l'apparition de la modale
             self.logger.info(f"Attente de l'apparition de la modale après clic sur '{main_button_text}'...")
             WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.CSS_SELECTOR, "div.bootbox.modal.fade.bootbox-confirm.in"))
             )
-
+            time.sleep(2)
             # Étape 3 : Clic sur le bouton dans la modale
             self.logger.info(f"Tentative de clic sur le bouton dans la modale avec le sélecteur '{modal_button_selector}'...")
             modal_button = WebDriverWait(driver, 10).until(
@@ -424,8 +414,7 @@ class SeresRPA:
             siret_input = driver.find_element(By.ID, "m_client_siret")
             siret_input.clear()
             siret_input.send_keys(siret_destinataire)
-            time.sleep(2)
-            
+            time.sleep(5)
             self.logger.info(f"SIRET remplacé par {siret_destinataire}.")
         except Exception as e:
             self.logger.error(f"Erreur lors du remplacement du SIRET : {e}")
@@ -434,7 +423,6 @@ class SeresRPA:
         """
         Traite un contrat spécifique avec Selenium.
         """
-        wait = WebDriverWait(driver, 20)
         start_time = time.time()
 
         # Initialisation des variables critiques
@@ -464,16 +452,12 @@ class SeresRPA:
             time.sleep(2)
             # Étape 5 : Remplacement du SIRET destinataire
             self.remplacer_siret(driver, siret_destinataire)
-            time.sleep(2)
-            # Étape 7 : Écriture d'un commentaire
-            self.write_comment(driver, "Siret destinataire corrigé selon Prmedi")
-            time.sleep(2)
             # Étape 6 : Clic sur le bouton "Sauvegarder"
             self.click_button_by_text(driver, "Sauvegarder")
             time.sleep(2)
             # Étape 8 : Gestion du bouton "Valider" et clic sur la modale
             self.click_and_validate_modal(driver, "Valider", "body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary")
-
+            time.sleep(2)
             # Étape 10 : Vérification de la page d'erreur
             if self.is_error_page(driver):
                 raise Exception("Page d'erreur détectée.")
@@ -555,9 +539,9 @@ class SeresRPA:
         facture_numbers = self.process_json_files(json_path)
 
         # Utilisation de ThreadPoolExecutor pour le traitement multi-threading
-        with ThreadPoolExecutor(max_workers=3) as executor:  # Ajustez max_workers selon les besoins
+        with ThreadPoolExecutor(max_workers=1) as executor:  # Ajustez max_workers selon les besoins
             futures = []
-            for numero_facture in facture_numbers[:10]:
+            for numero_facture in facture_numbers:
                 # Récupération des informations SIRET pour chaque contrat
                 siret_info = dictionnaire_siret.get(numero_facture)
                 siret_destinataire = siret_info["SIRET DESTINATAIRE"] if siret_info else None
@@ -586,7 +570,7 @@ class SeresRPA:
 
         self.logger.info("Traitement de tous les contrats terminé.")
 
-    def start(self, excel_path="data/data_traitement/Rejet SERES - Correction SIRET destinataire - 20241118.xlsx"):
+    def start(self, excel_path="data/data_traitement/Rejet SERES 2.xlsx"):
         """
         Démarre le traitement du RPA Seres avec tableau de bord et logs.
         """
