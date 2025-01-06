@@ -169,24 +169,36 @@ class AffranchigoPremiumCase:
             "#odcFormCPR > button",
             "#odcFormCPT > button"
         ]
-        
+
         button_found = False
         for selector in button_selectors:
             try:
+                # Localiser le bouton
                 submit_button = WebDriverWait(self.driver, 10).until(
                     EC.visibility_of_element_located((By.CSS_SELECTOR, selector))
                 )
-                submit_button.click()
+
+                # Scroller jusqu'au bouton
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", submit_button)
+                time.sleep(1)  # Pause optionnelle pour le scroll
+
+                # Clic via JavaScript
+                self.driver.execute_script("arguments[0].click();", submit_button)
+
+                self.logger.info(f"{numero_contrat} * Clic sur le bouton de soumission avec succès.")
                 button_found = True
                 break
             except TimeoutException:
                 self.logger.debug(f"Le bouton avec le sélecteur {selector} n'a pas été trouvé.")
+            except Exception as e:
+                self.logger.error(f"Erreur lors de la tentative de clic sur le bouton {selector}: {e}")
         
         if not button_found:
             self.logger.error(f"{numero_contrat} * Aucun bouton de soumission n'a été trouvé.")
             return
 
         try:
+            # Attente du changement d'URL après la soumission
             WebDriverWait(self.driver, 10).until(
                 EC.url_changes(
                     "https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/configurateur/put-contract"
@@ -194,6 +206,8 @@ class AffranchigoPremiumCase:
             )
             self.logger.info(f"{numero_contrat} * Formulaire soumis avec succès.")
             time.sleep(3)
+
+            # Navigation vers l'URL de départ
             try:
                 url_de_depart = "https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc"
                 self.driver.get(url_de_depart)
@@ -205,6 +219,7 @@ class AffranchigoPremiumCase:
         except Exception as e:
             self.save_non_modifiable_contract(numero_contrat)
             self.logger.critical(f"Erreur lors de la soumission du formulaire : {e}")
+
 
 
     def check_div_alert(self):
