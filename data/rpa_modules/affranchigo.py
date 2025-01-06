@@ -226,55 +226,64 @@ class AffranchigoRPA:
             return False
 
     def handle_non_clickable_element(self, driver, numero_contrat):
+        """Gestion des contrats multi-sites ou cas spécifiques."""
         try:
             span_element = driver.find_element(By.ID, "detailsCategorieV")
             if span_element.text == "Annexe Multisites":
                 self.save_non_modifiable_contract_mutli_sites(numero_contrat)
-                self.logger.debug(f"Contrat {numero_contrat} enregistré comme non modifiable en raison de 'Annexe Multisites'.")
+                self.logger.info(f"Contrat {numero_contrat} enregistré comme non modifiable (Annexe Multisites).")
+            else:
+                self.logger.debug(f"Contrat {numero_contrat} non marqué comme 'Annexe Multisites'. Texte détecté : {span_element.text}")
+        
         except NoSuchElementException:
-            self.logger.debug(f"L'élément span.detailsCategorieV n'a pas été trouvé pour le contrat {numero_contrat}.")
+            self.logger.debug(f"L'élément 'detailsCategorieV' introuvable pour le contrat {numero_contrat}.")
+        
         except Exception as e:
-            self.logger.exception(f"Erreur inattendue lors de la vérification de l'élément span.detailsCategorieV pour le contrat {numero_contrat}.")
+            self.logger.error(f"Erreur lors de la gestion des contrats multi-sites pour {numero_contrat} : {e}")
+        
         finally:
-            if driver:
-                try:
-                    driver.get(self.url)  # Revenir à l'URL de départ
-                except Exception as e:
-                    self.logger.error(f"Erreur lors du retour à l'URL pour {numero_contrat}: {e}")
-                
-                # Toujours retourner le WebDriver dans le pool après le traitement
-                try:
-                    self.pool.return_driver(driver)
-                except Exception as e:
-                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
+            # Retour à l'URL de départ et retour du WebDriver au pool
+            try:
+                driver.get(self.url)
+                self.logger.debug(f"Retour à l'URL de départ réussi pour le contrat {numero_contrat}.")
+            except Exception as e:
+                self.logger.error(f"Erreur lors du retour à l'URL de départ pour {numero_contrat} : {e}")
+            
+            try:
+                self.pool.return_driver(driver)
+                self.logger.debug(f"WebDriver retourné au pool pour le contrat {numero_contrat}.")
+            except Exception as e:
+                self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat} : {e}")
 
 
     def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number):
-        self.logger.info("Changement vers iframe et clic sur 'Modification'...")
+        self.logger.info("Changement vers iframe et tentative de clic sur 'Modification'...")
+        iframe_selector = "#modalRefContrat > div > div > div.modal-body > iframe"
+        modification_button_selector = "//permission/a[@href='#amendment']//div[@id='detailsModificationButton']"
+        
         try:
-            iframe_selector = "#modalRefContrat > div > div > div.modal-body > iframe"
+            # Passage à l'iframe
             iframe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, iframe_selector)))
             driver.switch_to.frame(iframe)
             self.logger.debug("Passé à l'iframe avec succès.")
 
-            modification_button_selector = "//permission/a[@href='#amendment']//div[@id='detailsModificationButton']"
+            # Tentative de clic sur le bouton de modification
+            bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
+            driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
+            driver.execute_script("arguments[0].click();", bouton_modification)
+            self.logger.info(f"Clic sur le bouton de modification pour le contrat {contrat_number} effectué avec succès.")
+        
+        except TimeoutException:
+            self.logger.warning(f"{contrat_number} * Le bouton 'Modification' n'est pas cliquable ou introuvable. Vérification des contrats multi-sites.")
+            self.handle_non_clickable_element(driver, contrat_number)
+        
+        except Exception as e:
+            self.logger.error(f"Erreur inattendue lors du traitement de l'iframe pour le contrat {contrat_number} : {e}")
+            self.handle_non_clickable_element(driver, contrat_number)
 
-            try:
-                self.logger.debug(f"Tentative pour cliquer sur le bouton de modification.")
-                bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
-                driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
-                driver.execute_script("arguments[0].click();", bouton_modification)
-                self.logger.info(f"Clique sur le bouton de modification pour le contrat {contrat_number} effectué avec succès.")
-            except TimeoutException:
-                self.logger.info(f"{contrat_number} * Le bouton 'Modification' n'est pas trouvé. Contrat Annexes Multisites ou autre cas spécifique.")
-                self.handle_non_clickable_element(driver, contrat_number)
-            except NoSuchElementException:
-                self.logger.info(f"L'élément bouton 'Modification' pour le contrat {contrat_number} n'a pas été trouvé. Contrat Annexes Multisites ou autre cas spécifique.")
-                self.handle_non_clickable_element(driver, contrat_number)
         finally:
             driver.switch_to.default_content()
             self.logger.debug("Retour au contenu principal après traitement de l'iframe.")
-
 
     def wait_for_complete_redirection(self, driver, wait, numero_contrat, timeout=20):
         self.logger.debug("Attente de la redirection...")
