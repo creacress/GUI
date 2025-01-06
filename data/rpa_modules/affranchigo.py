@@ -235,6 +235,18 @@ class AffranchigoRPA:
             self.logger.debug(f"L'élément span.detailsCategorieV n'a pas été trouvé pour le contrat {numero_contrat}.")
         except Exception as e:
             self.logger.exception(f"Erreur inattendue lors de la vérification de l'élément span.detailsCategorieV pour le contrat {numero_contrat}.")
+        finally:
+            if driver:
+                try:
+                    driver.get(self.url)  # Revenir à l'URL de départ
+                except Exception as e:
+                    self.logger.error(f"Erreur lors du retour à l'URL pour {numero_contrat}: {e}")
+                
+                # Toujours retourner le WebDriver dans le pool après le traitement
+                try:
+                    self.pool.return_driver(driver)
+                except Exception as e:
+                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
 
 
     def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number):
@@ -474,7 +486,7 @@ class AffranchigoRPA:
 
         self.logger.info("Tous les contrats ont été traités avec multi-threading.")
 
-    def start(self, excel_path="data/data_traitement/Transfert des S3C - 14 octobre 2024 - fichier Alexis.xlsx"):
+    def start(self, excel_path="data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx"):
         """
         Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
         """

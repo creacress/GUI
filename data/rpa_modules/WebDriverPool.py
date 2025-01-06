@@ -10,7 +10,7 @@ from rpa_modules.debug import setup_logger
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 class WebDriverPool:
-    def __init__(self, initial_size=1, max_size=20, idle_timeout=300, logger=None):
+    def __init__(self, initial_size=3, max_size=20, idle_timeout=300, logger=None):
         """
         Pool de WebDrivers avec auto-ajustement dynamique de la taille du pool.
         :param initial_size: Taille initiale du pool (pré-chargement).
@@ -43,8 +43,7 @@ class WebDriverPool:
 
             service = Service(driver_path)
             options = Options()
-            #options.add_argument("--headless")  # Si tu veux rester en mode headless
-            options.add_argument("--disable-gpu")
+            options.add_argument("--headless")  # Si tu veux rester en mode headless
             options.add_argument("--disable-software-rasterizer")
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
@@ -58,7 +57,7 @@ class WebDriverPool:
             driver = webdriver.Edge(service=service, options=options)
 
             # Naviguer vers l'URL directement après la création
-            driver.get("https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD")
+            driver.get("https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV")
             driver.last_used_time = time.time()
 
             self.logger.debug("WebDriver instance created and navigated to URL successfully")
@@ -97,7 +96,7 @@ class WebDriverPool:
             if driver:
                 try:
                     # Naviguer vers l'URL de départ avant de remettre le driver dans le pool
-                    start_url = "https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD"
+                    start_url = "https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV"
                     self.logger.debug(f"Retour à l'URL de départ {start_url} avant de retourner le WebDriver au pool.")
                     
                     driver.get(start_url)

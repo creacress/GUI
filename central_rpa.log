@@ -1,417 +1,682 @@
-2024-11-22 11:16:16 - central_logger - DEBUG - WebDriverPool initialized with max_size=20
-2024-11-22 11:16:16 - central_logger - DEBUG - Creating a new WebDriver instance
-2024-11-22 11:16:20 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
-2024-11-22 11:16:20 - central_logger - INFO - Nom du RPA reçu: Seres
-2024-11-22 11:16:20 - central_logger - INFO - Démarrage du RPA Seres avec le fichier : data/data_traitement/Rejet SERES 2.xlsx
-2024-11-22 11:16:20 - central_logger - INFO - Démarrage du tableau de board  dans http://127.0.0.1:8050
-2024-11-22 11:16:20 - central_logger - INFO - Démarrage du RPA Seres avec multithreading...
-2024-11-22 11:16:20 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats...
-2024-11-22 11:16:20 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:16:22 - central_logger - INFO - Début du traitement du contrat PF20240000103834.
-2024-11-22 11:16:22 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:16:25 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:16:27 - central_logger - INFO - Saisie du numéro facture : PF20240000103834
-2024-11-22 11:16:27 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:16:27 - central_logger - INFO - Numéro facture PF20240000103834 saisi et recherche lancée avec succès.
-2024-11-22 11:16:29 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000103834...
-2024-11-22 11:16:40 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000103834 n'a pas été trouvée.
-2024-11-22 11:16:40 - central_logger - WARNING - Contrat PF20240000103834 non trouvé. Passage au suivant.
-2024-11-22 11:16:40 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:16:42 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:16:42 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:16:42 - central_logger - WARNING - Échec du traitement du contrat PF20240000103834 : Contrat non trouvé
-2024-11-22 11:16:42 - central_logger - INFO - Début du traitement du contrat PF20240000103866.
-2024-11-22 11:16:42 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:16:48 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:16:50 - central_logger - INFO - Saisie du numéro facture : PF20240000103866
-2024-11-22 11:16:50 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:16:50 - central_logger - INFO - Numéro facture PF20240000103866 saisi et recherche lancée avec succès.
-2024-11-22 11:16:52 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000103866...
-2024-11-22 11:16:54 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:16:54 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000103866
-2024-11-22 11:16:54 - central_logger - INFO - Ligne avec le numéro facture PF20240000103866 sélectionnée et cliquée avec succès.
-2024-11-22 11:16:56 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:16:56 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:17:03 - central_logger - INFO - SIRET remplacé par 11000201100044.
-2024-11-22 11:17:03 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:17:03 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:17:06 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:17:06 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:17:06 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:17:08 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:17:10 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:17:10 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:17:12 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:17:14 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:17:14 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:17:14 - central_logger - INFO - Contrat PF20240000103866 traité avec succès en 30.00 secondes.
-2024-11-22 11:17:14 - central_logger - INFO - Début du traitement du contrat PF20240000103892.
-2024-11-22 11:17:14 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:17:18 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:17:20 - central_logger - INFO - Saisie du numéro facture : PF20240000103892
-2024-11-22 11:17:21 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:17:21 - central_logger - INFO - Numéro facture PF20240000103892 saisi et recherche lancée avec succès.
-2024-11-22 11:17:23 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000103892...
-2024-11-22 11:17:25 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:17:25 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000103892
-2024-11-22 11:17:25 - central_logger - INFO - Ligne avec le numéro facture PF20240000103892 sélectionnée et cliquée avec succès.
-2024-11-22 11:17:27 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:17:27 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:17:34 - central_logger - INFO - SIRET remplacé par 11000201100044.
-2024-11-22 11:17:34 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:17:34 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:17:36 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:17:36 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:17:36 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:17:39 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:17:41 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:17:41 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:17:43 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:17:45 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:17:45 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:17:45 - central_logger - INFO - Contrat PF20240000103892 traité avec succès en 28.00 secondes.
-2024-11-22 11:17:45 - central_logger - INFO - Début du traitement du contrat PF20240000103877.
-2024-11-22 11:17:45 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:17:47 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:17:49 - central_logger - INFO - Saisie du numéro facture : PF20240000103877
-2024-11-22 11:17:49 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:17:49 - central_logger - INFO - Numéro facture PF20240000103877 saisi et recherche lancée avec succès.
-2024-11-22 11:17:51 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000103877...
-2024-11-22 11:17:53 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:17:53 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000103877
-2024-11-22 11:17:53 - central_logger - INFO - Ligne avec le numéro facture PF20240000103877 sélectionnée et cliquée avec succès.
-2024-11-22 11:17:55 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:17:55 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:18:02 - central_logger - INFO - SIRET remplacé par 11000201100044.
-2024-11-22 11:18:02 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:18:02 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:18:05 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:18:05 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:18:05 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:18:07 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:18:09 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:18:09 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:18:11 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:18:13 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:18:13 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:18:13 - central_logger - INFO - Contrat PF20240000103877 traité avec succès en 26.00 secondes.
-2024-11-22 11:18:13 - central_logger - INFO - Début du traitement du contrat PF20240000078693.
-2024-11-22 11:18:13 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:18:21 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:18:23 - central_logger - INFO - Saisie du numéro facture : PF20240000078693
-2024-11-22 11:18:23 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:18:23 - central_logger - INFO - Numéro facture PF20240000078693 saisi et recherche lancée avec succès.
-2024-11-22 11:18:25 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000078693...
-2024-11-22 11:18:27 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 10
-2024-11-22 11:18:28 - central_logger - ERROR - La ligne avec le numéro facture PF20240000078693 n'a pas été trouvée ou n'est pas cliquable.
-2024-11-22 11:18:28 - central_logger - WARNING - Contrat PF20240000078693 non trouvé. Passage au suivant.
-2024-11-22 11:18:28 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:18:30 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:18:30 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:18:30 - central_logger - WARNING - Échec du traitement du contrat PF20240000078693 : Contrat non trouvé
-2024-11-22 11:18:30 - central_logger - INFO - Début du traitement du contrat PF20240000071039.
-2024-11-22 11:18:30 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:18:33 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:18:35 - central_logger - INFO - Saisie du numéro facture : PF20240000071039
-2024-11-22 11:18:35 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:18:35 - central_logger - INFO - Numéro facture PF20240000071039 saisi et recherche lancée avec succès.
-2024-11-22 11:18:37 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000071039...
-2024-11-22 11:18:48 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000071039 n'a pas été trouvée.
-2024-11-22 11:18:48 - central_logger - WARNING - Contrat PF20240000071039 non trouvé. Passage au suivant.
-2024-11-22 11:18:48 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:18:50 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:18:50 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:18:50 - central_logger - WARNING - Échec du traitement du contrat PF20240000071039 : Contrat non trouvé
-2024-11-22 11:18:50 - central_logger - INFO - Début du traitement du contrat PF20240000087020.
-2024-11-22 11:18:50 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:18:52 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:18:54 - central_logger - INFO - Saisie du numéro facture : PF20240000087020
-2024-11-22 11:18:54 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:18:54 - central_logger - INFO - Numéro facture PF20240000087020 saisi et recherche lancée avec succès.
-2024-11-22 11:18:56 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000087020...
-2024-11-22 11:19:07 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000087020 n'a pas été trouvée.
-2024-11-22 11:19:07 - central_logger - WARNING - Contrat PF20240000087020 non trouvé. Passage au suivant.
-2024-11-22 11:19:07 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:19:09 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:19:09 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:19:09 - central_logger - WARNING - Échec du traitement du contrat PF20240000087020 : Contrat non trouvé
-2024-11-22 11:19:09 - central_logger - INFO - Début du traitement du contrat PF20240000084296.
-2024-11-22 11:19:09 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:19:11 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:19:13 - central_logger - INFO - Saisie du numéro facture : PF20240000084296
-2024-11-22 11:19:13 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:19:13 - central_logger - INFO - Numéro facture PF20240000084296 saisi et recherche lancée avec succès.
-2024-11-22 11:19:15 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000084296...
-2024-11-22 11:19:17 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:19:17 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000084296
-2024-11-22 11:19:17 - central_logger - INFO - Ligne avec le numéro facture PF20240000084296 sélectionnée et cliquée avec succès.
-2024-11-22 11:19:19 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:19:19 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:19:26 - central_logger - INFO - SIRET remplacé par 18001404502021.
-2024-11-22 11:19:26 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:19:26 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:19:29 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:19:29 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:19:29 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:19:31 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:19:33 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:19:33 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:19:35 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:19:37 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:19:37 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:19:37 - central_logger - INFO - Contrat PF20240000084296 traité avec succès en 26.00 secondes.
-2024-11-22 11:19:37 - central_logger - INFO - Début du traitement du contrat PF20240000069771.
-2024-11-22 11:19:37 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:19:39 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:19:41 - central_logger - INFO - Saisie du numéro facture : PF20240000069771
-2024-11-22 11:19:41 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:19:41 - central_logger - INFO - Numéro facture PF20240000069771 saisi et recherche lancée avec succès.
-2024-11-22 11:19:43 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000069771...
-2024-11-22 11:19:54 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000069771 n'a pas été trouvée.
-2024-11-22 11:19:54 - central_logger - WARNING - Contrat PF20240000069771 non trouvé. Passage au suivant.
-2024-11-22 11:19:54 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:19:56 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:19:56 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:19:56 - central_logger - WARNING - Échec du traitement du contrat PF20240000069771 : Contrat non trouvé
-2024-11-22 11:19:56 - central_logger - INFO - Début du traitement du contrat PF20240000095260.
-2024-11-22 11:19:56 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:19:58 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:20:00 - central_logger - INFO - Saisie du numéro facture : PF20240000095260
-2024-11-22 11:20:00 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:20:00 - central_logger - INFO - Numéro facture PF20240000095260 saisi et recherche lancée avec succès.
-2024-11-22 11:20:02 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000095260...
-2024-11-22 11:20:04 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 10
-2024-11-22 11:20:06 - central_logger - ERROR - La ligne avec le numéro facture PF20240000095260 n'a pas été trouvée ou n'est pas cliquable.
-2024-11-22 11:20:06 - central_logger - WARNING - Contrat PF20240000095260 non trouvé. Passage au suivant.
-2024-11-22 11:20:06 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:20:06 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:20:06 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:20:06 - central_logger - WARNING - Échec du traitement du contrat PF20240000095260 : Contrat non trouvé
-2024-11-22 11:20:06 - central_logger - INFO - Début du traitement du contrat PF20240000069863.
-2024-11-22 11:20:06 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:20:07 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:20:09 - central_logger - INFO - Saisie du numéro facture : PF20240000069863
-2024-11-22 11:20:09 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:20:09 - central_logger - INFO - Numéro facture PF20240000069863 saisi et recherche lancée avec succès.
-2024-11-22 11:20:11 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000069863...
-2024-11-22 11:20:21 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000069863 n'a pas été trouvée.
-2024-11-22 11:20:21 - central_logger - WARNING - Contrat PF20240000069863 non trouvé. Passage au suivant.
-2024-11-22 11:20:21 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:20:23 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:20:23 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:20:23 - central_logger - WARNING - Échec du traitement du contrat PF20240000069863 : Contrat non trouvé
-2024-11-22 11:20:23 - central_logger - INFO - Début du traitement du contrat PF20240000069994.
-2024-11-22 11:20:23 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:20:26 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:20:28 - central_logger - INFO - Saisie du numéro facture : PF20240000069994
-2024-11-22 11:20:28 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:20:28 - central_logger - INFO - Numéro facture PF20240000069994 saisi et recherche lancée avec succès.
-2024-11-22 11:20:30 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000069994...
-2024-11-22 11:20:40 - central_logger - ERROR - Le tableau des documents ou la ligne avec le numéro facture PF20240000069994 n'a pas été trouvée.
-2024-11-22 11:20:40 - central_logger - WARNING - Contrat PF20240000069994 non trouvé. Passage au suivant.
-2024-11-22 11:20:40 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:20:43 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:20:43 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:20:43 - central_logger - WARNING - Échec du traitement du contrat PF20240000069994 : Contrat non trouvé
-2024-11-22 11:20:43 - central_logger - INFO - Début du traitement du contrat PF20240000083282.
-2024-11-22 11:20:43 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:20:46 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:20:48 - central_logger - INFO - Saisie du numéro facture : PF20240000083282
-2024-11-22 11:20:48 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:20:48 - central_logger - INFO - Numéro facture PF20240000083282 saisi et recherche lancée avec succès.
-2024-11-22 11:20:50 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000083282...
-2024-11-22 11:20:52 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:20:52 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000083282
-2024-11-22 11:20:52 - central_logger - INFO - Ligne avec le numéro facture PF20240000083282 sélectionnée et cliquée avec succès.
-2024-11-22 11:20:54 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:20:54 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:21:01 - central_logger - INFO - SIRET remplacé par 18001404502245.
-2024-11-22 11:21:01 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:21:01 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:21:03 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:21:03 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:21:03 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:21:06 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:21:08 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:21:08 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:21:10 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:21:12 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:21:12 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:21:12 - central_logger - INFO - Contrat PF20240000083282 traité avec succès en 26.00 secondes.
-2024-11-22 11:21:12 - central_logger - INFO - Début du traitement du contrat PF20240000078705.
-2024-11-22 11:21:12 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:21:14 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:21:16 - central_logger - INFO - Saisie du numéro facture : PF20240000078705
-2024-11-22 11:21:16 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:21:16 - central_logger - INFO - Numéro facture PF20240000078705 saisi et recherche lancée avec succès.
-2024-11-22 11:21:18 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000078705...
-2024-11-22 11:21:20 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:21:20 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000078705
-2024-11-22 11:21:20 - central_logger - INFO - Ligne avec le numéro facture PF20240000078705 sélectionnée et cliquée avec succès.
-2024-11-22 11:21:22 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:21:22 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:21:30 - central_logger - INFO - SIRET remplacé par 19450855200016.
-2024-11-22 11:21:30 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:21:30 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:21:32 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:21:32 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:21:32 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:21:34 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:21:36 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:21:36 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:21:38 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:21:40 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:21:40 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:21:40 - central_logger - INFO - Contrat PF20240000078705 traité avec succès en 26.00 secondes.
-2024-11-22 11:21:40 - central_logger - INFO - Début du traitement du contrat PF20240000103719.
-2024-11-22 11:21:40 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:21:43 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:21:45 - central_logger - INFO - Saisie du numéro facture : PF20240000103719
-2024-11-22 11:21:45 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:21:45 - central_logger - INFO - Numéro facture PF20240000103719 saisi et recherche lancée avec succès.
-2024-11-22 11:21:47 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000103719...
-2024-11-22 11:21:49 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:21:49 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000103719
-2024-11-22 11:21:49 - central_logger - INFO - Ligne avec le numéro facture PF20240000103719 sélectionnée et cliquée avec succès.
-2024-11-22 11:21:51 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:21:51 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:21:58 - central_logger - INFO - SIRET remplacé par 18005302700017.
-2024-11-22 11:21:58 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:21:58 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:22:00 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:22:00 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:22:00 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:22:03 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:22:05 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:22:05 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:22:07 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:22:09 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:22:09 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:22:09 - central_logger - INFO - Contrat PF20240000103719 traité avec succès en 26.00 secondes.
-2024-11-22 11:22:09 - central_logger - INFO - Début du traitement du contrat PF20240000052783.
-2024-11-22 11:22:09 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:22:11 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:22:13 - central_logger - INFO - Saisie du numéro facture : PF20240000052783
-2024-11-22 11:22:13 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:22:13 - central_logger - INFO - Numéro facture PF20240000052783 saisi et recherche lancée avec succès.
-2024-11-22 11:22:15 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000052783...
-2024-11-22 11:22:17 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:22:17 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000052783
-2024-11-22 11:22:17 - central_logger - INFO - Ligne avec le numéro facture PF20240000052783 sélectionnée et cliquée avec succès.
-2024-11-22 11:22:19 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:22:19 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:22:26 - central_logger - INFO - SIRET remplacé par 26750045201928.
-2024-11-22 11:22:26 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:22:27 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:22:29 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:22:29 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:22:29 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:22:31 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:22:33 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:22:33 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:22:35 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:22:37 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:22:37 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:22:37 - central_logger - INFO - Contrat PF20240000052783 traité avec succès en 26.00 secondes.
-2024-11-22 11:22:37 - central_logger - INFO - Début du traitement du contrat PF20240000020089.
-2024-11-22 11:22:37 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:22:40 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:22:42 - central_logger - INFO - Saisie du numéro facture : PF20240000020089
-2024-11-22 11:22:42 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:22:42 - central_logger - INFO - Numéro facture PF20240000020089 saisi et recherche lancée avec succès.
-2024-11-22 11:22:44 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000020089...
-2024-11-22 11:22:46 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:22:46 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000020089
-2024-11-22 11:22:46 - central_logger - INFO - Ligne avec le numéro facture PF20240000020089 sélectionnée et cliquée avec succès.
-2024-11-22 11:22:48 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:22:48 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:22:55 - central_logger - INFO - SIRET remplacé par 13000537400033.
-2024-11-22 11:22:55 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:22:55 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:22:57 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:22:57 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:22:57 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:22:59 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:23:01 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:23:02 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:23:04 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:23:06 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:23:06 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:23:06 - central_logger - INFO - Contrat PF20240000020089 traité avec succès en 26.00 secondes.
-2024-11-22 11:23:06 - central_logger - INFO - Début du traitement du contrat PF20240000030333.
-2024-11-22 11:23:06 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:23:08 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:23:10 - central_logger - INFO - Saisie du numéro facture : PF20240000030333
-2024-11-22 11:23:10 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:23:10 - central_logger - INFO - Numéro facture PF20240000030333 saisi et recherche lancée avec succès.
-2024-11-22 11:23:12 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000030333...
-2024-11-22 11:23:14 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:23:14 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000030333
-2024-11-22 11:23:14 - central_logger - INFO - Ligne avec le numéro facture PF20240000030333 sélectionnée et cliquée avec succès.
-2024-11-22 11:23:16 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:23:16 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:23:23 - central_logger - INFO - SIRET remplacé par 13000537400033.
-2024-11-22 11:23:23 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:23:23 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:23:26 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:23:26 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:23:26 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:23:28 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:23:30 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:23:30 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:23:32 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:23:34 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:23:34 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:23:34 - central_logger - INFO - Contrat PF20240000030333 traité avec succès en 26.00 secondes.
-2024-11-22 11:23:34 - central_logger - INFO - Début du traitement du contrat PF20240000019096.
-2024-11-22 11:23:34 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:23:36 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:23:38 - central_logger - INFO - Saisie du numéro facture : PF20240000019096
-2024-11-22 11:23:38 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:23:38 - central_logger - INFO - Numéro facture PF20240000019096 saisi et recherche lancée avec succès.
-2024-11-22 11:23:40 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000019096...
-2024-11-22 11:23:42 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:23:42 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000019096
-2024-11-22 11:23:43 - central_logger - INFO - Ligne avec le numéro facture PF20240000019096 sélectionnée et cliquée avec succès.
-2024-11-22 11:23:45 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:23:45 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:23:52 - central_logger - INFO - SIRET remplacé par 75407847500011.
-2024-11-22 11:23:52 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:23:52 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:23:54 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:23:54 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:23:54 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:23:56 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:23:58 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:23:58 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:24:00 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:24:02 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:24:02 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2024-11-22 11:24:02 - central_logger - INFO - Contrat PF20240000019096 traité avec succès en 26.00 secondes.
-2024-11-22 11:24:02 - central_logger - INFO - Début du traitement du contrat PF20240000041986.
-2024-11-22 11:24:02 - central_logger - INFO - Recherche de la div contenant 'Rejets AIFE'...
-2024-11-22 11:24:05 - central_logger - INFO - Clic sur 'Rejets AIFE' effectué avec succès.
-2024-11-22 11:24:07 - central_logger - INFO - Saisie du numéro facture : PF20240000041986
-2024-11-22 11:24:07 - central_logger - DEBUG - Appui sur Entrée pour lancer la recherche.
-2024-11-22 11:24:07 - central_logger - INFO - Numéro facture PF20240000041986 saisi et recherche lancée avec succès.
-2024-11-22 11:24:09 - central_logger - INFO - Sélection de la ligne avec le numéro facture : PF20240000041986...
-2024-11-22 11:24:11 - central_logger - DEBUG - Nombre de lignes trouvées dans le tableau : 1
-2024-11-22 11:24:11 - central_logger - INFO - Ligne trouvée avec le numéro facture PF20240000041986
-2024-11-22 11:24:11 - central_logger - INFO - Ligne avec le numéro facture PF20240000041986 sélectionnée et cliquée avec succès.
-2024-11-22 11:24:13 - central_logger - INFO - Attente de l'apparition de la modal...
-2024-11-22 11:24:13 - central_logger - INFO - Modal apparue et prête à être utilisée.
-2024-11-22 11:24:20 - central_logger - INFO - SIRET remplacé par 77555911501378.
-2024-11-22 11:24:20 - central_logger - DEBUG - Recherche du bouton avec le texte 'Sauvegarder'...
-2024-11-22 11:24:20 - central_logger - INFO - Bouton 'Sauvegarder' trouvé et cliqué.
-2024-11-22 11:24:23 - central_logger - INFO - Tentative de clic sur le bouton principal 'Valider'...
-2024-11-22 11:24:23 - central_logger - DEBUG - Recherche du bouton avec le texte 'Valider'...
-2024-11-22 11:24:23 - central_logger - INFO - Bouton 'Valider' trouvé et cliqué.
-2024-11-22 11:24:25 - central_logger - INFO - Attente de l'apparition de la modale après clic sur 'Valider'...
-2024-11-22 11:24:27 - central_logger - INFO - Tentative de clic sur le bouton dans la modale avec le sélecteur 'body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary'...
-2024-11-22 11:24:27 - central_logger - INFO - Clic sur le bouton dans la modale réussi.
-2024-11-22 11:24:29 - central_logger - DEBUG - Retour à l'URL de départ https://portail.e-facture.net/saml/saml-login.php?nomSP=ARTIMON_PROD avant de retourner le WebDriver au pool.
-2024-11-22 11:24:31 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
-2024-11-22 11:24:31 - central_logger - INFO - Contrat PF20240000041986 traité avec succès en 26.00 secondes.
-2024-11-22 11:24:31 - central_logger - INFO - Traitement de tous les contrats terminé.
-2024-11-22 11:24:31 - central_logger - INFO - Closing all WebDriver instances...
-2024-11-22 11:24:33 - central_logger - INFO - All WebDriver instances closed.
+2025-01-06 14:33:43 - central_logger - DEBUG - WebDriverPool initialized with max_size=20
+2025-01-06 14:33:43 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-06 14:33:45 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
+2025-01-06 14:33:45 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-06 14:33:49 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
+2025-01-06 14:33:49 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-06 14:33:54 - central_logger - DEBUG - WebDriver instance created and navigated to URL successfully
+2025-01-06 14:33:54 - central_logger - INFO - Nom du RPA reçu: Affranchigo
+2025-01-06 14:33:54 - central_logger - INFO - Lancement du RPA Affranchigo avec le fichier data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx
+2025-01-06 14:33:54 - central_logger - DEBUG - Démarrage du RPA Affranchigo en multi-threading...
+2025-01-06 14:33:54 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats à partir du fichier : data/numeros_contrat_robot.json
+2025-01-06 14:33:54 - central_logger - DEBUG - Numéros de contrat récupérés : ['D-749194-1', 'D-984609-1', 'D-724524-1', 'D-405962-1', 'D-1003851-1', '1-10265747400', 'D-586758-1', '1-10063522288']
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-749194-1
+2025-01-06 14:33:54 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-984609-1
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-724524-1
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-405962-1
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1003851-1
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10265747400
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-586758-1
+2025-01-06 14:33:54 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10063522288
+2025-01-06 14:33:54 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-749194-1.
+2025-01-06 14:33:54 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:33:54 - central_logger - INFO - Soumission du numéro de contrat D-749194-1...
+2025-01-06 14:33:54 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-984609-1.
+2025-01-06 14:33:54 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:33:54 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-724524-1.
+2025-01-06 14:33:54 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-06 14:33:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-06 14:33:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-06 14:33:55 - central_logger - INFO - Numéro de contrat D-749194-1 soumis avec succès.
+2025-01-06 14:33:55 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:33:55 - central_logger - INFO - Soumission du numéro de contrat D-984609-1...
+2025-01-06 14:33:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-06 14:33:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-06 14:33:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-06 14:33:55 - central_logger - INFO - Numéro de contrat D-984609-1 soumis avec succès.
+2025-01-06 14:33:55 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:33:55 - central_logger - INFO - Soumission du numéro de contrat D-724524-1...
+2025-01-06 14:33:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-06 14:33:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-06 14:33:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-06 14:33:55 - central_logger - INFO - Numéro de contrat D-724524-1 soumis avec succès.
+2025-01-06 14:33:55 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:33:57 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-06 14:33:57 - central_logger - DEBUG - Tentative pour cliquer sur le bouton de modification.
+2025-01-06 14:33:57 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-06 14:33:57 - central_logger - DEBUG - Tentative pour cliquer sur le bouton de modification.
+2025-01-06 14:33:57 - central_logger - INFO - Clique sur le bouton de modification pour le contrat D-984609-1 effectué avec succès.
+2025-01-06 14:33:57 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:33:57 - central_logger - DEBUG - Attente de la redirection...
+2025-01-06 14:33:58 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-06 14:33:58 - central_logger - DEBUG - Tentative pour cliquer sur le bouton de modification.
+2025-01-06 14:34:01 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:34:02 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-06 14:34:02 - central_logger - DEBUG - La page est complètement chargée
+2025-01-06 14:34:05 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:34:05 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-06 14:34:05 - central_logger - INFO - D-984609-1 * Traitement du contrat Affranchigo Premium
+2025-01-06 14:34:05 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:34:05 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:34:07 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:34:07 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:34:07 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:34:07 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:34:18 - central_logger - INFO - D-724524-1 * Le bouton 'Modification' n'est pas trouvé. Contrat Annexes Multisites ou autre cas spécifique.
+2025-01-06 14:34:18 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:34:18 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 1
+2025-01-06 14:34:18 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:34:18 - central_logger - DEBUG - Attente de la redirection...
+2025-01-06 14:34:18 - central_logger - INFO - D-749194-1 * Le bouton 'Modification' n'est pas trouvé. Contrat Annexes Multisites ou autre cas spécifique.
+2025-01-06 14:34:18 - central_logger - DEBUG - Le fichier n'existe pas, il sera créé.
+2025-01-06 14:34:18 - central_logger - DEBUG - Contrat numéro D-749194-1 ajouté.
+2025-01-06 14:34:18 - central_logger - DEBUG - Contrat D-749194-1 enregistré comme non modifiable en raison de 'Annexe Multisites'.
+2025-01-06 14:34:18 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:34:18 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 2
+2025-01-06 14:34:18 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:34:18 - central_logger - DEBUG - Attente de la redirection...
+2025-01-06 14:34:27 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:34:27 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:34:27 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:34:27 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:34:38 - central_logger - ERROR - La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé.
+Traceback (most recent call last):
+  File "c:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\data\rpa_modules\affranchigo.py", line 283, in wait_for_complete_redirection
+    h1_element = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:34:38 - central_logger - DEBUG - Le fichier n'existe pas, il sera créé.
+2025-01-06 14:34:38 - central_logger - INFO - Contrat numéro D-724524-1 ajouté aux non modifiables.
+2025-01-06 14:34:38 - central_logger - DEBUG - La page est complètement chargée
+2025-01-06 14:34:39 - central_logger - ERROR - La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé.
+Traceback (most recent call last):
+  File "c:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\data\rpa_modules\affranchigo.py", line 283, in wait_for_complete_redirection
+    h1_element = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:34:39 - central_logger - INFO - Contrat numéro D-749194-1 ajouté aux non modifiables.
+2025-01-06 14:34:39 - central_logger - DEBUG - La page est complètement chargée
+2025-01-06 14:34:48 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:34:48 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:34:48 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:34:53 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-06 14:34:53 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-06 14:34:53 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:34:53 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:34:53 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:34:53 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:35:01 - central_logger - ERROR - Service non reconnu : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+Traceback (most recent call last):
+  File "c:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\data\rpa_modules\affranchigo.py", line 332, in modifications_conditions_ventes
+    h1_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#header_offre_descr > h1")))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:35:01 - central_logger - INFO - D-724524-1 * Traitement terminé.
+2025-01-06 14:35:02 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:35:02 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 3
+2025-01-06 14:35:02 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:35:02 - central_logger - INFO - Contrat D-724524-1 traité avec succès.
+2025-01-06 14:35:02 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-405962-1.
+2025-01-06 14:35:02 - central_logger - INFO - Soumission du numéro de contrat D-405962-1...
+2025-01-06 14:35:02 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-06 14:35:02 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-06 14:35:02 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-06 14:35:02 - central_logger - INFO - Numéro de contrat D-405962-1 soumis avec succès.
+2025-01-06 14:35:02 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:35:02 - central_logger - ERROR - Service non reconnu : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+Traceback (most recent call last):
+  File "c:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\data\rpa_modules\affranchigo.py", line 332, in modifications_conditions_ventes
+    h1_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#header_offre_descr > h1")))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:35:02 - central_logger - INFO - D-749194-1 * Traitement terminé.
+2025-01-06 14:35:02 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:35:02 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 3
+2025-01-06 14:35:02 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:35:02 - central_logger - INFO - Contrat D-749194-1 traité avec succès.
+2025-01-06 14:35:03 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-1003851-1.
+2025-01-06 14:35:03 - central_logger - INFO - Soumission du numéro de contrat D-1003851-1...
+2025-01-06 14:35:03 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-06 14:35:03 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-06 14:35:03 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-06 14:35:03 - central_logger - INFO - Numéro de contrat D-1003851-1 soumis avec succès.
+2025-01-06 14:35:03 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:35:03 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-06 14:35:03 - central_logger - DEBUG - Tentative pour cliquer sur le bouton de modification.
+2025-01-06 14:35:03 - central_logger - INFO - Clique sur le bouton de modification pour le contrat D-405962-1 effectué avec succès.
+2025-01-06 14:35:03 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:35:03 - central_logger - DEBUG - Attente de la redirection...
+2025-01-06 14:35:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-06 14:35:05 - central_logger - DEBUG - Tentative pour cliquer sur le bouton de modification.
+2025-01-06 14:35:05 - central_logger - INFO - Clique sur le bouton de modification pour le contrat D-1003851-1 effectué avec succès.
+2025-01-06 14:35:05 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:35:05 - central_logger - DEBUG - Attente de la redirection...
+2025-01-06 14:35:06 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:35:07 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-06 14:35:07 - central_logger - DEBUG - La page est complètement chargée
+2025-01-06 14:35:08 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:35:08 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-06 14:35:08 - central_logger - DEBUG - La page est complètement chargée
+2025-01-06 14:35:10 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:35:10 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-06 14:35:10 - central_logger - INFO - D-405962-1 * Traitement du contrat Affranchigo Premium
+2025-01-06 14:35:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:35:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:35:11 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:35:11 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-06 14:35:11 - central_logger - INFO - D-1003851-1 * Traitement du contrat Affranchigo Premium
+2025-01-06 14:35:11 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:35:12 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:35:12 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:35:12 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:35:12 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:35:12 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:35:13 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:35:13 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:35:13 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:35:13 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:35:14 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:35:14 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:35:14 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:35:14 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:35:33 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:35:33 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:35:33 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:35:33 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:35:34 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:35:34 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:35:34 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:35:34 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:35:34 - central_logger - INFO - D-984609-1 * Rôle à l'arrivé un bloc Traitement et un bloc Dépôt
+2025-01-06 14:35:34 - central_logger - INFO - D-984609-1 * Ancienne  première valeur Régate  800440
+2025-01-06 14:35:34 - central_logger - INFO - D-984609-1 * Ancienne  seconde valeur Régate  801920
+2025-01-06 14:35:34 - central_logger - INFO - D-984609-1 * Futur valeur du fichier Excel Dépôt 801560
+2025-01-06 14:35:34 - central_logger - INFO - D-984609-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-06 14:35:34 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 801560
+2025-01-06 14:35:34 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:35:34 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:35:34 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:35:34 - central_logger - DEBUG - D-984609-1 * Nouveau code régate attribué 801560
+2025-01-06 14:35:34 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="28ad857e43090ef43ce550b840e66fa0", element="f.590DB323967ACFEB2F25F10ECEF4389E.d.56393BCF99F669A7748BAB1F69A8C71B.e.277")>
+2025-01-06 14:35:34 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:35:34 - central_logger - DEBUG - D-984609-1 * Selection actuelle dans le select: None
+2025-01-06 14:35:34 - central_logger - INFO - D-984609-1 * Nouveau Libellé d'établissement : 801560 POULAINVILLE AMIENS PPDC
+2025-01-06 14:35:34 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-06 14:35:35 - central_logger - DEBUG - D-984609-1 * Nouveau code régate attribué 598310
+2025-01-06 14:35:35 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="28ad857e43090ef43ce550b840e66fa0", element="f.590DB323967ACFEB2F25F10ECEF4389E.d.56393BCF99F669A7748BAB1F69A8C71B.e.279")>
+2025-01-06 14:35:35 - central_logger - DEBUG - D-984609-1 * Selection actuelle dans le select: None
+2025-01-06 14:35:35 - central_logger - INFO - D-984609-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-06 14:35:37 - central_logger - ERROR - Erreur lors de la sélection du rôle 'Dépôt' : Message: Select only works on <select> elements, not on input
+
+2025-01-06 14:35:37 - central_logger - ERROR - Erreur lors de la sélection du rôle 'Traitement' : Message: Select only works on <select> elements, not on input
+
+2025-01-06 14:35:37 - central_logger - INFO - D-984609-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-06 14:35:37 - central_logger - INFO - D-984609-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-06 14:35:37 - central_logger - DEBUG - D-984609-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-06 14:35:38 - central_logger - ERROR - Erreur lors du traitement du contrat D-984609-1 : Message: element click intercepted: Element <button type="submit" class="btn btn-info col-xs-offset-2 col-xs-8">...</button> is not clickable at point (777, 16). Other element would receive the click: <aside _ngcontent-gle-c78="">...</aside>
+  (Session info: MicrosoftEdge=130.0.2849.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989BCB0D]
+	(No symbol) [0x00007FF6989BADBE]
+	(No symbol) [0x00007FF6989B8B2A]
+	(No symbol) [0x00007FF6989B7F3F]
+	(No symbol) [0x00007FF6989AC65A]
+	(No symbol) [0x00007FF6989D7F4A]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989ABF6D]
+	(No symbol) [0x00007FF6989D8230]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:35:38 - central_logger - INFO - D-984609-1 * Traitement terminé.
+2025-01-06 14:35:38 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:35:39 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 3
+2025-01-06 14:35:39 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:35:39 - central_logger - INFO - Contrat D-984609-1 traité avec succès.
+2025-01-06 14:35:39 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-10265747400.
+2025-01-06 14:35:39 - central_logger - INFO - Soumission du numéro de contrat 1-10265747400...
+2025-01-06 14:35:53 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:35:53 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:35:53 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:35:54 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:35:55 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:35:55 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:35:58 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-06 14:35:58 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-06 14:35:58 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:35:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:35:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:35:58 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:35:59 - central_logger - WARNING - Timeout lors de la soumission du contrat 1-10265747400, la page pourrait ne pas avoir réagi à temps.
+2025-01-06 14:35:59 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:36:00 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-06 14:36:00 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-06 14:36:00 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:36:00 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:36:00 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:36:00 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:36:19 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:36:19 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:36:19 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:36:19 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:36:20 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:36:20 - central_logger - ERROR - Erreur lors du traitement du contrat 1-10265747400: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:36:20 - central_logger - INFO - Contrat numéro 1-10265747400 ajouté aux non modifiables.
+2025-01-06 14:36:20 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:36:20 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 3
+2025-01-06 14:36:20 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:36:20 - central_logger - WARNING - Échec du traitement du contrat 1-10265747400.
+2025-01-06 14:36:20 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-586758-1.
+2025-01-06 14:36:20 - central_logger - INFO - Soumission du numéro de contrat D-586758-1...
+2025-01-06 14:36:20 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:36:20 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:36:20 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:36:20 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:36:39 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:36:40 - central_logger - WARNING - Timeout lors de la soumission du contrat D-586758-1, la page pourrait ne pas avoir réagi à temps.
+2025-01-06 14:36:40 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:36:40 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:36:40 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:36:40 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:36:40 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:36:40 - central_logger - INFO - D-1003851-1 * Rôle à l'arrivé un bloc Traitement et un bloc Dépôt
+2025-01-06 14:36:40 - central_logger - INFO - D-1003851-1 * Ancienne  première valeur Régate  800760
+2025-01-06 14:36:40 - central_logger - INFO - D-1003851-1 * Ancienne  seconde valeur Régate  801920
+2025-01-06 14:36:40 - central_logger - INFO - D-1003851-1 * Futur valeur du fichier Excel Dépôt 801560
+2025-01-06 14:36:40 - central_logger - INFO - D-1003851-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-06 14:36:40 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 801560
+2025-01-06 14:36:41 - central_logger - DEBUG - D-1003851-1 * Nouveau code régate attribué 801560
+2025-01-06 14:36:41 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="46b149083c704b3b89c177e3d63653dc", element="f.200C34C4E35D3414C949CE99F7992315.d.7DD748ECB6FC3AE3F93125133BAA97A4.e.444")>
+2025-01-06 14:36:41 - central_logger - DEBUG - D-1003851-1 * Selection actuelle dans le select: None
+2025-01-06 14:36:41 - central_logger - INFO - D-1003851-1 * Nouveau Libellé d'établissement : 801560 POULAINVILLE AMIENS PPDC
+2025-01-06 14:36:41 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-06 14:36:41 - central_logger - DEBUG - D-1003851-1 * Nouveau code régate attribué 598310
+2025-01-06 14:36:41 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="46b149083c704b3b89c177e3d63653dc", element="f.200C34C4E35D3414C949CE99F7992315.d.7DD748ECB6FC3AE3F93125133BAA97A4.e.446")>
+2025-01-06 14:36:41 - central_logger - DEBUG - D-1003851-1 * Selection actuelle dans le select: None
+2025-01-06 14:36:42 - central_logger - INFO - D-1003851-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-06 14:36:44 - central_logger - ERROR - Erreur lors de la sélection du rôle 'Dépôt' : Message: Select only works on <select> elements, not on input
+
+2025-01-06 14:36:44 - central_logger - ERROR - Erreur lors de la sélection du rôle 'Traitement' : Message: Select only works on <select> elements, not on input
+
+2025-01-06 14:36:44 - central_logger - INFO - D-1003851-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-06 14:36:44 - central_logger - INFO - D-1003851-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-06 14:36:44 - central_logger - DEBUG - D-1003851-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-06 14:36:45 - central_logger - ERROR - Erreur lors du traitement du contrat D-1003851-1 : Message: element click intercepted: Element <button type="submit" class="btn btn-info col-xs-offset-2 col-xs-8">...</button> is not clickable at point (777, 16). Other element would receive the click: <aside _ngcontent-ffk-c78="">...</aside>
+  (Session info: MicrosoftEdge=130.0.2849.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989BCB0D]
+	(No symbol) [0x00007FF6989BADBE]
+	(No symbol) [0x00007FF6989B8B2A]
+	(No symbol) [0x00007FF6989B7F3F]
+	(No symbol) [0x00007FF6989AC65A]
+	(No symbol) [0x00007FF6989D7F4A]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989ABF6D]
+	(No symbol) [0x00007FF6989D8230]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:36:45 - central_logger - INFO - D-1003851-1 * Traitement terminé.
+2025-01-06 14:36:45 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:36:45 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 3
+2025-01-06 14:36:45 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-06 14:36:45 - central_logger - INFO - Contrat D-1003851-1 traité avec succès.
+2025-01-06 14:36:45 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-10063522288.
+2025-01-06 14:36:45 - central_logger - INFO - Soumission du numéro de contrat 1-10063522288...
+2025-01-06 14:36:45 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-06 14:36:46 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-06 14:36:46 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-06 14:36:46 - central_logger - INFO - Numéro de contrat 1-10063522288 soumis avec succès.
+2025-01-06 14:36:46 - central_logger - INFO - Changement vers iframe et clic sur 'Modification'...
+2025-01-06 14:36:47 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-06 14:36:47 - central_logger - DEBUG - Tentative pour cliquer sur le bouton de modification.
+2025-01-06 14:36:47 - central_logger - INFO - Clique sur le bouton de modification pour le contrat 1-10063522288 effectué avec succès.
+2025-01-06 14:36:47 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:36:47 - central_logger - DEBUG - Attente de la redirection...
+2025-01-06 14:36:49 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:36:50 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-06 14:36:50 - central_logger - DEBUG - La page est complètement chargée
+2025-01-06 14:36:53 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-06 14:36:53 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-06 14:36:53 - central_logger - INFO - 1-10063522288 * Traitement du contrat Affranchigo Premium
+2025-01-06 14:36:53 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:36:53 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:36:55 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:36:55 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:36:55 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:36:55 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:36:59 - central_logger - WARNING - D-405962-1 * Tentative 1/3 échouée en raison d'un timeout. Réessayer...
+2025-01-06 14:36:59 - central_logger - ERROR - Impossible d'initialiser les sélecteurs pour le contrat D-405962-1
+2025-01-06 14:36:59 - central_logger - INFO - D-405962-1 * Traitement terminé.
+2025-01-06 14:36:59 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:36:59 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 3
+2025-01-06 14:36:59 - central_logger - INFO - Contrat D-405962-1 traité avec succès.
+2025-01-06 14:37:01 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-06 14:37:01 - central_logger - ERROR - Erreur lors du traitement du contrat D-586758-1: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989B672E]
+	(No symbol) [0x00007FF6989B67B5]
+	(No symbol) [0x00007FF6989F4ED7]
+	(No symbol) [0x00007FF6989D7F8F]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:37:01 - central_logger - INFO - Contrat numéro D-586758-1 ajouté aux non modifiables.
+2025-01-06 14:37:01 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:37:01 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 4
+2025-01-06 14:37:01 - central_logger - WARNING - Échec du traitement du contrat D-586758-1.
+2025-01-06 14:37:16 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:37:16 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:37:16 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:37:16 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:37:36 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:37:36 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:37:36 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:37:41 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-06 14:37:41 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-06 14:37:41 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-06 14:37:41 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-06 14:37:41 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-06 14:37:41 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-06 14:38:01 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:38:01 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-06 14:38:01 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-06 14:38:01 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-06 14:38:21 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-06 14:38:21 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-06 14:38:21 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-06 14:38:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-06 14:38:21 - central_logger - INFO - 1-10063522288 * Rôle à l'arrivé un bloc Traitement et un bloc Dépôt
+2025-01-06 14:38:21 - central_logger - INFO - 1-10063522288 * Ancienne  première valeur Régate  800380
+2025-01-06 14:38:21 - central_logger - INFO - 1-10063522288 * Ancienne  seconde valeur Régate  801920
+2025-01-06 14:38:22 - central_logger - INFO - 1-10063522288 * Futur valeur du fichier Excel Dépôt 801560
+2025-01-06 14:38:22 - central_logger - INFO - 1-10063522288 * Futur valeur du fichier Excel traitement 598310
+2025-01-06 14:38:22 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 801560
+2025-01-06 14:38:22 - central_logger - DEBUG - 1-10063522288 * Nouveau code régate attribué 801560
+2025-01-06 14:38:22 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="28ad857e43090ef43ce550b840e66fa0", element="f.590DB323967ACFEB2F25F10ECEF4389E.d.B0ADF477A31BE8C78570D531E9C82A3A.e.949")>
+2025-01-06 14:38:22 - central_logger - DEBUG - 1-10063522288 * Selection actuelle dans le select: None
+2025-01-06 14:38:22 - central_logger - INFO - 1-10063522288 * Nouveau Libellé d'établissement : 801560 POULAINVILLE AMIENS PPDC
+2025-01-06 14:38:22 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-06 14:38:22 - central_logger - DEBUG - 1-10063522288 * Nouveau code régate attribué 598310
+2025-01-06 14:38:22 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="28ad857e43090ef43ce550b840e66fa0", element="f.590DB323967ACFEB2F25F10ECEF4389E.d.B0ADF477A31BE8C78570D531E9C82A3A.e.951")>
+2025-01-06 14:38:22 - central_logger - DEBUG - 1-10063522288 * Selection actuelle dans le select: None
+2025-01-06 14:38:23 - central_logger - INFO - 1-10063522288 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-06 14:38:25 - central_logger - ERROR - Erreur lors de la sélection du rôle 'Dépôt' : Message: Select only works on <select> elements, not on input
+
+2025-01-06 14:38:25 - central_logger - ERROR - Erreur lors de la sélection du rôle 'Traitement' : Message: Select only works on <select> elements, not on input
+
+2025-01-06 14:38:25 - central_logger - INFO - 1-10063522288 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-06 14:38:25 - central_logger - INFO - 1-10063522288 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-06 14:38:25 - central_logger - DEBUG - 1-10063522288 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-06 14:38:26 - central_logger - ERROR - Erreur lors du traitement du contrat 1-10063522288 : Message: element click intercepted: Element <button type="submit" class="btn btn-info col-xs-offset-2 col-xs-8">...</button> is not clickable at point (777, 16). Other element would receive the click: <aside _ngcontent-krt-c78="">...</aside>
+  (Session info: MicrosoftEdge=130.0.2849.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF698BBCEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698E3BD24+1897988]
+	(No symbol) [0x00007FF69896F1CC]
+	(No symbol) [0x00007FF6989BCB0D]
+	(No symbol) [0x00007FF6989BADBE]
+	(No symbol) [0x00007FF6989B8B2A]
+	(No symbol) [0x00007FF6989B7F3F]
+	(No symbol) [0x00007FF6989AC65A]
+	(No symbol) [0x00007FF6989D7F4A]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989ABF6D]
+	(No symbol) [0x00007FF6989D8230]
+	(No symbol) [0x00007FF6989AC09D]
+	(No symbol) [0x00007FF6989F2887]
+	(No symbol) [0x00007FF6989D7BB3]
+	(No symbol) [0x00007FF6989AB5AC]
+	(No symbol) [0x00007FF6989AAA8D]
+	(No symbol) [0x00007FF6989AB171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D69E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AE095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF698AD3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF698D68B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B59761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B55D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF698B4C28C+273244]
+	BaseThreadInitThunk [0x00007FFF5D047374+20]
+	RtlUserThreadStart [0x00007FFF5F05CC91+33]
+
+2025-01-06 14:38:26 - central_logger - INFO - 1-10063522288 * Traitement terminé.
+2025-01-06 14:38:26 - central_logger - DEBUG - Retour à l'URL de départ https://www.deviscontrat.net-courrier.extra.laposte.fr/appli/ihm/index/acces-dc?profil=ADV avant de retourner le WebDriver au pool.
+2025-01-06 14:38:26 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle du pool : 5
+2025-01-06 14:38:26 - central_logger - INFO - Contrat 1-10063522288 traité avec succès.
+2025-01-06 14:38:26 - central_logger - INFO - Tous les contrats ont été traités avec multi-threading.
+2025-01-06 14:38:26 - central_logger - INFO - Closing all WebDriver instances...
+2025-01-06 14:39:14 - central_logger - INFO - All WebDriver instances closed.

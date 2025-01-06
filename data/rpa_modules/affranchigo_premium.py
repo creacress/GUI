@@ -289,7 +289,7 @@ class AffranchigoPremiumCase:
         """
         try:
             # Charger le fichier Excel
-            df = pd.read_excel('data/data_traitement/Transfert des S3C - 14 octobre 2024 - fichier Alexis.xlsx')
+            df = pd.read_excel('data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx')
             self.logger.debug("Fichier Excel chargé.")
             
             # Trouver la ligne correspondant au numéro de contrat
@@ -321,7 +321,7 @@ class AffranchigoPremiumCase:
         """Traitement principal pour chaque cas."""
         self.logger.info(f"{numero_contrat} * Traitement du contrat Affranchigo Premium")
         # Charger le fichier Excel
-        df = pd.read_excel('data/data_traitement/Transfert des S3C - 14 octobre 2024 - fichier Alexis.xlsx')
+        df = pd.read_excel('data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx')
         self.logger.debug("Fichier Excel chargé.")
 
         # Trouver la ligne correspondant au numéro de contrat
