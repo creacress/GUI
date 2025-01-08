@@ -224,6 +224,18 @@ class AffranchigoRPA:
         else:
             self.logger.debug(f"Contrat numéro {contrat_number} déjà présent, non ajouté.")
             return False
+    
+    def handle_modals(self, driver):
+        """
+        Fonction pour gérer les modales en cliquant sur un bouton spécifique avec JavaScript.
+        """
+        try:
+            driver.execute_script(
+                'document.querySelector("body > div.bootbox.modal.fade.bootbox-alert.in > div > div > div.modal-footer > button").click();'
+            )
+            self.logger.debug("Modal cliqué avec succès.")
+        except Exception as e:
+            self.logger.error(f"Erreur lors du traitement de la modale: {e}")
 
     def handle_non_clickable_element(self, driver, numero_contrat):
         """Gestion des contrats multi-sites ou cas spécifiques."""
@@ -268,6 +280,7 @@ class AffranchigoRPA:
             self.logger.debug("Passé à l'iframe avec succès.")
 
             # Tentative de clic sur le bouton de modification
+            self.handle_modals(driver)
             bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
             driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
             driver.execute_script("arguments[0].click();", bouton_modification)
