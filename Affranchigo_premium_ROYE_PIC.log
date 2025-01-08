@@ -16319,3 +16319,5 @@ Stacktrace:
 2025-01-08 14:08:42 - central_logger - DEBUG - La page est complètement chargée.
 2025-01-08 14:08:42 - central_logger - INFO - Numéro de contrat 1-464894471 soumis avec succès.
 2025-01-08 14:08:42 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+
+document.querySelector("body > div.bootbox.modal.fade.bootbox-alert.in > div > div > div.modal-footer > button")
