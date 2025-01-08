@@ -468,7 +468,7 @@ class AffranchigoRPA:
                     self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
     
 
-    def main(self, max_workers=10):
+    def main(self, max_workers=5):
         self.logger.info("Lancement du traitement des contrats.")
         excel_path="data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx"
         json_path = 'data/numeros_contrat_robot.json'
