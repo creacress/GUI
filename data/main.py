@@ -13,8 +13,11 @@ logger = setup_logger('Affranchigo_premium_ROYE_PIC.log')
 
 # Initialisation du pool de WebDrivers
 DEFAULT_MAX_WORKERS = 5
+DEFAULT_POOL_SIZE = 5
+MAX_POOL_SIZE = 20
+IDLE_TIMEOUT = 300
 
-pool = WebDriverPool(initial_size=DEFAULT_MAX_WORKERS, max_size=DEFAULT_MAX_WORKERS, idle_timeout=300, logger=None)
+pool = WebDriverPool(initial_size=DEFAULT_POOL_SIZE, max_size=MAX_POOL_SIZE, idle_timeout=IDLE_TIMEOUT, logger=logger)
 
 def main_rpa(rpa_name, max_workers=DEFAULT_MAX_WORKERS):
     """
@@ -23,7 +26,7 @@ def main_rpa(rpa_name, max_workers=DEFAULT_MAX_WORKERS):
     try:
         if rpa_name == "Affranchigo":
             affranchigo_rpa = AffranchigoRPA(pool, logger)
-            affranchigo_rpa.main(max_workers=max_workers)  # Appel de la méthode principale
+            affranchigo_rpa.main(max_workers=max_workers)
 
         elif rpa_name == "CasDematerialisation":
             demat_rpa = CasDematerialisationRPA(pool, logger)
@@ -44,9 +47,10 @@ def main_rpa(rpa_name, max_workers=DEFAULT_MAX_WORKERS):
             sys.exit(1)
 
     except Exception as e:
-        logger.error(f"Erreur lors de l'exécution du RPA {rpa_name}: {e}")
+        logger.error(f"Erreur lors de l'exécution du RPA {rpa_name}: {e}", exc_info=True)
     finally:
         # Toujours fermer les WebDrivers à la fin
+        logger.info("Fermeture de tous les WebDrivers...")
         pool.close_all()
 
 if __name__ == "__main__":
@@ -60,6 +64,7 @@ if __name__ == "__main__":
 
     # Log du nom du RPA reçu
     logger.info(f"Nom du RPA reçu: {rpa_name}")
+    logger.info(f"Nombre de threads maximum: {max_workers}")
 
     # Lancer le RPA correspondant
     main_rpa(rpa_name, max_workers)

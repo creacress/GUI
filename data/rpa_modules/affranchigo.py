@@ -401,77 +401,83 @@ class AffranchigoRPA:
 
 
     def process_contract(self, driver, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
-        wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
+        """
+        Traite un contrat spécifique en utilisant un WebDriver.
+        """
+        wait = WebDriverWait(driver, 20)
         start_time = time.time()
 
         try:
             if not driver:
                 raise Exception("Driver non initialisé")
 
-            # Traitement du contrat (soumission, modifications, etc.)
+            # Étapes principales du traitement du contrat
             self.submit_contract_number(driver, wait, numero_contrat)
             self.switch_to_iframe_and_click_modification(driver, wait, numero_contrat)
             self.wait_for_complete_redirection(driver, wait, numero_contrat)
-            contrat_type = self.modifications_conditions_ventes(driver, wait, numero_contrat, dictionnaire, dictionnaire_original)
+            contrat_type = self.modifications_conditions_ventes(
+                driver, wait, numero_contrat, dictionnaire, dictionnaire_original
+            )
 
             self.logger.info(f"{numero_contrat} * Traitement terminé.")
             self.save_processed_contracts([numero_contrat])
 
             end_time = time.time()
             duration = int(end_time - start_time)
-
             return (numero_contrat, True, contrat_type, duration)
 
         except Exception as e:
-            self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}")
+            self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}", exc_info=True)
             self.save_non_modifiable(numero_contrat)
 
-            # Réinitialisation du driver après l'erreur
+            # Réinitialiser ou fermer le driver en cas d'erreur critique
             try:
                 driver.get(self.url)
             except Exception as reset_error:
                 self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
-                driver.quit()  # Fermer le driver si la réinitialisation échoue
-                driver = None  # Forcer la recréation d'un nouveau driver pour le prochain contrat
+                self.pool._remove_driver(driver)  # Utilise la méthode de suppression dans le pool
+                driver = None  # Forcer la recréation pour le prochain contrat
 
             end_time = time.time()
             duration = int(end_time - start_time)
             return (numero_contrat, False, "Erreur", duration)
-        
+
     def process_single_contract(self, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
         """
-        Fonction qui traite un contrat individuel dans un thread séparé.
+        Traite un contrat individuel dans un thread séparé.
         """
         driver = None
         try:
             driver = self.pool.get_driver()  # Récupère un WebDriver pour le contrat
-            self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_contrat}.")
+            self.logger.debug(f"WebDriver récupéré pour le contrat {numero_contrat}.")
 
-            # Appel à la fonction process_contract pour traiter le contrat
+            # Appel à la fonction principale pour traiter le contrat
             return self.process_contract(driver, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
 
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}", exc_info=True)
             return (numero_contrat, False, "Erreur", 0)
-        
+
         finally:
             if driver:
                 try:
                     driver.get(self.url)  # Revenir à l'URL de départ
                 except Exception as e:
-                    self.logger.error(f"Erreur lors du retour à l'URL pour {numero_contrat}: {e}")
-                
-                # Toujours retourner le WebDriver dans le pool après le traitement
+                    self.logger.error(f"Erreur lors du retour à l'URL pour le contrat {numero_contrat}: {e}")
+
+                # Toujours retourner le WebDriver au pool
                 try:
                     self.pool.return_driver(driver)
                 except Exception as e:
-                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
-    
+                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour le contrat {numero_contrat}: {e}")
 
     def main(self, max_workers=5):
-        self.logger.info("Lancement du traitement des contrats.")
-        excel_path="data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx"
-        json_path = 'data/numeros_contrat_robot.json'
+        """
+        Méthode principale pour traiter une liste de contrats.
+        """
+        self.logger.info("Démarrage du traitement des contrats.")
+        excel_path = "data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx"
+        json_path = "data/numeros_contrat_robot.json"
         extract_contrat_numbers_to_json(excel_path, json_path)
 
         dictionnaire_original = self.create_dictionnaire(excel_path)
@@ -497,19 +503,17 @@ class AffranchigoRPA:
                         'Durée': duration
                     })
                 except Exception as e:
-                    self.logger.error(f"Erreur: {e}")
+                    self.logger.error(f"Erreur lors du traitement d'un contrat: {e}")
 
         self.logger.info("Traitement terminé.")
         self.save_results_to_csv(results, "results.csv")
 
-
     def start(self):
         """
-        Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
+        Démarre le RPA avec un fichier Excel par défaut.
         """
-        self.logger.info(f"Lancement du RPA Affranchigo avec le fichier")
+        self.logger.info("Lancement du RPA Affranchigo.")
         self.main()
-
 
     def stop(self):
         """

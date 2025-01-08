@@ -74,7 +74,8 @@ class WebDriverPool:
                 try:
                     driver.execute_script("return document.readyState")
                 except Exception as e:
-                    self.logger.warning(f"WebDriver inactif, recréation: {e}")
+                    self.logger.warning(f"WebDriver inactif ou corrompu, recréation: {e}")
+                    self._remove_driver(driver)
                     driver = self.create_driver()
             else:
                 if self.current_size < self.max_size:
@@ -104,9 +105,20 @@ class WebDriverPool:
                     self.pool.put(driver)
                     self.logger.debug(f"WebDriver remis dans le pool. Taille actuelle: {self.pool.qsize()}.")
                 except Exception as e:
-                    self.logger.warning(f"Driver inactif, suppression: {e}")
-                    driver.quit()
-                    self.current_size -= 1
+                    self.logger.warning(f"Driver inactif ou corrompu, suppression: {e}")
+                    self._remove_driver(driver)
+
+    def _remove_driver(self, driver):
+        """
+        Supprime un WebDriver du pool.
+        """
+        try:
+            driver.quit()
+        except Exception as e:
+            self.logger.error(f"Erreur lors de la fermeture du WebDriver: {e}")
+        finally:
+            self.current_size -= 1
+            self.logger.debug(f"WebDriver supprimé. Taille actuelle du pool: {self.current_size}")
 
     def close_all(self):
         """
