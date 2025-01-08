@@ -224,18 +224,6 @@ class AffranchigoRPA:
         else:
             self.logger.debug(f"Contrat numéro {contrat_number} déjà présent, non ajouté.")
             return False
-    
-    def handle_modals(self, driver):
-        """
-        Fonction pour gérer les modales en cliquant sur un bouton spécifique avec JavaScript.
-        """
-        try:
-            driver.execute_script(
-                'document.querySelector("body > div.bootbox.modal.fade.bootbox-alert.in > div > div > div.modal-footer > button").click();'
-            )
-            self.logger.debug("Modal cliqué avec succès.")
-        except Exception as e:
-            self.logger.error(f"Erreur lors du traitement de la modale: {e}")
 
     def handle_non_clickable_element(self, driver, numero_contrat):
         """Gestion des contrats multi-sites ou cas spécifiques."""
@@ -280,7 +268,6 @@ class AffranchigoRPA:
             self.logger.debug("Passé à l'iframe avec succès.")
 
             # Tentative de clic sur le bouton de modification
-            self.handle_modals(driver)
             bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
             driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
             driver.execute_script("arguments[0].click();", bouton_modification)
@@ -315,9 +302,8 @@ class AffranchigoRPA:
             element.click()
             self.logger.debug("L'élément cible est cliquable et a été cliqué.")
         except TimeoutException as e:
-            self.logger.exception(f"La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé. {numero_contrat}")
+            self.logger.exception("La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé.")
             self.save_non_modifiable(numero_contrat)
-            driver.save_screenshot(f"timeout_error_{numero_contrat}.png")
         except NoSuchElementException as e:
             self.logger.exception("L'élément h1 ou l'élément cible n'a pas été trouvé sur la page.")
             self.save_non_modifiable(numero_contrat)
@@ -359,7 +345,7 @@ class AffranchigoRPA:
             if "Affranchigo Premium" in h1_text:
                 self.logger.info("Contrat Affranchigo Premium")
                 affranchigo_premium_case.handle_case_premium(numero_contrat, dictionnaire)
-                return "Affranchigo Premium"
+                return "Affranchigo liberté"
             elif "Affranchigo forfait" in h1_text:
                 self.logger.info("Contrat Affranchigo forfait")
                 if not isinstance(dictionnaire, dict):
@@ -396,124 +382,126 @@ class AffranchigoRPA:
             else:
                 return "Inconnu"
         except Exception as e:
-            self.logger.exception(f"Service non reconnu : {e}, {h1_text}")
+            self.logger.exception(f"Service non reconnu : {e}")
             return "Erreur"
 
 
     def process_contract(self, driver, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
-        """
-        Traite un contrat spécifique en utilisant un WebDriver.
-        """
-        wait = WebDriverWait(driver, 20)
+        wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
         start_time = time.time()
 
         try:
             if not driver:
                 raise Exception("Driver non initialisé")
 
-            # Étapes principales du traitement du contrat
+            # Traitement du contrat (soumission, modifications, etc.)
             self.submit_contract_number(driver, wait, numero_contrat)
             self.switch_to_iframe_and_click_modification(driver, wait, numero_contrat)
             self.wait_for_complete_redirection(driver, wait, numero_contrat)
-            contrat_type = self.modifications_conditions_ventes(
-                driver, wait, numero_contrat, dictionnaire, dictionnaire_original
-            )
+            contrat_type = self.modifications_conditions_ventes(driver, wait, numero_contrat, dictionnaire, dictionnaire_original)
 
             self.logger.info(f"{numero_contrat} * Traitement terminé.")
             self.save_processed_contracts([numero_contrat])
 
             end_time = time.time()
             duration = int(end_time - start_time)
+
             return (numero_contrat, True, contrat_type, duration)
 
         except Exception as e:
-            self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}", exc_info=True)
+            self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}")
             self.save_non_modifiable(numero_contrat)
 
-            # Réinitialiser ou fermer le driver en cas d'erreur critique
+            # Réinitialisation du driver après l'erreur
             try:
                 driver.get(self.url)
             except Exception as reset_error:
                 self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
-                self.pool._remove_driver(driver)  # Utilise la méthode de suppression dans le pool
-                driver = None  # Forcer la recréation pour le prochain contrat
+                driver.quit()  # Fermer le driver si la réinitialisation échoue
+                driver = None  # Forcer la recréation d'un nouveau driver pour le prochain contrat
 
             end_time = time.time()
             duration = int(end_time - start_time)
             return (numero_contrat, False, "Erreur", duration)
-
+        
     def process_single_contract(self, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
         """
-        Traite un contrat individuel dans un thread séparé.
+        Fonction qui traite un contrat individuel dans un thread séparé.
         """
         driver = None
         try:
             driver = self.pool.get_driver()  # Récupère un WebDriver pour le contrat
-            self.logger.debug(f"WebDriver récupéré pour le contrat {numero_contrat}.")
+            self.logger.debug(f"WebDriver récupéré avec succès pour le contrat {numero_contrat}.")
 
-            # Appel à la fonction principale pour traiter le contrat
+            # Appel à la fonction process_contract pour traiter le contrat
             return self.process_contract(driver, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
 
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}", exc_info=True)
             return (numero_contrat, False, "Erreur", 0)
-
+        
         finally:
             if driver:
                 try:
                     driver.get(self.url)  # Revenir à l'URL de départ
                 except Exception as e:
-                    self.logger.error(f"Erreur lors du retour à l'URL pour le contrat {numero_contrat}: {e}")
-
-                # Toujours retourner le WebDriver au pool
+                    self.logger.error(f"Erreur lors du retour à l'URL pour {numero_contrat}: {e}")
+                
+                # Toujours retourner le WebDriver dans le pool après le traitement
                 try:
                     self.pool.return_driver(driver)
                 except Exception as e:
-                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour le contrat {numero_contrat}: {e}")
+                    self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
+    
 
-    def main(self, max_workers=5):
+    def main(self, excel_path, progress_callback=None, max_workers=3):
         """
-        Méthode principale pour traiter une liste de contrats.
+        Méthode principale pour le traitement du RPA avec multi-threading.
         """
-        self.logger.info("Démarrage du traitement des contrats.")
-        excel_path = "data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx"
-        json_path = "data/numeros_contrat_robot.json"
+        self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
+
+        # Extraction des numéros de contrat
+        json_path = 'data/numeros_contrat_robot.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
 
         dictionnaire_original = self.create_dictionnaire(excel_path)
         dictionnaire = copy.deepcopy(dictionnaire_original)
+
         contract_numbers = self.process_json_files(json_path)
 
         identifiant = os.getenv("IDENTIFIANT")
         mot_de_passe = os.getenv("MOT_DE_PASSE")
 
-        results = []
+        # Utilisation d'un ThreadPoolExecutor pour le traitement multi-threading
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = [
-                executor.submit(self.process_single_contract, numero, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
-                for numero in contract_numbers
-            ]
+            futures = []
+            for numero_contrat in contract_numbers:
+                self.logger.debug(f"Préparation pour traiter le contrat suivant: {numero_contrat}")
+                
+                # Planification du traitement de chaque contrat dans un thread séparé
+                future = executor.submit(self.process_single_contract, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
+                futures.append(future)
+
+            # Collecter les résultats des threads au fur et à mesure
             for future in as_completed(futures):
                 try:
-                    numero_contrat, success, contrat_type, duration = future.result()
-                    results.append({
-                        'Numéro Contrat': numero_contrat,
-                        'Succès': success,
-                        'Type Contrat': contrat_type,
-                        'Durée': duration
-                    })
+                    numero_contrat, result, contrat_type, duration = future.result()
+                    if result:
+                        self.logger.info(f"Contrat {numero_contrat} traité avec succès.")
+                    else:
+                        self.logger.warning(f"Échec du traitement du contrat {numero_contrat}.")
                 except Exception as e:
-                    self.logger.error(f"Erreur lors du traitement d'un contrat: {e}")
+                    self.logger.error(f"Erreur dans le thread de traitement: {e}")
 
-        self.logger.info("Traitement terminé.")
-        self.save_results_to_csv(results, "results.csv")
+        self.logger.info("Tous les contrats ont été traités avec multi-threading.")
 
-    def start(self):
+    def start(self, excel_path="data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx"):
         """
-        Démarre le RPA avec un fichier Excel par défaut.
+        Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
         """
-        self.logger.info("Lancement du RPA Affranchigo.")
-        self.main()
+        self.logger.info(f"Lancement du RPA Affranchigo avec le fichier {excel_path}")
+        self.main(excel_path)
+
 
     def stop(self):
         """
