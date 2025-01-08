@@ -455,46 +455,39 @@ class AffranchigoRPA:
                     self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
     
 
-    def main(self, excel_path, progress_callback=None, max_workers=3):
-        """
-        Méthode principale pour le traitement du RPA avec multi-threading.
-        """
-        self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
-
-        # Extraction des numéros de contrat
+    def main(self, excel_path, max_workers=5):
+        self.logger.info("Lancement du traitement des contrats.")
         json_path = 'data/numeros_contrat_robot.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
 
         dictionnaire_original = self.create_dictionnaire(excel_path)
         dictionnaire = copy.deepcopy(dictionnaire_original)
-
         contract_numbers = self.process_json_files(json_path)
 
         identifiant = os.getenv("IDENTIFIANT")
         mot_de_passe = os.getenv("MOT_DE_PASSE")
 
-        # Utilisation d'un ThreadPoolExecutor pour le traitement multi-threading
+        results = []
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = []
-            for numero_contrat in contract_numbers:
-                self.logger.debug(f"Préparation pour traiter le contrat suivant: {numero_contrat}")
-                
-                # Planification du traitement de chaque contrat dans un thread séparé
-                future = executor.submit(self.process_single_contract, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
-                futures.append(future)
-
-            # Collecter les résultats des threads au fur et à mesure
+            futures = [
+                executor.submit(self.process_single_contract, numero, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
+                for numero in contract_numbers
+            ]
             for future in as_completed(futures):
                 try:
-                    numero_contrat, result, contrat_type, duration = future.result()
-                    if result:
-                        self.logger.info(f"Contrat {numero_contrat} traité avec succès.")
-                    else:
-                        self.logger.warning(f"Échec du traitement du contrat {numero_contrat}.")
+                    numero_contrat, success, contrat_type, duration = future.result()
+                    results.append({
+                        'Numéro Contrat': numero_contrat,
+                        'Succès': success,
+                        'Type Contrat': contrat_type,
+                        'Durée': duration
+                    })
                 except Exception as e:
-                    self.logger.error(f"Erreur dans le thread de traitement: {e}")
+                    self.logger.error(f"Erreur: {e}")
 
-        self.logger.info("Tous les contrats ont été traités avec multi-threading.")
+        self.logger.info("Traitement terminé.")
+        self.save_results_to_csv(results, "results.csv")
+
 
     def start(self, excel_path="data/data_traitement/BOULOGNE PPDC - Transfert des contrats Affranchigo 070125.xlsx"):
         """
