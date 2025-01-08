@@ -455,8 +455,9 @@ class AffranchigoRPA:
                     self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
     
 
-    def main(self, excel_path, max_workers=5):
+    def main(self, max_workers=5):
         self.logger.info("Lancement du traitement des contrats.")
+        excel_path="data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx"
         json_path = 'data/numeros_contrat_robot.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
 
@@ -489,12 +490,12 @@ class AffranchigoRPA:
         self.save_results_to_csv(results, "results.csv")
 
 
-    def start(self, excel_path="data/data_traitement/BOULOGNE PPDC - Transfert des contrats Affranchigo 070125.xlsx"):
+    def start(self):
         """
         Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
         """
-        self.logger.info(f"Lancement du RPA Affranchigo avec le fichier {excel_path}")
-        self.main(excel_path)
+        self.logger.info(f"Lancement du RPA Affranchigo avec le fichier")
+        self.main()
 
 
     def stop(self):
