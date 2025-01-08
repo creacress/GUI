@@ -302,8 +302,9 @@ class AffranchigoRPA:
             element.click()
             self.logger.debug("L'élément cible est cliquable et a été cliqué.")
         except TimeoutException as e:
-            self.logger.exception("La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé.")
+            self.logger.exception(f"La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé. {numero_contrat}")
             self.save_non_modifiable(numero_contrat)
+            driver.save_screenshot(f"timeout_error_{numero_contrat}.png")
         except NoSuchElementException as e:
             self.logger.exception("L'élément h1 ou l'élément cible n'a pas été trouvé sur la page.")
             self.save_non_modifiable(numero_contrat)
@@ -345,7 +346,7 @@ class AffranchigoRPA:
             if "Affranchigo Premium" in h1_text:
                 self.logger.info("Contrat Affranchigo Premium")
                 affranchigo_premium_case.handle_case_premium(numero_contrat, dictionnaire)
-                return "Affranchigo liberté"
+                return "Affranchigo Premium"
             elif "Affranchigo forfait" in h1_text:
                 self.logger.info("Contrat Affranchigo forfait")
                 if not isinstance(dictionnaire, dict):
@@ -382,7 +383,7 @@ class AffranchigoRPA:
             else:
                 return "Inconnu"
         except Exception as e:
-            self.logger.exception(f"Service non reconnu : {e}")
+            self.logger.exception(f"Service non reconnu : {e}, {h1_text}")
             return "Erreur"
 
 
@@ -495,7 +496,7 @@ class AffranchigoRPA:
 
         self.logger.info("Tous les contrats ont été traités avec multi-threading.")
 
-    def start(self, excel_path="data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx"):
+    def start(self, excel_path="data/data_traitement/BOULOGNE PPDC - Transfert des contrats Affranchigo 070125.xlsx"):
         """
         Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
         """

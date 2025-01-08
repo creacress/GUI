@@ -304,7 +304,7 @@ class AffranchigoPremiumCase:
         """
         try:
             # Charger le fichier Excel
-            df = pd.read_excel('data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx')
+            df = pd.read_excel('data/data_traitement/BOULOGNE PPDC - Transfert des contrats Affranchigo 070125.xlsx')
             self.logger.debug("Fichier Excel chargé.")
             
             # Trouver la ligne correspondant au numéro de contrat
@@ -336,7 +336,7 @@ class AffranchigoPremiumCase:
         """Traitement principal pour chaque cas."""
         self.logger.info(f"{numero_contrat} * Traitement du contrat Affranchigo Premium")
         # Charger le fichier Excel
-        df = pd.read_excel('data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx')
+        df = pd.read_excel('data/data_traitement/BOULOGNE PPDC - Transfert des contrats Affranchigo 070125.xlsx')
         self.logger.debug("Fichier Excel chargé.")
 
         # Trouver la ligne correspondant au numéro de contrat
@@ -719,8 +719,8 @@ class AffranchigoPremiumCase:
             time.sleep(2)
             
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             self.select_time_in_selectors(numero_contrat)
             
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
@@ -778,8 +778,8 @@ class AffranchigoPremiumCase:
             time.sleep(2)
             
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
             self.submit_liberte(numero_contrat)
@@ -833,8 +833,8 @@ class AffranchigoPremiumCase:
             
 
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             self.select_time_in_selectors(numero_contrat)
             
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
@@ -895,28 +895,28 @@ class AffranchigoPremiumCase:
                 # MAJ de l'établissement
                 self.update_select_element(self.driver, select_element_first, numero_contrat)
                 # Vérification de la valeur de l'input_regate_first
-                self.select_role(select_role_first, "Traitement")
+                #self.select_role(select_role_first, "Traitement")
 
             elif title_first_role == "Dépôt" : 
                 self.update_input(input_regate_first, new_value_depot, numero_contrat)
                 # MAJ de l'établissement
                 self.update_select_element(self.driver, select_element_first, numero_contrat)
                 # Vérification de la valeur de l'input_regate_first
-                self.select_role(select_role_first, "Dépôt")
+                #self.select_role(select_role_first, "Dépôt")
 
             elif title_second_role == "Traitement" :
                 self.update_input(input_regate_second, new_value_traitement, numero_contrat)
                 # MAJ de l'établissement
                 self.update_select_element(self.driver, select_element_second, numero_contrat)
                 # Vérification de la valeur de l'input_regate_first
-                self.select_role(select_role_second, "Traitement")
+                #self.select_role(select_role_second, "Traitement")
             
             elif title_second_role == "Dépôt" :
                 self.update_input(input_regate_second, new_value_depot, numero_contrat)
                 # MAJ de l'établissement
                 self.update_select_element(self.driver, select_element_second,numero_contrat)
                 # Vérification de la valeur de l'input_regate_first
-                self.select_role(select_role_second, "Dépôt")
+                #self.select_role(select_role_second, "Dépôt")
    
             self.select_time_in_selectors()
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
@@ -1017,8 +1017,8 @@ class AffranchigoPremiumCase:
 
 
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
             self.submit_liberte(numero_contrat)
@@ -1174,10 +1174,10 @@ class AffranchigoPremiumCase:
             
             if not select_role_second.get_attribute("value"): 
                 # Sélection des rôles
-                self.select_role(select_role_second, "Traitement")
+                #self.select_role(select_role_second, "Traitement")
                 self.driver.save_screenshot(f"{numero_contrat} * absence_traitement.png")
 
-            self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_first, "Dépôt")
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
             self.submit_liberte(numero_contrat)
@@ -1251,10 +1251,10 @@ class AffranchigoPremiumCase:
             
             if not select_role_first.get_attribute("value"): 
                 # Sélection des rôles
-                self.select_role(select_role_second, "Dépôt")
+                #self.select_role(select_role_second, "Dépôt")
                 self.driver.save_screenshot(f"{numero_contrat} * absence_depôt.png")
             # Sélection des rôles
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_second, "Traitement")
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
             self.submit_liberte(numero_contrat)
@@ -1335,8 +1335,8 @@ class AffranchigoPremiumCase:
 
 
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
             self.submit_liberte(numero_contrat)
@@ -1484,8 +1484,8 @@ class AffranchigoPremiumCase:
             
 
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
@@ -1560,8 +1560,8 @@ class AffranchigoPremiumCase:
             
 
             # Sélection des rôles
-            self.select_role(select_role_first, "Dépôt")
-            self.select_role(select_role_second, "Traitement")
+            #self.select_role(select_role_first, "Dépôt")
+            #self.select_role(select_role_second, "Traitement")
             
             self.select_time_in_selectors(numero_contrat)
             self.logger.debug(f"{numero_contrat} * Mise à jour des inputs et sélecteurs effectuée.")
