@@ -8,7 +8,7 @@ from selenium.webdriver.edge.options import Options
 from rpa_modules.debug import setup_logger
 
 class WebDriverPool:
-    def __init__(self, initial_size=5, max_size=20, idle_timeout=300, logger=None):
+    def __init__(self, initial_size=5, max_size=30, idle_timeout=100, logger=None):
         """
         Pool de WebDrivers avec auto-ajustement dynamique de la taille du pool.
         :param initial_size: Taille initiale du pool (pré-chargement).

@@ -58,17 +58,6 @@ class AffranchigoPremiumCase:
                     selectors["select_first_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[0\\]_v2"))) 
                     self.logger.debug("Sélecteur select_first_role (2 ème) initialisé.")
 
-                try:
-                    selectors["select_first_time"] = wait.until(EC.visibility_of_element_located((
-                        By.CSS_SELECTOR, "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select"
-                    )))
-                    self.logger.debug("Sélecteur select_first_time (1er) initialisé.")
-                except:
-                    self.logger.debug("Premier sélecteur invalide, tentative avec le second.")
-                    selectors["select_first_time"] = wait.until(EC.visibility_of_element_located((
-                        By.CSS_SELECTOR, "#\\[g0_p10858\\|0_r72238\\[0\\]\\] > div > critere-form:nth-child(5) > div.form-group.critere_psc > input-component > div > select"
-                    )))
-                    self.logger.debug("Sélecteur select_first_time (2ème) initialisé.")
 
                 selectors["input_second_regate"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72239\\[1\\]")))
                 self.logger.debug("Sélecteur input_second_regate initialisé.")
@@ -76,16 +65,6 @@ class AffranchigoPremiumCase:
                 selectors["select_second_etablissement"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(3) > div.form-group.critere_psc > input-etb-prest > div > select")))
                 self.logger.debug("Sélecteur select_second_etablissement initialisé.")
 
-                try:
-
-                    selectors["select_second_time"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(7) > div.form-group.critere_psc > input-component > div > select")))
-                    self.logger.debug("Sélecteur select_second_time (1er) initialisé.")
-                except:
-                    self.logger.debug("Premier sélecteur invalide, tentative avec le second.")
-                    selectors["select_second_time"] = wait.until(EC.visibility_of_element_located((
-                        By.CSS_SELECTOR, "#\\[\\[g0_p10858\\|0_r72238\\[0\\]\\]\\] > div > critere-form:nth-child(5) > div.form-group.critere_psc > input-component > div > select"
-                    )))
-                    self.logger.debug("Sélecteur select_second_time (2ème) initialisé.")
                 try:
 
                     selectors["select_second_role"] = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#g0_p10858\\|0_r72238_c72243\\[1\\]_v2")))
@@ -304,7 +283,7 @@ class AffranchigoPremiumCase:
         """
         try:
             # Charger le fichier Excel
-            df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx')
+            df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx')
             self.logger.debug("Fichier Excel chargé.")
             
             # Trouver la ligne correspondant au numéro de contrat
@@ -336,7 +315,7 @@ class AffranchigoPremiumCase:
         """Traitement principal pour chaque cas."""
         self.logger.info(f"{numero_contrat} * Traitement du contrat Affranchigo Premium")
         # Charger le fichier Excel
-        df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx')
+        df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx')
         self.logger.debug("Fichier Excel chargé.")
 
         # Trouver la ligne correspondant au numéro de contrat

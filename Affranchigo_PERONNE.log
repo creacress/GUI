@@ -1,0 +1,1999 @@
+2025-01-08 16:41:02 - central_logger - DEBUG - WebDriverPool initialized with max_size=20
+2025-01-08 16:41:02 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:08 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:08 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:14 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:14 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:26 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:26 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:32 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:32 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:38 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:38 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:43 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:43 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:49 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:49 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-08 16:41:54 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-08 16:41:54 - central_logger - INFO - Nom du RPA reçu: Affranchigo
+2025-01-08 16:41:54 - central_logger - DEBUG - Démarrage du RPA Affranchigo en multi-threading...
+2025-01-08 16:41:55 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats à partir du fichier : data/numeros_contrat_robot.json
+2025-01-08 16:41:55 - central_logger - DEBUG - Numéros de contrat récupérés : ['1-388824876', '1-468190391', 'D-945639-2', '1-299040775', 'D-754039-1', '1-1740445881', 'D-537349-2', 'D-564994-2', 'D-394894-1', 'D-561994-2', 'D-381657-2', 'F48656', '1-6754324677', 'D-835486-1', 'D-528532-1', '1-6516432653', 'D-433775-1', 'D-179285-1', 'D-310306-1', '1-181953271', 'D-141650-2', 'D-373404-1', 'D-858502-1', 'D-874000-1', 'D-895319-1', 'D-816287-1', 'D-939706-1', 'D-908748-1', 'D-827066-1', 'D-959369-1', 'D-883130-1']
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-388824876
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-468190391
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-945639-2
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-299040775
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-754039-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1740445881
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-537349-2
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-388824876.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-564994-2
+2025-01-08 16:41:55 - central_logger - INFO - Soumission du numéro de contrat 1-388824876...
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-394894-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-561994-2
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-381657-2
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: F48656
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-6754324677
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-835486-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-528532-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-6516432653
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-433775-1
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-468190391.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-179285-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-310306-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-181953271
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-141650-2
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-373404-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-858502-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-874000-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-895319-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-816287-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-939706-1
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-945639-2.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-908748-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-827066-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-959369-1
+2025-01-08 16:41:55 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-883130-1
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-299040775.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-754039-1.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-1740445881.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-537349-2.
+2025-01-08 16:41:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:41:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-564994-2.
+2025-01-08 16:41:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:55 - central_logger - INFO - Numéro de contrat 1-388824876 soumis avec succès.
+2025-01-08 16:41:55 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:55 - central_logger - INFO - Soumission du numéro de contrat 1-468190391...
+2025-01-08 16:41:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:55 - central_logger - INFO - Numéro de contrat 1-468190391 soumis avec succès.
+2025-01-08 16:41:55 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:55 - central_logger - INFO - Soumission du numéro de contrat D-945639-2...
+2025-01-08 16:41:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:55 - central_logger - INFO - Numéro de contrat D-945639-2 soumis avec succès.
+2025-01-08 16:41:55 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:55 - central_logger - INFO - Soumission du numéro de contrat 1-299040775...
+2025-01-08 16:41:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:55 - central_logger - INFO - Numéro de contrat 1-299040775 soumis avec succès.
+2025-01-08 16:41:55 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:55 - central_logger - INFO - Soumission du numéro de contrat D-754039-1...
+2025-01-08 16:41:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:55 - central_logger - INFO - Numéro de contrat D-754039-1 soumis avec succès.
+2025-01-08 16:41:55 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:55 - central_logger - INFO - Soumission du numéro de contrat 1-1740445881...
+2025-01-08 16:41:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:56 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:56 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:56 - central_logger - INFO - Numéro de contrat 1-1740445881 soumis avec succès.
+2025-01-08 16:41:56 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:56 - central_logger - INFO - Soumission du numéro de contrat D-537349-2...
+2025-01-08 16:41:56 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:56 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:56 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:56 - central_logger - INFO - Numéro de contrat D-537349-2 soumis avec succès.
+2025-01-08 16:41:56 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:56 - central_logger - INFO - Soumission du numéro de contrat D-564994-2...
+2025-01-08 16:41:56 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:41:56 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:41:56 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:41:56 - central_logger - INFO - Numéro de contrat D-564994-2 soumis avec succès.
+2025-01-08 16:41:56 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:41:59 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:00 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-468190391 effectué avec succès.
+2025-01-08 16:42:00 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:00 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:02 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:04 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-754039-1 effectué avec succès.
+2025-01-08 16:42:04 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:04 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:06 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-388824876 effectué avec succès.
+2025-01-08 16:42:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-945639-2 effectué avec succès.
+2025-01-08 16:42:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-1740445881 effectué avec succès.
+2025-01-08 16:42:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-537349-2 effectué avec succès.
+2025-01-08 16:42:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-564994-2 effectué avec succès.
+2025-01-08 16:42:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-299040775 effectué avec succès.
+2025-01-08 16:42:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:09 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:09 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:09 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:11 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:11 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:11 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:12 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:12 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:12 - central_logger - INFO - 1-468190391 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:12 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:12 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:14 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:14 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:14 - central_logger - INFO - D-754039-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:14 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:14 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:14 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:14 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:14 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:15 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:16 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:17 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:18 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:18 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:18 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:18 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:18 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:18 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:18 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:18 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:18 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:18 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:19 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:19 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:19 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:19 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:19 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:19 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:19 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:21 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - INFO - D-564994-2 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:42:21 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:42:21 - central_logger - INFO - D-754039-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:42:21 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:21 - central_logger - INFO - D-754039-1 * Ancienne première valeur Régate PERONNE
+2025-01-08 16:42:21 - central_logger - INFO - D-754039-1 * Ancienne seconde valeur Régate ROYE
+2025-01-08 16:42:21 - central_logger - INFO - D-754039-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:42:21 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - INFO - 1-1740445881 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:21 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - INFO - 1-388824876 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:21 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:22 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - INFO - 1-299040775 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:22 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:22 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - INFO - D-945639-2 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:22 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:22 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - INFO - D-537349-2 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:22 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:22 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Modification de traitement: de PERONNE à 598310
+2025-01-08 16:42:23 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:42:23 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:23 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - D-754039-1 * Nouveau code régate attribué 598310
+2025-01-08 16:42:24 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="32228244d682e524914dcbc605ac11ba", element="f.BF3A3EC833D6DB60F206C5AF42CF6543.d.C6B11F81EAABE74449EF74583AC510FD.e.322")>
+2025-01-08 16:42:24 - central_logger - DEBUG - D-754039-1 * Selection actuelle dans le select: None
+2025-01-08 16:42:24 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:24 - central_logger - INFO - D-754039-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:24 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:26 - central_logger - DEBUG - D-754039-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:42:26 - central_logger - INFO - D-754039-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:42:26 - central_logger - INFO - D-754039-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:42:27 - central_logger - INFO - D-754039-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:42:27 - central_logger - INFO - D-754039-1 * Formulaire soumis avec succès.
+2025-01-08 16:42:28 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:42:28 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:42:28 - central_logger - INFO - D-564994-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:42:28 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:28 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:28 - central_logger - INFO - D-564994-2 * Ancienne première valeur Régate 800360
+2025-01-08 16:42:28 - central_logger - INFO - D-564994-2 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:42:28 - central_logger - INFO - D-564994-2 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:42:28 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:42:28 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:42:28 - central_logger - INFO - 1-1740445881 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:42:28 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:29 - central_logger - INFO - 1-1740445881 * Ancienne première valeur Régate 800360
+2025-01-08 16:42:29 - central_logger - INFO - 1-1740445881 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:42:29 - central_logger - INFO - 1-1740445881 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:42:29 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:42:29 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:42:29 - central_logger - INFO - D-537349-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:42:29 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:29 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:29 - central_logger - INFO - D-537349-2 * Ancienne première valeur Régate 800360
+2025-01-08 16:42:29 - central_logger - INFO - D-537349-2 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:42:29 - central_logger - INFO - D-537349-2 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:42:30 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:42:30 - central_logger - INFO - D-754039-1 * Traitement terminé.
+2025-01-08 16:42:30 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:42:30 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:42:30 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:42:30 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:42:30 - central_logger - INFO - Contrat D-754039-1 traité avec succès.
+2025-01-08 16:42:30 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-394894-1.
+2025-01-08 16:42:30 - central_logger - INFO - Soumission du numéro de contrat D-394894-1...
+2025-01-08 16:42:30 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:42:31 - central_logger - DEBUG - D-564994-2 * Nouveau code régate attribué 598310
+2025-01-08 16:42:31 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="c258023be48260668921804d74bcdd6f", element="f.D481974DB4204269286E36D8D0EFBA20.d.E16387DDEF3413588CBC18666E9AD93D.e.315")>
+2025-01-08 16:42:31 - central_logger - DEBUG - D-564994-2 * Selection actuelle dans le select: None
+2025-01-08 16:42:31 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:42:31 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:42:31 - central_logger - INFO - Numéro de contrat D-394894-1 soumis avec succès.
+2025-01-08 16:42:31 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:42:31 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:42:31 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:42:31 - central_logger - INFO - D-564994-2 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:42:31 - central_logger - DEBUG - 1-1740445881 * Nouveau code régate attribué 598310
+2025-01-08 16:42:31 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="8be1cc1eed11a713138191e047ab0f15", element="f.7203AA7EB2BA62F66E83E810DE6DDBEC.d.4AB0127D2E068FBCF4290728E04B4FAD.e.309")>
+2025-01-08 16:42:31 - central_logger - DEBUG - 1-1740445881 * Selection actuelle dans le select: None
+2025-01-08 16:42:31 - central_logger - INFO - 1-1740445881 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:42:31 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:32 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:42:32 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:42:32 - central_logger - DEBUG - D-537349-2 * Nouveau code régate attribué 598310
+2025-01-08 16:42:32 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b0c24c7f012a48b3b2e10fe018cbb3a6", element="f.00651BE8A4BC6C18369E6207245A4A2D.d.D9044611A39E84126937147BEDB1219A.e.301")>
+2025-01-08 16:42:32 - central_logger - DEBUG - D-537349-2 * Selection actuelle dans le select: None
+2025-01-08 16:42:32 - central_logger - INFO - D-537349-2 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:42:32 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-394894-1 effectué avec succès.
+2025-01-08 16:42:32 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:32 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:33 - central_logger - DEBUG - D-564994-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:42:33 - central_logger - INFO - D-564994-2 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:42:33 - central_logger - DEBUG - 1-1740445881 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:42:33 - central_logger - INFO - D-564994-2 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:42:33 - central_logger - INFO - 1-1740445881 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:42:33 - central_logger - INFO - 1-1740445881 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:42:34 - central_logger - DEBUG - D-537349-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:42:34 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:34 - central_logger - INFO - D-537349-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:42:34 - central_logger - INFO - D-564994-2 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:42:34 - central_logger - INFO - D-564994-2 * Formulaire soumis avec succès.
+2025-01-08 16:42:34 - central_logger - INFO - D-537349-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:42:34 - central_logger - INFO - 1-1740445881 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:42:35 - central_logger - INFO - 1-1740445881 * Formulaire soumis avec succès.
+2025-01-08 16:42:35 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:35 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:35 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:42:35 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:42:35 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:35 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:35 - central_logger - INFO - D-537349-2 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:42:35 - central_logger - INFO - D-537349-2 * Formulaire soumis avec succès.
+2025-01-08 16:42:37 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:42:37 - central_logger - INFO - D-564994-2 * Traitement terminé.
+2025-01-08 16:42:38 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:42:38 - central_logger - INFO - 1-1740445881 * Traitement terminé.
+2025-01-08 16:42:38 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:42:38 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:42:38 - central_logger - INFO - Contrat D-564994-2 traité avec succès.
+2025-01-08 16:42:38 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-561994-2.
+2025-01-08 16:42:38 - central_logger - INFO - Soumission du numéro de contrat D-561994-2...
+2025-01-08 16:42:38 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:42:38 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:42:38 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:42:38 - central_logger - INFO - Numéro de contrat D-561994-2 soumis avec succès.
+2025-01-08 16:42:38 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:42:38 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:38 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:38 - central_logger - INFO - D-394894-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:38 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:42:38 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:42:38 - central_logger - INFO - Contrat 1-1740445881 traité avec succès.
+2025-01-08 16:42:38 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-381657-2.
+2025-01-08 16:42:38 - central_logger - INFO - Soumission du numéro de contrat D-381657-2...
+2025-01-08 16:42:38 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:42:38 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:42:38 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:42:38 - central_logger - INFO - Numéro de contrat D-381657-2 soumis avec succès.
+2025-01-08 16:42:38 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:42:38 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:42:38 - central_logger - INFO - D-537349-2 * Traitement terminé.
+2025-01-08 16:42:39 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:42:39 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:42:39 - central_logger - INFO - Contrat D-537349-2 traité avec succès.
+2025-01-08 16:42:39 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat F48656.
+2025-01-08 16:42:39 - central_logger - INFO - Soumission du numéro de contrat F48656...
+2025-01-08 16:42:39 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:42:39 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:42:39 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:42:39 - central_logger - INFO - Numéro de contrat F48656 soumis avec succès.
+2025-01-08 16:42:39 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:42:39 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:40 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:40 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:40 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:41 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-561994-2 effectué avec succès.
+2025-01-08 16:42:41 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:41 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:41 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-381657-2 effectué avec succès.
+2025-01-08 16:42:41 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:41 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:41 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:42 - central_logger - INFO - Clic sur le bouton de modification pour le contrat F48656 effectué avec succès.
+2025-01-08 16:42:42 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:42 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:43 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:44 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:44 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:44 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:44 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:44 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:44 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:45 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:45 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:42:45 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:42:45 - central_logger - INFO - D-394894-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:42:45 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:45 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:45 - central_logger - INFO - D-394894-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:42:45 - central_logger - INFO - D-394894-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:42:45 - central_logger - INFO - D-394894-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:42:47 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:47 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:47 - central_logger - INFO - D-561994-2 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:47 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:42:47 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:42:48 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:48 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:48 - central_logger - INFO - D-381657-2 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:48 - central_logger - DEBUG - D-394894-1 * Nouveau code régate attribué 598310
+2025-01-08 16:42:48 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="32228244d682e524914dcbc605ac11ba", element="f.BF3A3EC833D6DB60F206C5AF42CF6543.d.49C16CB5360E182C15924E8781E6289F.e.976")>
+2025-01-08 16:42:48 - central_logger - DEBUG - D-394894-1 * Selection actuelle dans le select: None
+2025-01-08 16:42:48 - central_logger - INFO - D-394894-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:42:48 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:48 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:42:48 - central_logger - INFO - F48656 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:49 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:50 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:50 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:50 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:50 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:50 - central_logger - DEBUG - D-394894-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:42:50 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:50 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:50 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:50 - central_logger - INFO - D-394894-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:42:50 - central_logger - INFO - D-394894-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:42:51 - central_logger - INFO - D-394894-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:42:51 - central_logger - INFO - D-394894-1 * Formulaire soumis avec succès.
+2025-01-08 16:42:54 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:42:54 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:42:54 - central_logger - INFO - D-561994-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:42:54 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:42:54 - central_logger - INFO - D-394894-1 * Traitement terminé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:42:54 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:55 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:42:55 - central_logger - INFO - D-561994-2 * Ancienne première valeur Régate 801920
+2025-01-08 16:42:55 - central_logger - INFO - D-561994-2 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:42:55 - central_logger - INFO - D-561994-2 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:42:55 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:42:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:42:55 - central_logger - INFO - Contrat D-394894-1 traité avec succès.
+2025-01-08 16:42:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-6754324677.
+2025-01-08 16:42:55 - central_logger - INFO - Soumission du numéro de contrat 1-6754324677...
+2025-01-08 16:42:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:42:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:42:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:42:55 - central_logger - INFO - Numéro de contrat 1-6754324677 soumis avec succès.
+2025-01-08 16:42:55 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:42:55 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:42:55 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:42:55 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:42:56 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:42:56 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-6754324677 effectué avec succès.
+2025-01-08 16:42:56 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:42:56 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:42:57 - central_logger - DEBUG - Modification de traitement: de 801920 à 598310
+2025-01-08 16:42:57 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:42:57 - central_logger - DEBUG - D-561994-2 * Nouveau code régate attribué 598310
+2025-01-08 16:42:57 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="c258023be48260668921804d74bcdd6f", element="f.D481974DB4204269286E36D8D0EFBA20.d.C8C87A24CAC3934510285B2AD279DED5.e.959")>
+2025-01-08 16:42:57 - central_logger - DEBUG - D-561994-2 * Selection actuelle dans le select: None
+2025-01-08 16:42:57 - central_logger - INFO - D-561994-2 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:42:58 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:42:59 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:42:59 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:42:59 - central_logger - DEBUG - D-561994-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:42:59 - central_logger - INFO - D-561994-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:42:59 - central_logger - INFO - D-561994-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:43:00 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:43:00 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:43:00 - central_logger - INFO - 1-468190391 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:43:00 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:00 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:00 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:00 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:01 - central_logger - INFO - D-561994-2 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:43:01 - central_logger - INFO - D-561994-2 * Formulaire soumis avec succès.
+2025-01-08 16:43:02 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:43:02 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:43:02 - central_logger - INFO - 1-6754324677 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:43:02 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:02 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:43:04 - central_logger - INFO - D-561994-2 * Traitement terminé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:04 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:05 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:05 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:43:05 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:43:05 - central_logger - INFO - Contrat D-561994-2 traité avec succès.
+2025-01-08 16:43:05 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-835486-1.
+2025-01-08 16:43:05 - central_logger - INFO - Soumission du numéro de contrat D-835486-1...
+2025-01-08 16:43:05 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:43:05 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:43:05 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:43:05 - central_logger - INFO - Numéro de contrat D-835486-1 soumis avec succès.
+2025-01-08 16:43:05 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:43:06 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:43:07 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-835486-1 effectué avec succès.
+2025-01-08 16:43:07 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:43:07 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:43:09 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:43:09 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:43:09 - central_logger - INFO - 1-388824876 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:43:09 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:09 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:09 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:09 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:09 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:43:09 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:43:09 - central_logger - INFO - 1-299040775 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:43:09 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:09 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:09 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:09 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:09 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:43:10 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Traitement
+2025-01-08 16:43:10 - central_logger - DEBUG - Valeur actuelle Second Rôle: Dépôt
+2025-01-08 16:43:10 - central_logger - INFO - D-945639-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:43:10 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:10 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:10 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:10 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:43:10 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:43:10 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:10 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:10 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:10 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:10 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:43:13 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:43:13 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:43:13 - central_logger - INFO - D-835486-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:43:13 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:13 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:15 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:15 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:15 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:15 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:21 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:21 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:21 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:21 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:24 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:25 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:25 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:25 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:29 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:29 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:29 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:29 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:30 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:31 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:31 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:31 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:31 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:35 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:35 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:35 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:35 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:35 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:43:35 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:43:35 - central_logger - INFO - D-381657-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:43:35 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:35 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:35 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:35 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:41 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:41 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:41 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:41 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:41 - central_logger - INFO - 1-468190391 * Ancienne première valeur Régate 800360
+2025-01-08 16:43:41 - central_logger - INFO - 1-468190391 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:43:41 - central_logger - INFO - 1-468190391 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:43:43 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:43:43 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:43:44 - central_logger - DEBUG - 1-468190391 * Nouveau code régate attribué 598310
+2025-01-08 16:43:44 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="589f4e7b4ab2d8ecf6b90cd0297433f2", element="f.3C88134943CA910539D6DA953FFB5528.d.DF7DA735514569ADE20EE81DE3E51D90.e.310")>
+2025-01-08 16:43:44 - central_logger - DEBUG - 1-468190391 * Selection actuelle dans le select: None
+2025-01-08 16:43:44 - central_logger - INFO - 1-468190391 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:43:45 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:45 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:45 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:46 - central_logger - DEBUG - 1-468190391 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:43:46 - central_logger - INFO - 1-468190391 * L'heure est déjà sélectionnée: '15H30'.
+2025-01-08 16:43:46 - central_logger - INFO - 1-468190391 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:43:47 - central_logger - INFO - 1-468190391 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:43:47 - central_logger - INFO - 1-468190391 * Formulaire soumis avec succès.
+2025-01-08 16:43:50 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:43:50 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:43:50 - central_logger - INFO - 1-6754324677 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:43:50 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:50 - central_logger - INFO - 1-388824876 * Ancienne première valeur Régate 800360
+2025-01-08 16:43:50 - central_logger - INFO - 1-388824876 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:43:50 - central_logger - INFO - 1-388824876 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:43:50 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:43:50 - central_logger - INFO - 1-468190391 * Traitement terminé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:50 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:50 - central_logger - INFO - 1-299040775 * Ancienne première valeur Régate 800360
+2025-01-08 16:43:50 - central_logger - INFO - 1-299040775 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:43:50 - central_logger - INFO - 1-299040775 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:43:51 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:51 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:43:51 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:43:51 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:43:51 - central_logger - INFO - Contrat 1-468190391 traité avec succès.
+2025-01-08 16:43:51 - central_logger - INFO - D-945639-2 * Ancienne première valeur Régate 801920
+2025-01-08 16:43:51 - central_logger - INFO - D-945639-2 * Ancienne seconde valeur Régate 800360
+2025-01-08 16:43:51 - central_logger - INFO - D-945639-2 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:43:51 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-528532-1.
+2025-01-08 16:43:51 - central_logger - INFO - Soumission du numéro de contrat D-528532-1...
+2025-01-08 16:43:51 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:43:51 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:43:51 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:43:51 - central_logger - INFO - Numéro de contrat D-528532-1 soumis avec succès.
+2025-01-08 16:43:51 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:43:51 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:52 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:52 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:43:52 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:43:53 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:43:53 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:43:53 - central_logger - DEBUG - Modification de traitement: de 801920 à 598310
+2025-01-08 16:43:53 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:43:54 - central_logger - DEBUG - 1-388824876 * Nouveau code régate attribué 598310
+2025-01-08 16:43:54 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="53ba4b56f029cf17c7295d057f2d38de", element="f.A4E8E11D64422F2230AA32D40478A640.d.2F7FB5F1B061CA85E6878B4910DFC4D9.e.316")>
+2025-01-08 16:43:54 - central_logger - DEBUG - D-945639-2 * Nouveau code régate attribué 598310
+2025-01-08 16:43:54 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="4d83186f0280fddf6fb3d5a46b0073c4", element="f.FAF8C5F71AC10F60124AB89F075F55A4.d.A3C4A8154F32A8B1D062FC8969F2D27B.e.313")>
+2025-01-08 16:43:54 - central_logger - DEBUG - 1-299040775 * Nouveau code régate attribué 598310
+2025-01-08 16:43:54 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="5c0fe925f3d6e006eded89917f0de83d", element="f.B0965349FEC03E68DE41B275D6FC42A7.d.6837BE0E509E57988388B42589706C8D.e.331")>
+2025-01-08 16:43:54 - central_logger - DEBUG - 1-388824876 * Selection actuelle dans le select: None
+2025-01-08 16:43:54 - central_logger - DEBUG - D-945639-2 * Selection actuelle dans le select: None
+2025-01-08 16:43:54 - central_logger - DEBUG - 1-299040775 * Selection actuelle dans le select: None
+2025-01-08 16:43:54 - central_logger - INFO - D-945639-2 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:43:54 - central_logger - INFO - 1-299040775 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:43:54 - central_logger - INFO - 1-388824876 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:43:54 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:43:55 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-528532-1 effectué avec succès.
+2025-01-08 16:43:55 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:43:55 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:43:55 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:55 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:43:56 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:43:56 - central_logger - DEBUG - D-945639-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:43:56 - central_logger - DEBUG - 1-299040775 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:43:56 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:43:56 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:43:56 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:43:56 - central_logger - DEBUG - 1-388824876 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:43:56 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:43:56 - central_logger - INFO - D-945639-2 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:43:56 - central_logger - INFO - 1-299040775 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:43:56 - central_logger - INFO - 1-388824876 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:43:56 - central_logger - INFO - D-945639-2 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:43:56 - central_logger - INFO - 1-299040775 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:43:56 - central_logger - INFO - 1-388824876 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:43:56 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:43:57 - central_logger - INFO - D-945639-2 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:43:57 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:43:57 - central_logger - INFO - D-945639-2 * Formulaire soumis avec succès.
+2025-01-08 16:43:57 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:43:57 - central_logger - INFO - 1-299040775 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:43:57 - central_logger - INFO - 1-299040775 * Formulaire soumis avec succès.
+2025-01-08 16:43:57 - central_logger - INFO - 1-388824876 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:43:57 - central_logger - INFO - 1-388824876 * Formulaire soumis avec succès.
+2025-01-08 16:44:00 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:00 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:00 - central_logger - INFO - D-528532-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:00 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:00 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:00 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:00 - central_logger - INFO - D-945639-2 * Traitement terminé.
+2025-01-08 16:44:00 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:00 - central_logger - INFO - 1-388824876 * Traitement terminé.
+2025-01-08 16:44:00 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:00 - central_logger - INFO - 1-299040775 * Traitement terminé.
+2025-01-08 16:44:01 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:44:01 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:44:01 - central_logger - INFO - D-835486-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:01 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:01 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:01 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:01 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:01 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:44:01 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:01 - central_logger - INFO - Contrat 1-388824876 traité avec succès.
+2025-01-08 16:44:01 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-6516432653.
+2025-01-08 16:44:01 - central_logger - INFO - Soumission du numéro de contrat 1-6516432653...
+2025-01-08 16:44:01 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:01 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:44:01 - central_logger - INFO - Contrat 1-299040775 traité avec succès.
+2025-01-08 16:44:01 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:01 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:01 - central_logger - INFO - Numéro de contrat 1-6516432653 soumis avec succès.
+2025-01-08 16:44:01 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:01 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 2.
+2025-01-08 16:44:01 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:01 - central_logger - INFO - Contrat D-945639-2 traité avec succès.
+2025-01-08 16:44:01 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-433775-1.
+2025-01-08 16:44:01 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:01 - central_logger - INFO - Soumission du numéro de contrat D-433775-1...
+2025-01-08 16:44:01 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-179285-1.
+2025-01-08 16:44:01 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:01 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:01 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:01 - central_logger - INFO - Numéro de contrat D-433775-1 soumis avec succès.
+2025-01-08 16:44:01 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:01 - central_logger - INFO - Soumission du numéro de contrat D-179285-1...
+2025-01-08 16:44:01 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:01 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:02 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:02 - central_logger - INFO - Numéro de contrat D-179285-1 soumis avec succès.
+2025-01-08 16:44:02 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:02 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:02 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:02 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:02 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:02 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:03 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:03 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-6516432653 effectué avec succès.
+2025-01-08 16:44:03 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:03 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:03 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:04 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-433775-1 effectué avec succès.
+2025-01-08 16:44:04 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:04 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:04 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-179285-1 effectué avec succès.
+2025-01-08 16:44:04 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:04 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:06 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:06 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:06 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:07 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:07 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:07 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:07 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:07 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:07 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:10 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - INFO - 1-6516432653 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:10 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - INFO - D-433775-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:10 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - INFO - D-179285-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:10 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:44:12 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:16 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:16 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:44:16 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:16 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:16 - central_logger - INFO - D-381657-2 * Ancienne première valeur Régate 800360
+2025-01-08 16:44:16 - central_logger - INFO - D-381657-2 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:44:16 - central_logger - INFO - D-381657-2 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:44:17 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Traitement
+2025-01-08 16:44:17 - central_logger - DEBUG - Valeur actuelle Second Rôle: Dépôt
+2025-01-08 16:44:17 - central_logger - INFO - F48656 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:17 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:17 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:17 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:17 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:44:17 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:44:17 - central_logger - INFO - D-179285-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:17 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:17 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:17 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:17 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:18 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:44:18 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:18 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:18 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:44:18 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:18 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:18 - central_logger - INFO - D-179285-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:44:18 - central_logger - INFO - D-179285-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:44:18 - central_logger - INFO - D-179285-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:44:18 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:44:18 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:44:19 - central_logger - DEBUG - D-381657-2 * Nouveau code régate attribué 598310
+2025-01-08 16:44:19 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="8be1cc1eed11a713138191e047ab0f15", element="f.7203AA7EB2BA62F66E83E810DE6DDBEC.d.CA220248F2490D18B1990C7A6C26B799.e.934")>
+2025-01-08 16:44:19 - central_logger - DEBUG - D-381657-2 * Selection actuelle dans le select: None
+2025-01-08 16:44:19 - central_logger - INFO - D-381657-2 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:44:20 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:44:20 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:44:20 - central_logger - DEBUG - D-179285-1 * Nouveau code régate attribué 598310
+2025-01-08 16:44:20 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="4d83186f0280fddf6fb3d5a46b0073c4", element="f.FAF8C5F71AC10F60124AB89F075F55A4.d.A0B3F223C14D32533F99122AF53F9E92.e.965")>
+2025-01-08 16:44:20 - central_logger - DEBUG - D-179285-1 * Selection actuelle dans le select: None
+2025-01-08 16:44:20 - central_logger - INFO - D-179285-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:44:21 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:21 - central_logger - DEBUG - D-381657-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:44:21 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:21 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:21 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:21 - central_logger - INFO - D-381657-2 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:44:22 - central_logger - INFO - D-381657-2 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:44:22 - central_logger - DEBUG - D-179285-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:44:22 - central_logger - INFO - D-179285-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:44:22 - central_logger - INFO - D-179285-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:44:23 - central_logger - INFO - D-381657-2 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:44:23 - central_logger - INFO - D-381657-2 * Formulaire soumis avec succès.
+2025-01-08 16:44:23 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:23 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:23 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:23 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:23 - central_logger - INFO - D-179285-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:44:23 - central_logger - INFO - D-179285-1 * Formulaire soumis avec succès.
+2025-01-08 16:44:26 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:26 - central_logger - INFO - D-381657-2 * Traitement terminé.
+2025-01-08 16:44:26 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:44:26 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:26 - central_logger - INFO - Contrat D-381657-2 traité avec succès.
+2025-01-08 16:44:26 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-310306-1.
+2025-01-08 16:44:26 - central_logger - INFO - Soumission du numéro de contrat D-310306-1...
+2025-01-08 16:44:26 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:26 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:26 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:26 - central_logger - INFO - Numéro de contrat D-310306-1 soumis avec succès.
+2025-01-08 16:44:26 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:26 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:26 - central_logger - INFO - D-179285-1 * Traitement terminé.
+2025-01-08 16:44:27 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:44:27 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:27 - central_logger - INFO - Contrat D-179285-1 traité avec succès.
+2025-01-08 16:44:27 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-181953271.
+2025-01-08 16:44:27 - central_logger - INFO - Soumission du numéro de contrat 1-181953271...
+2025-01-08 16:44:27 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:27 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:27 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:27 - central_logger - INFO - Numéro de contrat 1-181953271 soumis avec succès.
+2025-01-08 16:44:27 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:27 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:28 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-310306-1 effectué avec succès.
+2025-01-08 16:44:28 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:28 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:28 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:28 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-181953271 effectué avec succès.
+2025-01-08 16:44:28 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:28 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:30 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:30 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:30 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:44:30 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:30 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:30 - central_logger - INFO - 1-6754324677 * Ancienne première valeur Régate 800300
+2025-01-08 16:44:30 - central_logger - INFO - 1-6754324677 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:44:30 - central_logger - INFO - 1-6754324677 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:44:30 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:30 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:31 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:31 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:31 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:32 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:32 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:32 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:32 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:32 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:32 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:32 - central_logger - DEBUG - Modification de traitement: de 800300 à 598310
+2025-01-08 16:44:32 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:44:32 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:32 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:33 - central_logger - DEBUG - 1-6754324677 * Nouveau code régate attribué 598310
+2025-01-08 16:44:33 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="32228244d682e524914dcbc605ac11ba", element="f.BF3A3EC833D6DB60F206C5AF42CF6543.d.3EA66B050A583A9B575ED79F794805FC.e.1641")>
+2025-01-08 16:44:33 - central_logger - DEBUG - 1-6754324677 * Selection actuelle dans le select: None
+2025-01-08 16:44:33 - central_logger - INFO - 1-6754324677 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:44:33 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:33 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:33 - central_logger - INFO - D-310306-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:34 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:34 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:34 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:34 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:34 - central_logger - INFO - 1-181953271 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:34 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:34 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:35 - central_logger - DEBUG - 1-6754324677 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:44:35 - central_logger - INFO - 1-6754324677 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:44:35 - central_logger - INFO - 1-6754324677 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:44:36 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:36 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:36 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:36 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:36 - central_logger - INFO - 1-6754324677 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:44:36 - central_logger - INFO - 1-6754324677 * Formulaire soumis avec succès.
+2025-01-08 16:44:36 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:37 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:37 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:37 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:37 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:44:40 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:40 - central_logger - INFO - 1-6754324677 * Traitement terminé.
+2025-01-08 16:44:40 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:44:40 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:40 - central_logger - INFO - Contrat 1-6754324677 traité avec succès.
+2025-01-08 16:44:40 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-141650-2.
+2025-01-08 16:44:40 - central_logger - INFO - Soumission du numéro de contrat D-141650-2...
+2025-01-08 16:44:40 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:40 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:40 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:40 - central_logger - INFO - Numéro de contrat D-141650-2 soumis avec succès.
+2025-01-08 16:44:40 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:41 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:42 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-141650-2 effectué avec succès.
+2025-01-08 16:44:42 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:42 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:42 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:42 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:44:42 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:42 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:42 - central_logger - INFO - D-835486-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:44:42 - central_logger - INFO - D-835486-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:44:42 - central_logger - INFO - D-835486-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:44:43 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:43 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:43 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:44:43 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:44 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:44:44 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:44:44 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:44 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:45 - central_logger - DEBUG - D-835486-1 * Nouveau code régate attribué 598310
+2025-01-08 16:44:45 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="c258023be48260668921804d74bcdd6f", element="f.D481974DB4204269286E36D8D0EFBA20.d.FCCD8CC1A9C3D2FC2E86086D6DB67249.e.1604")>
+2025-01-08 16:44:45 - central_logger - DEBUG - D-835486-1 * Selection actuelle dans le select: None
+2025-01-08 16:44:45 - central_logger - INFO - D-835486-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:44:47 - central_logger - DEBUG - D-835486-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:44:47 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:47 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:47 - central_logger - INFO - D-141650-2 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:47 - central_logger - INFO - D-835486-1 * L'heure est déjà sélectionnée: '15H30'.
+2025-01-08 16:44:48 - central_logger - INFO - D-835486-1 * L'heure est déjà sélectionnée: '17H30'.
+2025-01-08 16:44:49 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:44:49 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:44:49 - central_logger - INFO - D-528532-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:49 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:49 - central_logger - INFO - D-835486-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:44:49 - central_logger - INFO - D-835486-1 * Formulaire soumis avec succès.
+2025-01-08 16:44:49 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:44:49 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:52 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:44:52 - central_logger - INFO - D-835486-1 * Traitement terminé.
+2025-01-08 16:44:52 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:44:52 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:44:52 - central_logger - INFO - Contrat D-835486-1 traité avec succès.
+2025-01-08 16:44:52 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-373404-1.
+2025-01-08 16:44:52 - central_logger - INFO - Soumission du numéro de contrat D-373404-1...
+2025-01-08 16:44:52 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:44:52 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:44:52 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:44:52 - central_logger - INFO - Numéro de contrat D-373404-1 soumis avec succès.
+2025-01-08 16:44:52 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:44:52 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:52 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:44:52 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:52 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:52 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:44:52 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:53 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:44:53 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-373404-1 effectué avec succès.
+2025-01-08 16:44:54 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:44:54 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:44:55 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:44:55 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:44:55 - central_logger - INFO - D-141650-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:55 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:44:55 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:55 - central_logger - INFO - D-141650-2 * Ancienne première valeur Régate 800360
+2025-01-08 16:44:55 - central_logger - INFO - D-141650-2 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:44:55 - central_logger - INFO - D-141650-2 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:44:55 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:56 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:56 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:56 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:56 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:44:56 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:56 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:44:57 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:57 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:57 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:57 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:57 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:44:57 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:44:57 - central_logger - DEBUG - D-141650-2 * Nouveau code régate attribué 598310
+2025-01-08 16:44:57 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="32228244d682e524914dcbc605ac11ba", element="f.BF3A3EC833D6DB60F206C5AF42CF6543.d.4ED0E15E2546A5DBA0974B106610D51E.e.2305")>
+2025-01-08 16:44:57 - central_logger - DEBUG - D-141650-2 * Selection actuelle dans le select: None
+2025-01-08 16:44:57 - central_logger - INFO - D-141650-2 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:44:57 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:44:57 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:44:57 - central_logger - INFO - 1-6516432653 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:57 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:57 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:57 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:57 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:57 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:44:57 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:44:57 - central_logger - INFO - D-433775-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:44:57 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:44:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:44:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:44:58 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:44:58 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:44:58 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:44:58 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:44:58 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:44:59 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:44:59 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:44:59 - central_logger - INFO - D-373404-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:44:59 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:59 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:44:59 - central_logger - DEBUG - D-141650-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:44:59 - central_logger - INFO - D-141650-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:44:59 - central_logger - INFO - D-141650-2 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:45:00 - central_logger - INFO - D-141650-2 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:45:00 - central_logger - INFO - D-141650-2 * Formulaire soumis avec succès.
+2025-01-08 16:45:01 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:01 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:01 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:01 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:45:04 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:45:04 - central_logger - INFO - D-141650-2 * Traitement terminé.
+2025-01-08 16:45:04 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:45:04 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:45:04 - central_logger - INFO - Contrat D-141650-2 traité avec succès.
+2025-01-08 16:45:04 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-858502-1.
+2025-01-08 16:45:04 - central_logger - INFO - Soumission du numéro de contrat D-858502-1...
+2025-01-08 16:45:04 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:45:04 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:45:04 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:45:04 - central_logger - INFO - Numéro de contrat D-858502-1 soumis avec succès.
+2025-01-08 16:45:04 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:45:05 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:45:06 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-858502-1 effectué avec succès.
+2025-01-08 16:45:06 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:45:06 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:45:08 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:08 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:45:08 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:45:09 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:09 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:09 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:09 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:11 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:11 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:45:11 - central_logger - INFO - D-858502-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:45:11 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:11 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:13 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:13 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:13 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:14 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:45:16 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:16 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:16 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:17 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:17 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:17 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:18 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:21 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:45:21 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:45:21 - central_logger - INFO - D-310306-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:45:21 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:21 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:21 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:21 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:21 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:45:21 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:21 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:21 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:22 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:45:22 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:45:22 - central_logger - INFO - 1-181953271 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:45:22 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:22 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:22 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:22 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:45:29 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:30 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:30 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:30 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:30 - central_logger - INFO - D-528532-1 * Ancienne première valeur Régate 800300
+2025-01-08 16:45:30 - central_logger - INFO - D-528532-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:45:30 - central_logger - INFO - D-528532-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:45:32 - central_logger - DEBUG - Modification de traitement: de 800300 à 598310
+2025-01-08 16:45:32 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:45:32 - central_logger - DEBUG - D-528532-1 * Nouveau code régate attribué 598310
+2025-01-08 16:45:32 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="589f4e7b4ab2d8ecf6b90cd0297433f2", element="f.3C88134943CA910539D6DA953FFB5528.d.2B93F35BFCBE194BD1F2C33ADAA5A18D.e.973")>
+2025-01-08 16:45:32 - central_logger - DEBUG - D-528532-1 * Selection actuelle dans le select: None
+2025-01-08 16:45:33 - central_logger - INFO - D-528532-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:45:34 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:34 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:34 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:34 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:35 - central_logger - DEBUG - D-528532-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:45:35 - central_logger - INFO - D-528532-1 * L'heure est déjà sélectionnée: '15H30'.
+2025-01-08 16:45:35 - central_logger - INFO - D-528532-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:45:36 - central_logger - INFO - D-528532-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:45:36 - central_logger - INFO - D-528532-1 * Formulaire soumis avec succès.
+2025-01-08 16:45:38 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:38 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:38 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:38 - central_logger - INFO - 1-6516432653 * Ancienne première valeur Régate 800360
+2025-01-08 16:45:38 - central_logger - INFO - 1-6516432653 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:45:38 - central_logger - INFO - 1-6516432653 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:45:38 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:38 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:38 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:38 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:38 - central_logger - INFO - F48656 * Ancienne première valeur Régate 801920
+2025-01-08 16:45:38 - central_logger - INFO - F48656 * Ancienne seconde valeur Régate 800300
+2025-01-08 16:45:38 - central_logger - INFO - F48656 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:45:38 - central_logger - INFO - D-433775-1 * Ancienne première valeur Régate 800300
+2025-01-08 16:45:38 - central_logger - INFO - D-433775-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:45:38 - central_logger - INFO - D-433775-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:45:39 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:45:39 - central_logger - INFO - D-528532-1 * Traitement terminé.
+2025-01-08 16:45:40 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:45:40 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:45:40 - central_logger - INFO - Contrat D-528532-1 traité avec succès.
+2025-01-08 16:45:40 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-874000-1.
+2025-01-08 16:45:40 - central_logger - INFO - Soumission du numéro de contrat D-874000-1...
+2025-01-08 16:45:40 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:45:40 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:45:40 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:45:40 - central_logger - INFO - Numéro de contrat D-874000-1 soumis avec succès.
+2025-01-08 16:45:40 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:45:40 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - Modification de traitement: de 801920 à 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - Modification de traitement: de 800300 à 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - 1-6516432653 * Nouveau code régate attribué 598310
+2025-01-08 16:45:40 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="53ba4b56f029cf17c7295d057f2d38de", element="f.A4E8E11D64422F2230AA32D40478A640.d.7113978F5DEFBF7D3CD92D4F3D963FA8.e.962")>
+2025-01-08 16:45:41 - central_logger - DEBUG - 1-6516432653 * Selection actuelle dans le select: None
+2025-01-08 16:45:41 - central_logger - INFO - 1-6516432653 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:45:41 - central_logger - DEBUG - F48656 * Nouveau code régate attribué 598310
+2025-01-08 16:45:41 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b0c24c7f012a48b3b2e10fe018cbb3a6", element="f.00651BE8A4BC6C18369E6207245A4A2D.d.F2B5FF50D30DBF9ACFCF776564772FED.e.933")>
+2025-01-08 16:45:41 - central_logger - DEBUG - F48656 * Selection actuelle dans le select: None
+2025-01-08 16:45:41 - central_logger - DEBUG - D-433775-1 * Nouveau code régate attribué 598310
+2025-01-08 16:45:41 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="5c0fe925f3d6e006eded89917f0de83d", element="f.B0965349FEC03E68DE41B275D6FC42A7.d.0C177D7B83EF7D837E8CA82D1085E46C.e.1046")>
+2025-01-08 16:45:41 - central_logger - DEBUG - D-433775-1 * Selection actuelle dans le select: None
+2025-01-08 16:45:41 - central_logger - INFO - F48656 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:45:41 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:45:41 - central_logger - INFO - D-433775-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:45:42 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:42 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:42 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-874000-1 effectué avec succès.
+2025-01-08 16:45:42 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:45:42 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:45:42 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:45:42 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:45:43 - central_logger - DEBUG - 1-6516432653 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:45:43 - central_logger - INFO - 1-6516432653 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:45:43 - central_logger - INFO - 1-6516432653 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:45:43 - central_logger - DEBUG - F48656 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:45:43 - central_logger - DEBUG - D-433775-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:45:43 - central_logger - INFO - F48656 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:45:43 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:43 - central_logger - INFO - D-433775-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:45:43 - central_logger - INFO - F48656 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:45:43 - central_logger - INFO - D-433775-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:45:44 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:45:44 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:45:44 - central_logger - INFO - 1-6516432653 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:45:44 - central_logger - INFO - 1-6516432653 * Formulaire soumis avec succès.
+2025-01-08 16:45:44 - central_logger - INFO - F48656 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:45:44 - central_logger - INFO - F48656 * Formulaire soumis avec succès.
+2025-01-08 16:45:44 - central_logger - INFO - D-433775-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:45:44 - central_logger - INFO - D-433775-1 * Formulaire soumis avec succès.
+2025-01-08 16:45:47 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:45:47 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:45:47 - central_logger - INFO - D-373404-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:45:47 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:47 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:47 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:47 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:45:47 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:47 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:45:47 - central_logger - INFO - D-874000-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:45:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:47 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:45:47 - central_logger - INFO - 1-6516432653 * Traitement terminé.
+2025-01-08 16:45:47 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:45:47 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:45:47 - central_logger - INFO - Contrat 1-6516432653 traité avec succès.
+2025-01-08 16:45:47 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-895319-1.
+2025-01-08 16:45:47 - central_logger - INFO - Soumission du numéro de contrat D-895319-1...
+2025-01-08 16:45:47 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:45:47 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:45:47 - central_logger - INFO - F48656 * Traitement terminé.
+2025-01-08 16:45:48 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:45:48 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:45:48 - central_logger - INFO - D-433775-1 * Traitement terminé.
+2025-01-08 16:45:48 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:45:48 - central_logger - INFO - Numéro de contrat D-895319-1 soumis avec succès.
+2025-01-08 16:45:48 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:45:48 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:45:48 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:45:48 - central_logger - INFO - Contrat F48656 traité avec succès.
+2025-01-08 16:45:48 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-816287-1.
+2025-01-08 16:45:48 - central_logger - INFO - Soumission du numéro de contrat D-816287-1...
+2025-01-08 16:45:48 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:45:48 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:45:48 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:45:48 - central_logger - INFO - Numéro de contrat D-816287-1 soumis avec succès.
+2025-01-08 16:45:48 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:45:48 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:45:48 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:45:48 - central_logger - INFO - Contrat D-433775-1 traité avec succès.
+2025-01-08 16:45:48 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-939706-1.
+2025-01-08 16:45:48 - central_logger - INFO - Soumission du numéro de contrat D-939706-1...
+2025-01-08 16:45:48 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:45:48 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:45:48 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:45:48 - central_logger - INFO - Numéro de contrat D-939706-1 soumis avec succès.
+2025-01-08 16:45:48 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:45:49 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:45:49 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:49 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:49 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:49 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:45:49 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-895319-1 effectué avec succès.
+2025-01-08 16:45:49 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:45:49 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:45:50 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:45:50 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-816287-1 effectué avec succès.
+2025-01-08 16:45:50 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:45:50 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:45:51 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-939706-1 effectué avec succès.
+2025-01-08 16:45:51 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:45:51 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:45:52 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:52 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:52 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:53 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:45:53 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:45:53 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:45:53 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:45:53 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:45:53 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:45:54 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:45:54 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:45:54 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:45:56 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - INFO - D-895319-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:56 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - INFO - D-816287-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:56 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - INFO - D-939706-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:45:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:59 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:45:59 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:45:59 - central_logger - INFO - D-858502-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:45:59 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:45:59 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:45:59 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:45:59 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:46:02 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:02 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:46:02 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:46:02 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:02 - central_logger - INFO - D-310306-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:46:02 - central_logger - INFO - D-310306-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:46:02 - central_logger - INFO - D-310306-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:46:02 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:02 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:46:02 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:46:03 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:03 - central_logger - INFO - 1-181953271 * Ancienne première valeur Régate 800300
+2025-01-08 16:46:03 - central_logger - INFO - 1-181953271 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:46:03 - central_logger - INFO - 1-181953271 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:46:04 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:46:04 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:46:04 - central_logger - DEBUG - D-310306-1 * Nouveau code régate attribué 598310
+2025-01-08 16:46:04 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="8be1cc1eed11a713138191e047ab0f15", element="f.7203AA7EB2BA62F66E83E810DE6DDBEC.d.8218509B018C474915E191CD5F94722D.e.1622")>
+2025-01-08 16:46:04 - central_logger - DEBUG - D-310306-1 * Selection actuelle dans le select: None
+2025-01-08 16:46:04 - central_logger - INFO - D-310306-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:46:05 - central_logger - DEBUG - Modification de traitement: de 800300 à 598310
+2025-01-08 16:46:05 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:46:05 - central_logger - DEBUG - 1-181953271 * Nouveau code régate attribué 598310
+2025-01-08 16:46:05 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="4d83186f0280fddf6fb3d5a46b0073c4", element="f.FAF8C5F71AC10F60124AB89F075F55A4.d.B42459B10E9C1A0EE300030272BF58A1.e.1617")>
+2025-01-08 16:46:05 - central_logger - DEBUG - 1-181953271 * Selection actuelle dans le select: None
+2025-01-08 16:46:05 - central_logger - INFO - 1-181953271 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:46:06 - central_logger - DEBUG - D-310306-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:46:07 - central_logger - INFO - D-310306-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:46:07 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:07 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:07 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:07 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:07 - central_logger - INFO - D-310306-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:46:07 - central_logger - DEBUG - 1-181953271 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:46:07 - central_logger - INFO - 1-181953271 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:46:07 - central_logger - INFO - 1-181953271 * L'heure est déjà sélectionnée: '17H30'.
+2025-01-08 16:46:08 - central_logger - INFO - D-310306-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:46:08 - central_logger - INFO - D-310306-1 * Formulaire soumis avec succès.
+2025-01-08 16:46:08 - central_logger - INFO - 1-181953271 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:46:08 - central_logger - INFO - 1-181953271 * Formulaire soumis avec succès.
+2025-01-08 16:46:09 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:46:09 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:46:09 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:09 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:09 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:46:11 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:46:11 - central_logger - INFO - D-310306-1 * Traitement terminé.
+2025-01-08 16:46:11 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:46:11 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:46:11 - central_logger - INFO - Contrat D-310306-1 traité avec succès.
+2025-01-08 16:46:11 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-908748-1.
+2025-01-08 16:46:11 - central_logger - INFO - Soumission du numéro de contrat D-908748-1...
+2025-01-08 16:46:11 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:46:11 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:46:11 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:46:11 - central_logger - INFO - 1-181953271 * Traitement terminé.
+2025-01-08 16:46:11 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:46:11 - central_logger - INFO - Numéro de contrat D-908748-1 soumis avec succès.
+2025-01-08 16:46:11 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:46:12 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:46:12 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:46:12 - central_logger - INFO - Contrat 1-181953271 traité avec succès.
+2025-01-08 16:46:12 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-827066-1.
+2025-01-08 16:46:12 - central_logger - INFO - Soumission du numéro de contrat D-827066-1...
+2025-01-08 16:46:12 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:46:12 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:46:12 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:46:12 - central_logger - INFO - Numéro de contrat D-827066-1 soumis avec succès.
+2025-01-08 16:46:12 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:46:13 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:46:14 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:46:14 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-908748-1 effectué avec succès.
+2025-01-08 16:46:14 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:46:14 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:46:14 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-827066-1 effectué avec succès.
+2025-01-08 16:46:14 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:46:14 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:46:16 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:16 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:17 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:46:17 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:46:17 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:46:17 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:46:18 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:19 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:20 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:20 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:46:20 - central_logger - INFO - D-908748-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:46:20 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:20 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:20 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:20 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:46:20 - central_logger - INFO - D-827066-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:46:20 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:20 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:22 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:46:22 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:46:22 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:46:22 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:46:22 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:46:22 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:46:22 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:46:22 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:46:27 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:27 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:46:27 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:46:27 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:27 - central_logger - INFO - D-373404-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:46:27 - central_logger - INFO - D-373404-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:46:27 - central_logger - INFO - D-373404-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:46:29 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:46:29 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:46:29 - central_logger - DEBUG - D-373404-1 * Nouveau code régate attribué 598310
+2025-01-08 16:46:29 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="c258023be48260668921804d74bcdd6f", element="f.D481974DB4204269286E36D8D0EFBA20.d.25B8E42F4105224C8A0CCBC75E2C18E6.e.2273")>
+2025-01-08 16:46:29 - central_logger - DEBUG - D-373404-1 * Selection actuelle dans le select: None
+2025-01-08 16:46:29 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:46:29 - central_logger - INFO - D-373404-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:46:32 - central_logger - DEBUG - D-373404-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:46:32 - central_logger - INFO - D-373404-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:46:32 - central_logger - INFO - D-373404-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:46:33 - central_logger - INFO - D-373404-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:46:33 - central_logger - INFO - D-373404-1 * Formulaire soumis avec succès.
+2025-01-08 16:46:34 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Traitement
+2025-01-08 16:46:34 - central_logger - DEBUG - Valeur actuelle Second Rôle: Dépôt
+2025-01-08 16:46:34 - central_logger - INFO - D-874000-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:46:34 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:46:35 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:46:35 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:46:36 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:46:36 - central_logger - INFO - D-373404-1 * Traitement terminé.
+2025-01-08 16:46:36 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:46:36 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:46:36 - central_logger - INFO - Contrat D-373404-1 traité avec succès.
+2025-01-08 16:46:36 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-959369-1.
+2025-01-08 16:46:36 - central_logger - INFO - Soumission du numéro de contrat D-959369-1...
+2025-01-08 16:46:36 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:46:36 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:46:37 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:46:37 - central_logger - INFO - Numéro de contrat D-959369-1 soumis avec succès.
+2025-01-08 16:46:37 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:46:37 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:46:38 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-959369-1 effectué avec succès.
+2025-01-08 16:46:38 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:46:38 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:46:38 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:38 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:38 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:38 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:39 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:39 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:39 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:39 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:46:39 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:39 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:46:39 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:40 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:40 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:46:40 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:46:40 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:40 - central_logger - INFO - D-858502-1 * Ancienne première valeur Régate peronne pdc
+2025-01-08 16:46:40 - central_logger - INFO - D-858502-1 * Ancienne seconde valeur Régate roye pic
+2025-01-08 16:46:40 - central_logger - INFO - D-858502-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:46:40 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:41 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:46:41 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:46:42 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:42 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:42 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:42 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:42 - central_logger - DEBUG - Modification de traitement: de peronne pdc à 598310
+2025-01-08 16:46:42 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:46:42 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:42 - central_logger - DEBUG - D-858502-1 * Nouveau code régate attribué 598310
+2025-01-08 16:46:42 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="32228244d682e524914dcbc605ac11ba", element="f.BF3A3EC833D6DB60F206C5AF42CF6543.d.8C251181A7E0F7451429E0FB31581E3D.e.2972")>
+2025-01-08 16:46:42 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:46:42 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:42 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:43 - central_logger - DEBUG - D-858502-1 * Selection actuelle dans le select: None
+2025-01-08 16:46:43 - central_logger - INFO - D-858502-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:46:44 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:46:44 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:46:44 - central_logger - INFO - D-816287-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:46:44 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:46:44 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:46:44 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:46:44 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:46:44 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:44 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:46:44 - central_logger - INFO - D-959369-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:46:44 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:44 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:45 - central_logger - DEBUG - D-858502-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:46:45 - central_logger - INFO - D-858502-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:46:45 - central_logger - INFO - D-858502-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:46:46 - central_logger - INFO - D-858502-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:46:46 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:46:46 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:46:46 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:46:48 - central_logger - INFO - D-858502-1 * Formulaire soumis avec succès.
+2025-01-08 16:46:51 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:46:51 - central_logger - INFO - D-858502-1 * Traitement terminé.
+2025-01-08 16:46:51 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:46:51 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-08 16:46:51 - central_logger - INFO - Contrat D-858502-1 traité avec succès.
+2025-01-08 16:46:51 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-883130-1.
+2025-01-08 16:46:51 - central_logger - INFO - Soumission du numéro de contrat D-883130-1...
+2025-01-08 16:46:51 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-08 16:46:51 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-08 16:46:51 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-08 16:46:51 - central_logger - INFO - Numéro de contrat D-883130-1 soumis avec succès.
+2025-01-08 16:46:51 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-08 16:46:52 - central_logger - DEBUG - Passé à l'iframe avec succès.
+2025-01-08 16:46:53 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-883130-1 effectué avec succès.
+2025-01-08 16:46:53 - central_logger - DEBUG - Retour au contenu principal après traitement de l'iframe.
+2025-01-08 16:46:53 - central_logger - DEBUG - Attente de la redirection...
+2025-01-08 16:46:55 - central_logger - DEBUG - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:55 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:46:55 - central_logger - DEBUG - Sélecteur select_first_time (1er) initialisé.
+2025-01-08 16:46:55 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:46:55 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:46:55 - central_logger - DEBUG - Sélecteur select_second_time (1er) initialisé.
+2025-01-08 16:46:55 - central_logger - DEBUG - L'élément cible est cliquable et a été cliqué.
+2025-01-08 16:46:55 - central_logger - DEBUG - La page est complètement chargée
+2025-01-08 16:46:58 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:58 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:46:59 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-08 16:46:59 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-08 16:46:59 - central_logger - INFO - D-883130-1 * Traitement du contrat Affranchigo Premium
+2025-01-08 16:46:59 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:59 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:46:59 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:46:59 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:01 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:47:01 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:47:01 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:47:01 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:47:02 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:02 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:02 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:03 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:03 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:03 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:04 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:04 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:47:04 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:47:04 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:47:07 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:47:07 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:47:07 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:47:07 - central_logger - INFO - D-908748-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:47:07 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:47:07 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:47:07 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:47:07 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:47:08 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:47:08 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:47:08 - central_logger - INFO - D-827066-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:47:08 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:47:08 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:47:08 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:47:08 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:47:15 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:15 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:47:15 - central_logger - INFO - D-874000-1 * Ancienne première valeur Régate ROYE PIC
+2025-01-08 16:47:15 - central_logger - INFO - D-874000-1 * Ancienne seconde valeur Régate 800360
+2025-01-08 16:47:15 - central_logger - INFO - D-874000-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:47:17 - central_logger - DEBUG - Modification de traitement: de ROYE PIC à 598310
+2025-01-08 16:47:17 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:47:18 - central_logger - DEBUG - D-874000-1 * Nouveau code régate attribué 598310
+2025-01-08 16:47:18 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="589f4e7b4ab2d8ecf6b90cd0297433f2", element="f.3C88134943CA910539D6DA953FFB5528.d.06551BAECE392628A8B8404A3169793D.e.1613")>
+2025-01-08 16:47:18 - central_logger - DEBUG - D-874000-1 * Selection actuelle dans le select: None
+2025-01-08 16:47:18 - central_logger - INFO - D-874000-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:47:18 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:19 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:20 - central_logger - DEBUG - D-874000-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:47:21 - central_logger - INFO - D-874000-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:47:21 - central_logger - INFO - D-874000-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:47:21 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:21 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:47:21 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:47:21 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:47:22 - central_logger - INFO - D-874000-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:47:22 - central_logger - INFO - D-874000-1 * Formulaire soumis avec succès.
+2025-01-08 16:47:23 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Traitement
+2025-01-08 16:47:23 - central_logger - DEBUG - Valeur actuelle Second Rôle: Dépôt
+2025-01-08 16:47:23 - central_logger - INFO - D-895319-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:47:23 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:47:24 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:47:24 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:47:24 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:24 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:24 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:24 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:47:24 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Traitement
+2025-01-08 16:47:24 - central_logger - DEBUG - Valeur actuelle Second Rôle: Dépôt
+2025-01-08 16:47:24 - central_logger - INFO - D-939706-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:47:24 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:47:24 - central_logger - INFO - D-816287-1 * Ancienne première valeur Régate PERONNE
+2025-01-08 16:47:24 - central_logger - INFO - D-816287-1 * Ancienne seconde valeur Régate ROYE
+2025-01-08 16:47:24 - central_logger - INFO - D-816287-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:47:24 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:47:24 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:47:25 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:47:25 - central_logger - INFO - D-874000-1 * Traitement terminé.
+2025-01-08 16:47:25 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-08 16:47:25 - central_logger - INFO - Contrat D-874000-1 traité avec succès.
+2025-01-08 16:47:26 - central_logger - DEBUG - Modification de traitement: de PERONNE à 598310
+2025-01-08 16:47:26 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:47:26 - central_logger - DEBUG - D-816287-1 * Nouveau code régate attribué 598310
+2025-01-08 16:47:26 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b0c24c7f012a48b3b2e10fe018cbb3a6", element="f.00651BE8A4BC6C18369E6207245A4A2D.d.55111CF25954F75D14125514BC845934.e.1604")>
+2025-01-08 16:47:26 - central_logger - DEBUG - D-816287-1 * Selection actuelle dans le select: None
+2025-01-08 16:47:27 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:27 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:47:27 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:47:27 - central_logger - INFO - D-816287-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:47:27 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:47:27 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:27 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:47:27 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:47:27 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:47:28 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:28 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:47:28 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:47:28 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:47:29 - central_logger - DEBUG - D-816287-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:47:29 - central_logger - INFO - D-816287-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:47:29 - central_logger - INFO - D-816287-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:47:30 - central_logger - INFO - D-816287-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:47:30 - central_logger - INFO - D-816287-1 * Formulaire soumis avec succès.
+2025-01-08 16:47:33 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:47:33 - central_logger - INFO - D-816287-1 * Traitement terminé.
+2025-01-08 16:47:34 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 2.
+2025-01-08 16:47:34 - central_logger - INFO - Contrat D-816287-1 traité avec succès.
+2025-01-08 16:47:41 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:41 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:41 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:44 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:47:44 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:47:46 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-08 16:47:46 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-08 16:47:46 - central_logger - INFO - D-883130-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:47:46 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:47:47 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:47:47 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:47:47 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-08 16:47:47 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:47 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:48 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:48 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:48 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:47:48 - central_logger - INFO - D-908748-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:47:48 - central_logger - INFO - D-908748-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:47:48 - central_logger - INFO - D-908748-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:47:48 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:47:48 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:47:48 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:47:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:47:48 - central_logger - INFO - D-827066-1 * Ancienne première valeur Régate PERONNE
+2025-01-08 16:47:48 - central_logger - INFO - D-827066-1 * Ancienne seconde valeur Régate 801920
+2025-01-08 16:47:48 - central_logger - INFO - D-827066-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:47:50 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:47:50 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:47:50 - central_logger - DEBUG - D-908748-1 * Nouveau code régate attribué 598310
+2025-01-08 16:47:50 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="8be1cc1eed11a713138191e047ab0f15", element="f.7203AA7EB2BA62F66E83E810DE6DDBEC.d.310794E9BCCC33BEFF80198A824AA241.e.2315")>
+2025-01-08 16:47:50 - central_logger - DEBUG - D-908748-1 * Selection actuelle dans le select: None
+2025-01-08 16:47:50 - central_logger - DEBUG - Modification de traitement: de PERONNE à 598310
+2025-01-08 16:47:50 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:47:50 - central_logger - INFO - D-908748-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:47:50 - central_logger - DEBUG - D-827066-1 * Nouveau code régate attribué 598310
+2025-01-08 16:47:50 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="4d83186f0280fddf6fb3d5a46b0073c4", element="f.FAF8C5F71AC10F60124AB89F075F55A4.d.85457117D0A867D77EFB94AC6B551BEA.e.2288")>
+2025-01-08 16:47:51 - central_logger - DEBUG - D-827066-1 * Selection actuelle dans le select: None
+2025-01-08 16:47:51 - central_logger - INFO - D-827066-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:47:52 - central_logger - DEBUG - D-908748-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:47:52 - central_logger - INFO - D-908748-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:47:52 - central_logger - INFO - D-908748-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:47:53 - central_logger - DEBUG - D-827066-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:47:53 - central_logger - INFO - D-827066-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-08 16:47:53 - central_logger - INFO - D-827066-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:47:54 - central_logger - INFO - D-908748-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:47:54 - central_logger - INFO - D-908748-1 * Formulaire soumis avec succès.
+2025-01-08 16:47:54 - central_logger - INFO - D-827066-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:47:54 - central_logger - INFO - D-827066-1 * Formulaire soumis avec succès.
+2025-01-08 16:47:57 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:47:57 - central_logger - INFO - D-908748-1 * Traitement terminé.
+2025-01-08 16:47:57 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 3.
+2025-01-08 16:47:57 - central_logger - INFO - Contrat D-908748-1 traité avec succès.
+2025-01-08 16:47:57 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:47:57 - central_logger - INFO - D-827066-1 * Traitement terminé.
+2025-01-08 16:47:58 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 4.
+2025-01-08 16:47:58 - central_logger - INFO - Contrat D-827066-1 traité avec succès.
+2025-01-08 16:48:04 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:04 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:48:04 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:48:04 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:48:05 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:05 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:48:05 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:48:05 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:48:07 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:07 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:48:07 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:48:07 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:48:07 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:48:12 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Traitement
+2025-01-08 16:48:12 - central_logger - DEBUG - Valeur actuelle Second Rôle: Dépôt
+2025-01-08 16:48:12 - central_logger - INFO - D-959369-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-08 16:48:12 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-08 16:48:12 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-08 16:48:12 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-08 16:48:24 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:24 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:48:25 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:25 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:48:27 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:27 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:48:27 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:48:27 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:48:27 - central_logger - INFO - D-883130-1 * Ancienne première valeur Régate 800360
+2025-01-08 16:48:27 - central_logger - INFO - D-883130-1 * Ancienne seconde valeur Régate roye pic
+2025-01-08 16:48:27 - central_logger - INFO - D-883130-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:48:29 - central_logger - DEBUG - Modification de traitement: de 800360 à 598310
+2025-01-08 16:48:29 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:48:30 - central_logger - DEBUG - D-883130-1 * Nouveau code régate attribué 598310
+2025-01-08 16:48:30 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="32228244d682e524914dcbc605ac11ba", element="f.BF3A3EC833D6DB60F206C5AF42CF6543.d.A5C0127E949578BCF3965AC5D6AADCDB.e.3630")>
+2025-01-08 16:48:30 - central_logger - DEBUG - D-883130-1 * Selection actuelle dans le select: None
+2025-01-08 16:48:30 - central_logger - INFO - D-883130-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:48:32 - central_logger - DEBUG - D-883130-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:48:32 - central_logger - INFO - D-883130-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:48:32 - central_logger - DEBUG - Sélecteur select_first_role (2 ème) initialisé.
+2025-01-08 16:48:32 - central_logger - INFO - D-883130-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:48:33 - central_logger - INFO - D-883130-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:48:33 - central_logger - INFO - D-883130-1 * Formulaire soumis avec succès.
+2025-01-08 16:48:37 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:48:37 - central_logger - INFO - D-883130-1 * Traitement terminé.
+2025-01-08 16:48:37 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 5.
+2025-01-08 16:48:37 - central_logger - INFO - Contrat D-883130-1 traité avec succès.
+2025-01-08 16:48:44 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:48:44 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:48:44 - central_logger - INFO - D-895319-1 * Ancienne première valeur Régate 801920
+2025-01-08 16:48:44 - central_logger - INFO - D-895319-1 * Ancienne seconde valeur Régate 800360
+2025-01-08 16:48:44 - central_logger - INFO - D-895319-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:48:45 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:48:45 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:48:45 - central_logger - INFO - D-939706-1 * Ancienne première valeur Régate 801920
+2025-01-08 16:48:45 - central_logger - INFO - D-939706-1 * Ancienne seconde valeur Régate PERONNE
+2025-01-08 16:48:45 - central_logger - INFO - D-939706-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:48:46 - central_logger - DEBUG - Modification de traitement: de 801920 à 598310
+2025-01-08 16:48:46 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:48:47 - central_logger - DEBUG - D-895319-1 * Nouveau code régate attribué 598310
+2025-01-08 16:48:47 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="53ba4b56f029cf17c7295d057f2d38de", element="f.A4E8E11D64422F2230AA32D40478A640.d.5EC9BE854489780C89CAD09DBB6963D7.e.1656")>
+2025-01-08 16:48:47 - central_logger - DEBUG - D-895319-1 * Selection actuelle dans le select: None
+2025-01-08 16:48:47 - central_logger - INFO - D-895319-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:48:47 - central_logger - DEBUG - Modification de traitement: de 801920 à 598310
+2025-01-08 16:48:47 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:48:47 - central_logger - DEBUG - D-939706-1 * Nouveau code régate attribué 598310
+2025-01-08 16:48:47 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="5c0fe925f3d6e006eded89917f0de83d", element="f.B0965349FEC03E68DE41B275D6FC42A7.d.AEC4D9AB70412A061F6488FBE27D7B31.e.1741")>
+2025-01-08 16:48:48 - central_logger - DEBUG - D-939706-1 * Selection actuelle dans le select: None
+2025-01-08 16:48:48 - central_logger - INFO - D-939706-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:48:49 - central_logger - DEBUG - D-895319-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:48:49 - central_logger - INFO - D-895319-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:48:49 - central_logger - INFO - D-895319-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:48:50 - central_logger - DEBUG - D-939706-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:48:50 - central_logger - INFO - D-939706-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:48:50 - central_logger - INFO - D-939706-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-08 16:48:50 - central_logger - INFO - D-895319-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:48:50 - central_logger - INFO - D-895319-1 * Formulaire soumis avec succès.
+2025-01-08 16:48:51 - central_logger - INFO - D-939706-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:48:52 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:48:52 - central_logger - DEBUG - Sélecteur select_first_time (2ème) initialisé.
+2025-01-08 16:48:53 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-08 16:48:53 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-08 16:48:53 - central_logger - INFO - D-939706-1 * Formulaire soumis avec succès.
+2025-01-08 16:48:54 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:48:54 - central_logger - INFO - D-895319-1 * Traitement terminé.
+2025-01-08 16:48:54 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 6.
+2025-01-08 16:48:54 - central_logger - INFO - Contrat D-895319-1 traité avec succès.
+2025-01-08 16:48:57 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:48:57 - central_logger - INFO - D-939706-1 * Traitement terminé.
+2025-01-08 16:48:57 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 7.
+2025-01-08 16:48:57 - central_logger - INFO - Contrat D-939706-1 traité avec succès.
+2025-01-08 16:49:13 - central_logger - DEBUG - Premier sélecteur invalide, tentative avec le second.
+2025-01-08 16:49:13 - central_logger - DEBUG - Sélecteur select_second_time (2ème) initialisé.
+2025-01-08 16:49:33 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-08 16:49:33 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-08 16:49:33 - central_logger - INFO - D-959369-1 * Ancienne première valeur Régate 801920
+2025-01-08 16:49:33 - central_logger - INFO - D-959369-1 * Ancienne seconde valeur Régate 800360
+2025-01-08 16:49:33 - central_logger - INFO - D-959369-1 * Futur valeur du fichier Excel traitement 598310
+2025-01-08 16:49:35 - central_logger - DEBUG - Modification de traitement: de 801920 à 598310
+2025-01-08 16:49:35 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 598310
+2025-01-08 16:49:35 - central_logger - DEBUG - D-959369-1 * Nouveau code régate attribué 598310
+2025-01-08 16:49:35 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="c258023be48260668921804d74bcdd6f", element="f.D481974DB4204269286E36D8D0EFBA20.d.D6BA1EAC58C90D4D483EC600CF6FF50C.e.2932")>
+2025-01-08 16:49:35 - central_logger - DEBUG - D-959369-1 * Selection actuelle dans le select: None
+2025-01-08 16:49:35 - central_logger - INFO - D-959369-1 * Nouveau Libellé d'établissement : 598310 LESQUIN LILLE PIC
+2025-01-08 16:49:37 - central_logger - DEBUG - D-959369-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-08 16:49:38 - central_logger - INFO - D-959369-1 * L'heure est déjà sélectionnée: '18H00'.
+2025-01-08 16:49:38 - central_logger - INFO - D-959369-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-08 16:49:39 - central_logger - INFO - D-959369-1 * Clic sur le bouton de soumission avec succès.
+2025-01-08 16:49:40 - central_logger - INFO - D-959369-1 * Formulaire soumis avec succès.
+2025-01-08 16:49:43 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-08 16:49:43 - central_logger - INFO - D-959369-1 * Traitement terminé.
+2025-01-08 16:49:44 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 8.
+2025-01-08 16:49:44 - central_logger - INFO - Contrat D-959369-1 traité avec succès.
+2025-01-08 16:49:44 - central_logger - INFO - Tous les contrats ont été traités avec multi-threading.
+2025-01-08 16:49:44 - central_logger - INFO - Fermeture de toutes les instances WebDriver...
+2025-01-08 16:50:31 - central_logger - INFO - Toutes les instances WebDriver ont été fermées.

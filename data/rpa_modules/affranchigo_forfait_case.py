@@ -358,7 +358,7 @@ class AffranchigoForfaitCase:
         """
         try:
             # Charger le fichier Excel
-            df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx')
+            df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx')
             self.logger.debug("Fichier Excel chargé.")
             
             # Trouver la ligne correspondant au numéro de contrat
@@ -391,7 +391,7 @@ class AffranchigoForfaitCase:
         self.logger.info(f"{numero_contrat} * Traitement du contrat Affranchigo Forfait")
 
         # Charger le fichier Excel
-        df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125.xlsx')
+        df = pd.read_excel('data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx')
         self.logger.debug("Fichier Excel chargé.")
 
         # Sélectionner les éléments radio

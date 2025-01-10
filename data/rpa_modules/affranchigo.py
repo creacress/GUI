@@ -204,7 +204,7 @@ class AffranchigoRPA:
             self.logger.debug(f"Contrat numéro {contrat_number} déjà présent, non ajouté.")
             return False
 
-    def save_non_modifiable(self, contrat_number, file_path="problèmes_contrats.json"):
+    def save_non_modifiable(self, contrat_number, file_path="problèmes_contrats_2.json"):
         data = set()
         try:
             with self.file_lock, open(file_path, "r") as file:
@@ -272,11 +272,6 @@ class AffranchigoRPA:
             driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
             driver.execute_script("arguments[0].click();", bouton_modification)
             self.logger.info(f"Clic sur le bouton de modification pour le contrat {contrat_number} effectué avec succès.")
-        
-        except TimeoutException:
-            self.logger.warning(f"{contrat_number} * Le bouton 'Modification' n'est pas cliquable ou introuvable. Vérification des contrats multi-sites.")
-            self.handle_non_clickable_element(driver, contrat_number)
-        
         except Exception as e:
             self.logger.error(f"Erreur inattendue lors du traitement de l'iframe pour le contrat {contrat_number} : {e}")
             self.handle_non_clickable_element(driver, contrat_number)
@@ -289,15 +284,7 @@ class AffranchigoRPA:
         self.logger.debug("Attente de la redirection...")
 
         try:
-            h1_element = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
-            h1_text = h1_element.text
-            self.logger.debug(f"Texte de l'en-tête H1: {h1_text}")
-
-            if "Collecte Remise Plus" in h1_text or "Collecte et remise" in h1_text:
-                target_selector = "#content_offre > ul > li:nth-child(3) > a"
-            else:
-                target_selector = "#content_offre > ul > li:nth-child(2) > a"
-
+            target_selector = "#content_offre > ul > li:nth-child(2) > a"
             element = WebDriverWait(driver, timeout).until(EC.element_to_be_clickable((By.CSS_SELECTOR, target_selector)))
             element.click()
             self.logger.debug("L'élément cible est cliquable et a été cliqué.")
@@ -454,12 +441,12 @@ class AffranchigoRPA:
                     self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {e}")
     
 
-    def main(self, excel_path, progress_callback=None, max_workers=3):
+    def main(self, progress_callback=None, max_workers=5):
         """
         Méthode principale pour le traitement du RPA avec multi-threading.
         """
         self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
-
+        excel_path="data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx"
         # Extraction des numéros de contrat
         json_path = 'data/numeros_contrat_robot.json'
         extract_contrat_numbers_to_json(excel_path, json_path)
@@ -495,12 +482,11 @@ class AffranchigoRPA:
 
         self.logger.info("Tous les contrats ont été traités avec multi-threading.")
 
-    def start(self, excel_path="data/data_traitement/PIC de ROYE - Transfert des S3C.xlsx"):
+    def start(self ):
         """
         Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
         """
-        self.logger.info(f"Lancement du RPA Affranchigo avec le fichier {excel_path}")
-        self.main(excel_path)
+        self.main()
 
 
     def stop(self):
