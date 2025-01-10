@@ -237,74 +237,14 @@ class AffranchigoRPA:
         
         except NoSuchElementException:
             self.logger.debug(f"L'élément 'detailsCategorieV' introuvable pour le contrat {numero_contrat}.")
+            self.return_driver_erreur(numero_contrat)
         
         except Exception as e:
             self.logger.error(f"Erreur lors de la gestion des contrats multi-sites pour {numero_contrat} : {e}")
+            self.return_driver_erreur(numero_contrat)
         
-        finally:
-            if driver:
-                try:
-                    # Réinitialiser le WebDriver à l'URL de départ
-                    driver.get(self.url)
-                    self.logger.debug(f"WebDriver réinitialisé à l'URL de départ pour le contrat {numero_contrat}.")
-                except Exception as reset_error:
-                    # Si la réinitialisation échoue, détruire le driver
-                    self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
-                    try:
-                        driver.quit()
-                        self.logger.debug("WebDriver défectueux fermé avec succès.")
-                    except Exception as quit_error:
-                        self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                    finally:
-                        driver = None  # Forcer la création d'un nouveau WebDriver
-
-                # Retourner le WebDriver au pool ou en créer un nouveau
-                if driver:
-                    try:
-                        self.pool.return_driver(driver)
-                        self.logger.debug(f"WebDriver retourné au pool pour le contrat {numero_contrat}.")
-                    except Exception as pool_error:
-                        self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {pool_error}")
-                        try:
-                            driver.quit()
-                            self.logger.debug("WebDriver fermé après échec de retour au pool.")
-                        except Exception as quit_error:
-                            self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                        finally:
-                            driver = None
-                else:
-                    # Créer un nouveau WebDriver si le précédent a échoué
-                    try:
-                        new_driver = self.pool.create_driver()
-                        self.pool.return_driver(new_driver)
-                        self.logger.debug("Nouveau WebDriver créé et ajouté au pool après défaillance.")
-                    except Exception as creation_error:
-                        self.logger.critical(f"Erreur critique lors de la création d'un nouveau WebDriver: {creation_error}")
-
-
-
-    def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number):
-        self.logger.info("Changement vers iframe et tentative de clic sur 'Modification'...")
-        iframe_selector = "#modalRefContrat > div > div > div.modal-body > iframe"
-        modification_button_selector = "//permission/a[@href='#amendment']//div[@id='detailsModificationButton']"
-        
-        try:
-            # Passage à l'iframe
-            iframe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, iframe_selector)))
-            driver.switch_to.frame(iframe)
-            self.logger.debug("Passé à l'iframe avec succès.")
-
-            # Tentative de clic sur le bouton de modification
-            bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
-            driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
-            driver.execute_script("arguments[0].click();", bouton_modification)
-            self.logger.info(f"Clic sur le bouton de modification pour le contrat {contrat_number} effectué avec succès.")
-        except Exception as e:
-            self.logger.error(f"Erreur inattendue lors du traitement de l'iframe pour le contrat {contrat_number} : {e}")
-            self.handle_non_clickable_element(driver, contrat_number)
-
-        finally:
-            if driver:
+    def return_driver_erreur(self, contrat_number):
+         if driver:
                 try:
                     # Réinitialiser le WebDriver à l'URL de départ
                     driver.get(self.url)
@@ -343,67 +283,43 @@ class AffranchigoRPA:
                     except Exception as creation_error:
                         self.logger.critical(f"Erreur critique lors de la création d'un nouveau WebDriver: {creation_error}")
 
+    def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number):
+        self.logger.info("Changement vers iframe et tentative de clic sur 'Modification'...")
+        iframe_selector = "#modalRefContrat > div > div > div.modal-body > iframe"
+        modification_button_selector = "//permission/a[@href='#amendment']//div[@id='detailsModificationButton']"
+        
+        try:
+            # Passage à l'iframe
+            iframe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, iframe_selector)))
+            driver.switch_to.frame(iframe)
+            self.logger.debug("Passé à l'iframe avec succès.")
+
+            # Tentative de clic sur le bouton de modification
+            bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
+            driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
+            driver.execute_script("arguments[0].click();", bouton_modification)
+            self.logger.info(f"Clic sur le bouton de modification pour le contrat {contrat_number} effectué avec succès.")
+        except Exception as e:
+            self.logger.error(f"Erreur inattendue lors du traitement de l'iframe pour le contrat {contrat_number} : {e}")
+            self.handle_non_clickable_element(driver, contrat_number)
+            self.return_driver_erreur(contrat_number)
 
     def wait_for_complete_redirection(self, driver, wait, numero_contrat, timeout=20):
         self.logger.debug("Attente de la redirection...")
-
         try:
             target_selector = "#content_offre > ul > li:nth-child(2) > a"
             element = WebDriverWait(driver, timeout).until(EC.element_to_be_clickable((By.CSS_SELECTOR, target_selector)))
             element.click()
             self.logger.debug("L'élément cible est cliquable et a été cliqué.")
-        except TimeoutException as e:
-            self.logger.exception("La redirection ou le chargement de la page n'a pas été complet dans le temps imparti, ou l'élément cible n'a pas été trouvé.")
-            self.save_non_modifiable(numero_contrat)
         except NoSuchElementException as e:
             self.logger.exception("L'élément h1 ou l'élément cible n'a pas été trouvé sur la page.")
             self.save_non_modifiable(numero_contrat)
+            self.return_driver_erreur(numero_contrat)
         except Exception as e:
             self.logger.debug("Erreur inattendue lors de l'attente de la redirection ou du chargement de la page.")
             self.save_non_modifiable(numero_contrat)
-
-        finally:
-            if driver:
-                try:
-                    # Réinitialiser le WebDriver à l'URL de départ
-                    driver.get(self.url)
-                    self.logger.debug(f"WebDriver réinitialisé à l'URL de départ pour le contrat {numero_contrat}.")
-                except Exception as reset_error:
-                    # Si la réinitialisation échoue, détruire le driver
-                    self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
-                    try:
-                        driver.quit()
-                        self.logger.debug("WebDriver défectueux fermé avec succès.")
-                    except Exception as quit_error:
-                        self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                    finally:
-                        driver = None  # Forcer la création d'un nouveau WebDriver
-
-                # Retourner le WebDriver au pool ou en créer un nouveau
-                if driver:
-                    try:
-                        self.pool.return_driver(driver)
-                        self.logger.debug(f"WebDriver retourné au pool pour le contrat {numero_contrat}.")
-                    except Exception as pool_error:
-                        self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {pool_error}")
-                        try:
-                            driver.quit()
-                            self.logger.debug("WebDriver fermé après échec de retour au pool.")
-                        except Exception as quit_error:
-                            self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                        finally:
-                            driver = None
-                else:
-                    # Créer un nouveau WebDriver si le précédent a échoué
-                    try:
-                        new_driver = self.pool.create_driver()
-                        self.pool.return_driver(new_driver)
-                        self.logger.debug("Nouveau WebDriver créé et ajouté au pool après défaillance.")
-                    except Exception as creation_error:
-                        self.logger.critical(f"Erreur critique lors de la création d'un nouveau WebDriver: {creation_error}")
-
-
-
+            self.return_driver_erreur(numero_contrat)
+    
     def modifications_conditions_ventes(self, driver, wait, numero_contrat, dictionnaire, dictionnaire_original):
         # Importer les modules localement pour éviter les boucles d'importation circulaire
         from rpa_modules.affranchigo_forfait_case import AffranchigoForfaitCase
@@ -475,48 +391,8 @@ class AffranchigoRPA:
                 return "Inconnu"
         except Exception as e:
             self.logger.exception(f"Service non reconnu : {e}")
+            self.return_driver_erreur(numero_contrat)
             return "Erreur"
-        finally:
-            if driver:
-                try:
-                    # Réinitialiser le WebDriver à l'URL de départ
-                    driver.get(self.url)
-                    self.logger.debug(f"WebDriver réinitialisé à l'URL de départ pour le contrat {numero_contrat}.")
-                except Exception as reset_error:
-                    # Si la réinitialisation échoue, détruire le driver
-                    self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
-                    try:
-                        driver.quit()
-                        self.logger.debug("WebDriver défectueux fermé avec succès.")
-                    except Exception as quit_error:
-                        self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                    finally:
-                        driver = None  # Forcer la création d'un nouveau WebDriver
-
-                # Retourner le WebDriver au pool ou en créer un nouveau
-                if driver:
-                    try:
-                        self.pool.return_driver(driver)
-                        self.logger.debug(f"WebDriver retourné au pool pour le contrat {numero_contrat}.")
-                    except Exception as pool_error:
-                        self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {pool_error}")
-                        try:
-                            driver.quit()
-                            self.logger.debug("WebDriver fermé après échec de retour au pool.")
-                        except Exception as quit_error:
-                            self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                        finally:
-                            driver = None
-                else:
-                    # Créer un nouveau WebDriver si le précédent a échoué
-                    try:
-                        new_driver = self.pool.create_driver()
-                        self.pool.return_driver(new_driver)
-                        self.logger.debug("Nouveau WebDriver créé et ajouté au pool après défaillance.")
-                    except Exception as creation_error:
-                        self.logger.critical(f"Erreur critique lors de la création d'un nouveau WebDriver: {creation_error}")
-
-
 
     def process_contract(self, driver, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
         wait = WebDriverWait(driver, 20)  # Augmentation du délai pour le WebDriver
@@ -654,7 +530,7 @@ class AffranchigoRPA:
 
     
 
-    def main(self, progress_callback=None, max_workers=5):
+    def main(self, progress_callback=None, max_workers=2):
         """
         Méthode principale pour le traitement du RPA avec multi-threading.
         """
