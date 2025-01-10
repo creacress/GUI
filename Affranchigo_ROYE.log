@@ -1,236 +1,227 @@
-2025-01-10 11:07:36 - central_logger - DEBUG - WebDriverPool initialized with max_size=30
-2025-01-10 11:07:36 - central_logger - DEBUG - Creating a new WebDriver instance
-2025-01-10 11:07:39 - central_logger - DEBUG - WebDriver instance created successfully
-2025-01-10 11:07:39 - central_logger - DEBUG - Creating a new WebDriver instance
-2025-01-10 11:07:43 - central_logger - DEBUG - WebDriver instance created successfully
-2025-01-10 11:07:43 - central_logger - INFO - Nom du RPA reçu: Affranchigo
-2025-01-10 11:07:43 - central_logger - DEBUG - Démarrage du RPA Affranchigo en multi-threading...
-2025-01-10 11:07:44 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats à partir du fichier : data/numeros_contrat_robot.json
-2025-01-10 11:07:44 - central_logger - DEBUG - Numéros de contrat récupérés : ['D-410806-1', 'D-782298-1', '1-10063522288', 'D-826954-1', '1-10095909286', 'D-652969-1', 'D-453512-1', 'D-464224-1', 'D-557707-1', 'D-920366-3', 'D-791069-1', 'D-928427-1', 'D-569164-1', 'D-1036879-1', 'D-644785-1', 'D-667487-1', 'D-713306-2', 'D-1043775-2', 'D-879358-1', 'D-806468-1', 'D-750417-1', 'D-762569-1', 'D-775541-1', 'D-823472-2', 'D-835953-1', 'D-941562-1', 'D-833255-1', 'D-857547-1', 'D-1003851-1', 'D-1018577-2', 'D-914690-2', 'D-946328-1', 'D-1033101-2', 'D-963774-1', 'D-972505-1', 'D-972707-1', 'D-1034538-1', 'D-1047854-1', '1-8012470411', '1-1674684211', 'D-90928-1', '1-273982655', '1-6934970218', 'D-705589-1', '1-280537538', '1-1781616511', '1-272753701', '1-316391553', '1-296691760', '1-297910717', '1-291206280', '1-2329492712', '1-304525350', 'D-560355-1', '1-2842234101', '1-3203985848', '1-7746937496', '1-286246359', '1-282885131', '1-754550886', '1-322621903', '1-316023701', '1-3323922813', '1-2265776661', '1-7339592401', '1-4417716776', 'D-750209-1', 'D-796406-2', 'D-998449-1', '1-2717668155', '1-3234233409', '1-3166555911', '1-2694521923', '1-6590293439', '1-297944037', '1-2705899595', '1-649676903', '1-7664216424', '1-300040816', 'D-917673-2', '1-295478197', '1-302667375', '1-275465004', '1-943824164', 'D-745713-1', 'D-527490-1', '1-281365631', '1-2048509104', '1-3118165184', '1-1225253991', '1-511488097', 'D-538398-1', '1-304015672', '1-322701028', '1-347878947', '1-271669921', '1-10002158131', 'D-307959-2', '1-4567968281', 'D-803532-1', '1-953366758', '1-5055054651', '1-312003677', 'D-25892-1', '1-3446997321', 'D-827784-2', '1-1040282730', '1-1242749174', '1-537789101', 'D-946996-1', '1-3230200393', '1-5941088630', 'D-827782-1', 'D-581519-1', 'D-815070-2', 'D-797181-1', '1-8431942307', '1-9855653183', '1-10135012261', 'D-701736-2', 'D-705477-1', 'D-1017167-2', 'D-427659-2', 'D-730770-2', 'D-464708-1', 'D-894567-1', 'D-644440-1', 'D-825727-1', 'D-648417-1', 'D-552464-2', 'D-566511-2', 'D-61937-2', 'D-822416-2', 'D-843216-2', 'D-919989-1', 'D-651584-2', 'D-552642-1', 'D-716992-2', 'D-745788-2', 'D-850871-2', 'D-896502-1', 'D-962737-1', '1-273331126', 'D-676134-1', 'D-843560-2', 'D-753457-1', 'D-834268-2', 'D-504714-2', 'D-938919-2']
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-410806-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-782298-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10063522288
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-826954-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10095909286
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-652969-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-453512-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-464224-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-557707-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-920366-3
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-791069-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-928427-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-569164-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1036879-1
-2025-01-10 11:07:44 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-410806-1.
-2025-01-10 11:07:44 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-644785-1
-2025-01-10 11:07:44 - central_logger - INFO - Soumission du numéro de contrat D-410806-1...
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-667487-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-713306-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1043775-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-879358-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-806468-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-750417-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-762569-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-775541-1
-2025-01-10 11:07:44 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-782298-1.
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-823472-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-835953-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-941562-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-833255-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-857547-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1003851-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1018577-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-914690-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-946328-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1033101-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-963774-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-972505-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-972707-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1034538-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1047854-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-8012470411
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1674684211
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-90928-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-273982655
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-6934970218
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-705589-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-280537538
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1781616511
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-272753701
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-316391553
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-296691760
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-297910717
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-291206280
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2329492712
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-304525350
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-560355-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2842234101
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3203985848
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-7746937496
-2025-01-10 11:07:44 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-286246359
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-282885131
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-754550886
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-322621903
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-316023701
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3323922813
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2265776661
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-7339592401
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-4417716776
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-750209-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-796406-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-998449-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2717668155
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3234233409
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3166555911
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2694521923
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-6590293439
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-297944037
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2705899595
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-649676903
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-7664216424
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-300040816
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-917673-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-295478197
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-302667375
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-275465004
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-943824164
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-745713-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-527490-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-281365631
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2048509104
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3118165184
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1225253991
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-511488097
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-538398-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-304015672
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-322701028
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-347878947
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-271669921
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10002158131
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-307959-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-4567968281
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-803532-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-953366758
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-5055054651
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-312003677
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-25892-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3446997321
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-827784-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1040282730
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1242749174
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-537789101
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-946996-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3230200393
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-5941088630
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-827782-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-581519-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-815070-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-797181-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-8431942307
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-9855653183
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10135012261
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-701736-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-705477-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1017167-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-427659-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-730770-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-464708-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-894567-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-644440-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-825727-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-648417-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-552464-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-566511-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-61937-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-822416-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-843216-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-919989-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-651584-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-552642-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-716992-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-745788-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-850871-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-896502-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-962737-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-273331126
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-676134-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-843560-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-753457-1
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-834268-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-504714-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-938919-2
-2025-01-10 11:07:44 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
-2025-01-10 11:07:44 - central_logger - DEBUG - La page est complètement chargée.
-2025-01-10 11:07:44 - central_logger - INFO - Numéro de contrat D-410806-1 soumis avec succès.
-2025-01-10 11:07:44 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
-2025-01-10 11:07:44 - central_logger - INFO - Soumission du numéro de contrat D-782298-1...
-2025-01-10 11:07:44 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
-2025-01-10 11:07:44 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
-2025-01-10 11:07:44 - central_logger - DEBUG - La page est complètement chargée.
-2025-01-10 11:07:44 - central_logger - INFO - Numéro de contrat D-782298-1 soumis avec succès.
-2025-01-10 11:07:44 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
-2025-01-10 11:07:46 - central_logger - DEBUG - Passé à l'iframe avec succès.
-2025-01-10 11:07:46 - central_logger - DEBUG - Passé à l'iframe avec succès.
-2025-01-10 11:07:46 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-410806-1 effectué avec succès.
-2025-01-10 11:07:46 - central_logger - DEBUG - Attente de la redirection...
-2025-01-10 11:07:47 - central_logger - INFO - Clic sur le bouton de modification pour le contrat D-782298-1 effectué avec succès.
-2025-01-10 11:07:47 - central_logger - DEBUG - Attente de la redirection...
-2025-01-10 11:08:06 - central_logger - DEBUG - Erreur inattendue lors de l'attente de la redirection ou du chargement de la page.
-2025-01-10 11:08:06 - central_logger - DEBUG - Le fichier n'existe pas, il sera créé.
-2025-01-10 11:08:06 - central_logger - INFO - Contrat numéro D-410806-1 ajouté aux non modifiables.
-2025-01-10 11:08:06 - central_logger - ERROR - Erreur lors du traitement du contrat D-410806-1: cannot access local variable 'driver' where it is not associated with a value
-2025-01-10 11:08:06 - central_logger - DEBUG - Contrat numéro D-410806-1 déjà présent, non ajouté.
-2025-01-10 11:08:07 - central_logger - DEBUG - Erreur inattendue lors de l'attente de la redirection ou du chargement de la page.
-2025-01-10 11:08:07 - central_logger - INFO - Contrat numéro D-782298-1 ajouté aux non modifiables.
-2025-01-10 11:08:07 - central_logger - ERROR - Erreur lors du traitement du contrat D-782298-1: cannot access local variable 'driver' where it is not associated with a value
-2025-01-10 11:08:07 - central_logger - DEBUG - Contrat numéro D-782298-1 déjà présent, non ajouté.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-782298-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-410806-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-782298-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-782298-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 2.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-410806-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-410806-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 3.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-782298-1.
-2025-01-10 11:08:07 - central_logger - WARNING - Échec du traitement du contrat D-782298-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 4.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-410806-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2025-01-10 11:08:07 - central_logger - WARNING - Échec du traitement du contrat D-410806-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-10063522288.
-2025-01-10 11:08:07 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
-2025-01-10 11:08:07 - central_logger - INFO - Soumission du numéro de contrat 1-10063522288...
-2025-01-10 11:08:07 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-826954-1.
-2025-01-10 11:08:07 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
-2025-01-10 11:08:08 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
-2025-01-10 11:08:08 - central_logger - DEBUG - La page est complètement chargée.
-2025-01-10 11:08:08 - central_logger - INFO - Numéro de contrat 1-10063522288 soumis avec succès.
-2025-01-10 11:08:08 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
-2025-01-10 11:08:08 - central_logger - INFO - Soumission du numéro de contrat D-826954-1...
-2025-01-10 11:08:08 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
-2025-01-10 11:08:08 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
-2025-01-10 11:08:08 - central_logger - DEBUG - La page est complètement chargée.
-2025-01-10 11:08:08 - central_logger - INFO - Numéro de contrat D-826954-1 soumis avec succès.
-2025-01-10 11:08:08 - central_logger - INFO - Changement vers iframe et tentative de clic sur 'Modification'...
-2025-01-10 11:08:08 - central_logger - DEBUG - Passé à l'iframe avec succès.
-2025-01-10 11:08:09 - central_logger - INFO - Clic sur le bouton de modification pour le contrat 1-10063522288 effectué avec succès.
-2025-01-10 11:08:09 - central_logger - DEBUG - Attente de la redirection...
-2025-01-10 11:08:09 - central_logger - DEBUG - Passé à l'iframe avec succès.
-2025-01-10 11:08:10 - central_logger - ERROR - Erreur inattendue lors du traitement de l'iframe pour le contrat D-826954-1 : Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=130.0.2849.56)
+2025-01-10 11:41:58 - central_logger - DEBUG - WebDriverPool initialized with max_size=30
+2025-01-10 11:41:58 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-10 11:42:01 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-10 11:42:01 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-10 11:42:06 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-10 11:42:06 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-10 11:42:10 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-10 11:42:10 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-10 11:42:15 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-10 11:42:15 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-10 11:42:19 - central_logger - DEBUG - WebDriver instance created successfully
+2025-01-10 11:42:19 - central_logger - INFO - Nom du RPA reçu: Affranchigo
+2025-01-10 11:42:19 - central_logger - DEBUG - Démarrage du RPA Affranchigo en multi-threading...
+2025-01-10 11:42:19 - central_logger - DEBUG - Traitement du fichier JSON pour les contrats à partir du fichier : data/numeros_contrat_robot.json
+2025-01-10 11:42:19 - central_logger - DEBUG - Numéros de contrat récupérés : ['D-429633-1', 'D-136405-1', '1-3077015436', 'D-424658-1', 'D-402478-1', 'D-1015059-1', 'D-998247-1', 'D-1025019-2', 'D-958890-1', '1-4151309220', '1-311207752', 'D-739417-1', 'D-216871-1', 'D-801955-1', 'D-69447-1', 'D-1038376-1', 'F27079', 'D-590636-1', '1-1943999383', 'D-747856-1', 'D-523086-1', 'D-977783-1', 'D-452168-1', '1-5073266918', '1-2465102793', 'D-1016881-2', 'D-1026301-1', '1-6686422614', 'D-939496-1', '1-2861893296', 'D-567862-1', 'D-822440-1', 'D-1057693-1', 'D-216637-1', 'D-676354-1', '1-1302904013', 'D-1023380-2', 'D-1023575-2', 'D-1023173-2', 'D-745607-1', '1-3927729457', 'D-1024797-2', 'D-1035131-2', 'D-663051-1', 'D-856388-1', 'D-17160-1', '1-3979891664', 'F27090', '1-244783060', 'D-992812-1', 'D-422461-1', 'F27095', 'D-181727-1', 'D-517503-1', '1-321315908', 'D-1031941-2', 'D-363275-1', 'D-1042181-1', '1-7148586131', 'D-664703-1', 'D-716737-1', 'D-97704-1', 'D-22740-1', 'D-1060052-1', 'D-1023887-2', '1-307488064', 'D-1016908-2', 'D-754791-1', 'D-412411-1', 'D-3648-1', 'D-62720-1', 'D-844802-1', 'D-993914-2', 'D-342900-1', 'D-383536-1', 'D-205971-1', 'D-182291-1', 'D-22960-1', '1-6460879431', 'D-462834-1', '1-10028049761', 'D-908033-2', 'D-1020166-2', 'D-1013347-1', '1-4395261306', 'D-462832-1', 'D-359517-1', 'D-843567-1', 'D-21937-2', 'D-16313-1', 'D-1080236-1', 'D-331245-1', 'D-419422-1', '1-10178255866', 'D-338541-1', 'D-816544-1', '1-9475479501', 'D-477599-1', 'D-994317-2', 'D-370749-2', '1-10290526334', 'D-330623-1', 'D-991531-1', 'D-1023515-1', 'D-893809-1', 'D-883132-1', 'D-569178-1', 'D-804917-1', 'D-629981-1', 'D-639784-1', 'D-658156-1', 'D-674699-1', 'D-694596-1', 'D-722544-1', 'D-722551-1', 'D-859038-1', 'D-838598-1', 'D-1005502-2', 'D-894262-1', 'D-963755-2', 'D-923288-1', 'D-995733-2', 'D-1016422-1', 'D-1013214-2', 'D-1063927-1', 'D-996757-2', 'D-159469-2', 'D-1035308-2', 'D-954772-1', 'D-811936-1', 'D-1073119-2', 'D-870567-2', 'D-939028-1', 'D-800156-2', 'D-820981-2', 'D-853209-2', 'D-956318-2', 'D-1038518-2']
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-429633-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-136405-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3077015436
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-424658-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-402478-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1015059-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-998247-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1025019-2
+2025-01-10 11:42:19 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-429633-1.
+2025-01-10 11:42:19 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-958890-1
+2025-01-10 11:42:19 - central_logger - INFO - Soumission du numéro de contrat D-429633-1...
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-4151309220
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-311207752
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-739417-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-216871-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-801955-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-69447-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1038376-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: F27079
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-590636-1
+2025-01-10 11:42:19 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-136405-1.
+2025-01-10 11:42:19 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1943999383
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-747856-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-523086-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-977783-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-452168-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-5073266918
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2465102793
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1016881-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1026301-1
+2025-01-10 11:42:19 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-3077015436.
+2025-01-10 11:42:19 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-6686422614
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-939496-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-2861893296
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-567862-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-822440-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1057693-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-216637-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-676354-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-1302904013
+2025-01-10 11:42:19 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-424658-1.
+2025-01-10 11:42:19 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1023380-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1023575-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1023173-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-745607-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3927729457
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1024797-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1035131-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-663051-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-856388-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-17160-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-3979891664
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: F27090
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-244783060
+2025-01-10 11:42:19 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-992812-1
+2025-01-10 11:42:19 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-402478-1.
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-422461-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: F27095
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-181727-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-517503-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-321315908
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1031941-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-363275-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1042181-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-7148586131
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-664703-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-716737-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-97704-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-22740-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1060052-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1023887-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-307488064
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1016908-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-754791-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-412411-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-3648-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-62720-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-844802-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-993914-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-342900-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-383536-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-205971-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-182291-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-22960-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-6460879431
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-462834-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10028049761
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-908033-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1020166-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1013347-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-4395261306
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-462832-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-359517-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-843567-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-21937-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-16313-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1080236-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-331245-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-419422-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10178255866
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-338541-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-816544-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-9475479501
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-477599-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-994317-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-370749-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: 1-10290526334
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-330623-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-991531-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1023515-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-893809-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-883132-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-569178-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-804917-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-629981-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-639784-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-658156-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-674699-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-694596-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-722544-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-722551-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-859038-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-838598-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1005502-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-894262-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-963755-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-923288-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-995733-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1016422-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1013214-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1063927-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-996757-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-159469-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1035308-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-954772-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-811936-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1073119-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-870567-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-939028-1
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-800156-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-820981-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-853209-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-956318-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Préparation pour traiter le contrat suivant: D-1038518-2
+2025-01-10 11:42:19 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:42:19 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:42:19 - central_logger - INFO - Numéro de contrat D-429633-1 soumis avec succès.
+2025-01-10 11:42:19 - central_logger - INFO - D-429633-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:42:19 - central_logger - INFO - Soumission du numéro de contrat D-136405-1...
+2025-01-10 11:42:19 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:42:20 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:42:20 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:42:20 - central_logger - INFO - Numéro de contrat D-136405-1 soumis avec succès.
+2025-01-10 11:42:20 - central_logger - INFO - D-136405-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:42:20 - central_logger - INFO - Soumission du numéro de contrat 1-3077015436...
+2025-01-10 11:42:20 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:42:20 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:42:20 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:42:20 - central_logger - INFO - Numéro de contrat 1-3077015436 soumis avec succès.
+2025-01-10 11:42:20 - central_logger - INFO - 1-3077015436 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:42:20 - central_logger - INFO - Soumission du numéro de contrat D-424658-1...
+2025-01-10 11:42:20 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:42:20 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:42:20 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:42:20 - central_logger - INFO - Numéro de contrat D-424658-1 soumis avec succès.
+2025-01-10 11:42:20 - central_logger - INFO - D-424658-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:42:20 - central_logger - INFO - Soumission du numéro de contrat D-402478-1...
+2025-01-10 11:42:20 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:42:21 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:42:21 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:42:21 - central_logger - INFO - Numéro de contrat D-402478-1 soumis avec succès.
+2025-01-10 11:42:21 - central_logger - INFO - D-402478-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:42:23 - central_logger - DEBUG - D-429633-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:42:23 - central_logger - DEBUG - D-136405-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:42:23 - central_logger - INFO - D-429633-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:42:23 - central_logger - DEBUG - D-429633-1 * Attente de la redirection...
+2025-01-10 11:42:24 - central_logger - DEBUG - D-429633-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:42:24 - central_logger - DEBUG - 1-3077015436 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:42:24 - central_logger - INFO - 1-3077015436 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:42:24 - central_logger - DEBUG - 1-3077015436 * Attente de la redirection...
+2025-01-10 11:42:24 - central_logger - DEBUG - 1-3077015436 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:42:25 - central_logger - INFO - D-136405-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:42:25 - central_logger - DEBUG - D-136405-1 * Attente de la redirection...
+2025-01-10 11:42:25 - central_logger - DEBUG - D-136405-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:42:26 - central_logger - DEBUG - D-424658-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:42:26 - central_logger - DEBUG - D-402478-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:42:27 - central_logger - INFO - D-424658-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:42:27 - central_logger - DEBUG - D-424658-1 * Attente de la redirection...
+2025-01-10 11:42:27 - central_logger - DEBUG - D-424658-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:42:27 - central_logger - INFO - D-402478-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:42:27 - central_logger - DEBUG - D-402478-1 * Attente de la redirection...
+2025-01-10 11:42:27 - central_logger - DEBUG - D-402478-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:42:44 - central_logger - WARNING - D-429633-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
 Stacktrace:
 	GetHandleVerifier [0x00007FF6C148CEF5+12997]
 	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
 	(No symbol) [0x00007FF6C123F1CC]
-	(No symbol) [0x00007FF6C121AB09]
-	(No symbol) [0x00007FF6C12AE83B]
-	(No symbol) [0x00007FF6C12C21DA]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
 	(No symbol) [0x00007FF6C12A7BB3]
 	(No symbol) [0x00007FF6C127B5AC]
 	(No symbol) [0x00007FF6C127AA8D]
@@ -246,16 +237,21 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFDC2157374+20]
 	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
 
-2025-01-10 11:08:10 - central_logger - ERROR - Erreur lors de la gestion des contrats multi-sites pour D-826954-1 : Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=130.0.2849.56)
+2025-01-10 11:42:44 - central_logger - DEBUG - D-429633-1 * Réessai 1/2 après échec.
+2025-01-10 11:42:44 - central_logger - DEBUG - D-429633-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:42:44 - central_logger - DEBUG - D-429633-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:42:44 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:42:45 - central_logger - WARNING - 1-3077015436 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
 Stacktrace:
 	GetHandleVerifier [0x00007FF6C148CEF5+12997]
 	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
 	(No symbol) [0x00007FF6C123F1CC]
-	(No symbol) [0x00007FF6C121AB09]
-	(No symbol) [0x00007FF6C12AE83B]
-	(No symbol) [0x00007FF6C12C21DA]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
 	(No symbol) [0x00007FF6C12A7BB3]
 	(No symbol) [0x00007FF6C127B5AC]
 	(No symbol) [0x00007FF6C127AA8D]
@@ -271,16 +267,21 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFDC2157374+20]
 	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
 
-2025-01-10 11:08:10 - central_logger - ERROR - Erreur lors de la réinitialisation du WebDriver pour D-826954-1: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=130.0.2849.56)
+2025-01-10 11:42:45 - central_logger - DEBUG - 1-3077015436 * Réessai 1/2 après échec.
+2025-01-10 11:42:45 - central_logger - DEBUG - 1-3077015436 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:42:45 - central_logger - DEBUG - 1-3077015436 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:42:45 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:42:45 - central_logger - WARNING - D-136405-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
 Stacktrace:
 	GetHandleVerifier [0x00007FF6C148CEF5+12997]
 	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
 	(No symbol) [0x00007FF6C123F1CC]
-	(No symbol) [0x00007FF6C121AB09]
-	(No symbol) [0x00007FF6C12AE83B]
-	(No symbol) [0x00007FF6C12C21DA]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
 	(No symbol) [0x00007FF6C12A7BB3]
 	(No symbol) [0x00007FF6C127B5AC]
 	(No symbol) [0x00007FF6C127AA8D]
@@ -296,5 +297,1085 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FFDC2157374+20]
 	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
 
-2025-01-10 11:08:12 - central_logger - DEBUG - WebDriver défectueux fermé avec succès.
-2025-01-10 11:08:12 - central_logger - DEBUG - Creating a new WebDriver instance
+2025-01-10 11:42:45 - central_logger - DEBUG - D-136405-1 * Réessai 1/2 après échec.
+2025-01-10 11:42:45 - central_logger - DEBUG - D-136405-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:42:45 - central_logger - DEBUG - D-136405-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:42:45 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:42:47 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:42:47 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:42:47 - central_logger - INFO - D-429633-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:42:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:47 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:47 - central_logger - WARNING - D-424658-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:42:47 - central_logger - DEBUG - D-424658-1 * Réessai 1/2 après échec.
+2025-01-10 11:42:47 - central_logger - DEBUG - D-424658-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:42:47 - central_logger - DEBUG - D-424658-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:42:47 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:42:48 - central_logger - WARNING - D-402478-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:42:48 - central_logger - DEBUG - D-402478-1 * Réessai 1/2 après échec.
+2025-01-10 11:42:48 - central_logger - DEBUG - D-402478-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:42:48 - central_logger - DEBUG - D-402478-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:42:48 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:42:48 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:42:48 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:42:48 - central_logger - INFO - 1-3077015436 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:48 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:42:48 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:42:48 - central_logger - INFO - D-136405-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:48 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:49 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:49 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:49 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:49 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:49 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:49 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:49 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:50 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:42:50 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:42:50 - central_logger - INFO - D-424658-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:42:50 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:50 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:51 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:42:51 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:42:51 - central_logger - INFO - D-402478-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:42:51 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:51 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:52 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:52 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:53 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:42:54 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:42:54 - central_logger - INFO - D-429633-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:42:54 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:54 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:54 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:54 - central_logger - INFO - D-429633-1 * Ancienne première valeur Régate 670270
+2025-01-10 11:42:54 - central_logger - INFO - D-429633-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:42:54 - central_logger - INFO - D-429633-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:42:55 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:42:55 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:42:55 - central_logger - INFO - 1-3077015436 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:42:55 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:55 - central_logger - INFO - 1-3077015436 * Ancienne première valeur Régate 670270
+2025-01-10 11:42:55 - central_logger - INFO - 1-3077015436 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:42:55 - central_logger - INFO - 1-3077015436 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:42:55 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:42:55 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:42:55 - central_logger - INFO - D-136405-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:42:55 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:55 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:56 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:56 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:56 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:56 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:56 - central_logger - INFO - D-136405-1 * Ancienne première valeur Régate 670270
+2025-01-10 11:42:56 - central_logger - INFO - D-136405-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:42:56 - central_logger - INFO - D-136405-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:42:56 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:42:56 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:42:57 - central_logger - DEBUG - D-429633-1 * Nouveau code régate attribué 572040
+2025-01-10 11:42:57 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b6654f7b8883e1eb5191e8402f59e874", element="f.9489BDEAC3D1A7A5EE16D9F08F79457D.d.9104D652BB3A8A5A17A9B19D6225EED7.e.307")>
+2025-01-10 11:42:57 - central_logger - DEBUG - D-429633-1 * Selection actuelle dans le select: None
+2025-01-10 11:42:57 - central_logger - INFO - D-429633-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:42:57 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:42:57 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:42:58 - central_logger - DEBUG - 1-3077015436 * Nouveau code régate attribué 572040
+2025-01-10 11:42:58 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="f7c014588ff1a50ef88ea65a76470b82", element="f.58A3C6B04E575AD0E19BF1C8F60F703E.d.00A39DED5C962CF208CE12E522AD4C73.e.304")>
+2025-01-10 11:42:58 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:42:58 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:42:58 - central_logger - INFO - D-424658-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:42:58 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:58 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:42:58 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - 1-3077015436 * Selection actuelle dans le select: None
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:58 - central_logger - INFO - D-424658-1 * Ancienne première valeur Régate 670270
+2025-01-10 11:42:58 - central_logger - INFO - D-424658-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:42:58 - central_logger - INFO - D-424658-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:42:58 - central_logger - INFO - 1-3077015436 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:42:58 - central_logger - DEBUG - D-136405-1 * Nouveau code régate attribué 572040
+2025-01-10 11:42:58 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b2e0b98a667874cc2d9271e14ee1b759", element="f.DC7DDD325CE5071AAEC7CA917141F096.d.DF2F0652F8B179431EDF226EA0C8D456.e.312")>
+2025-01-10 11:42:58 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:42:58 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:42:58 - central_logger - INFO - D-402478-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:42:58 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:42:58 - central_logger - DEBUG - D-136405-1 * Selection actuelle dans le select: None
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:42:58 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:42:58 - central_logger - INFO - D-402478-1 * Ancienne première valeur Régate 670910
+2025-01-10 11:42:58 - central_logger - INFO - D-402478-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:42:58 - central_logger - INFO - D-402478-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:42:58 - central_logger - INFO - D-136405-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:42:59 - central_logger - DEBUG - D-429633-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:42:59 - central_logger - INFO - D-429633-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:42:59 - central_logger - INFO - D-429633-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:00 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:43:00 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:43:00 - central_logger - DEBUG - 1-3077015436 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:43:00 - central_logger - INFO - 1-3077015436 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:00 - central_logger - DEBUG - D-424658-1 * Nouveau code régate attribué 572040
+2025-01-10 11:43:00 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="4a7eda3c8b0d9c8fa067a6a0567d6bef", element="f.A4D51A236CF738A0B6475B8C7D91F93C.d.6B1929E14C13C2F9CBE912CE2F7F7477.e.242")>
+2025-01-10 11:43:00 - central_logger - DEBUG - Modification de traitement: de 670910 à 572040
+2025-01-10 11:43:00 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:43:00 - central_logger - DEBUG - D-136405-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:43:00 - central_logger - DEBUG - D-424658-1 * Selection actuelle dans le select: None
+2025-01-10 11:43:00 - central_logger - INFO - 1-3077015436 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:00 - central_logger - INFO - D-136405-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:00 - central_logger - DEBUG - D-402478-1 * Nouveau code régate attribué 572040
+2025-01-10 11:43:00 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="80f654db99c27e38d52701af02f8a721", element="f.21227E764117D6D3EAE6770AE540A67A.d.9DA5F4F3F1061667A873BEC06332FC5E.e.308")>
+2025-01-10 11:43:00 - central_logger - INFO - D-424658-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:43:00 - central_logger - DEBUG - D-402478-1 * Selection actuelle dans le select: None
+2025-01-10 11:43:00 - central_logger - INFO - D-136405-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:01 - central_logger - INFO - D-429633-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:43:01 - central_logger - INFO - D-429633-1 * Formulaire soumis avec succès.
+2025-01-10 11:43:01 - central_logger - INFO - D-402478-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:43:01 - central_logger - INFO - 1-3077015436 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:43:01 - central_logger - INFO - 1-3077015436 * Formulaire soumis avec succès.
+2025-01-10 11:43:01 - central_logger - INFO - D-136405-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:43:01 - central_logger - INFO - D-136405-1 * Formulaire soumis avec succès.
+2025-01-10 11:43:02 - central_logger - DEBUG - D-424658-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:43:03 - central_logger - DEBUG - D-402478-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:43:03 - central_logger - INFO - D-424658-1 * L'heure est déjà sélectionnée: '15H30'.
+2025-01-10 11:43:03 - central_logger - INFO - D-424658-1 * L'heure est déjà sélectionnée: '15H30'.
+2025-01-10 11:43:03 - central_logger - INFO - D-402478-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:03 - central_logger - INFO - D-402478-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:43:04 - central_logger - INFO - D-424658-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:43:04 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:43:04 - central_logger - INFO - D-429633-1 * Traitement terminé.
+2025-01-10 11:43:04 - central_logger - INFO - D-424658-1 * Formulaire soumis avec succès.
+2025-01-10 11:43:04 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-429633-1.
+2025-01-10 11:43:04 - central_logger - INFO - D-402478-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:43:04 - central_logger - INFO - D-402478-1 * Formulaire soumis avec succès.
+2025-01-10 11:43:04 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 1.
+2025-01-10 11:43:04 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-429633-1.
+2025-01-10 11:43:04 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:43:04 - central_logger - INFO - 1-3077015436 * Traitement terminé.
+2025-01-10 11:43:04 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-429633-1.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 2.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-429633-1.
+2025-01-10 11:43:05 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:43:05 - central_logger - INFO - Contrat D-429633-1 traité avec succès.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-1015059-1.
+2025-01-10 11:43:05 - central_logger - INFO - Soumission du numéro de contrat D-1015059-1...
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat 1-3077015436.
+2025-01-10 11:43:05 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:43:05 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:43:05 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:43:05 - central_logger - INFO - Numéro de contrat D-1015059-1 soumis avec succès.
+2025-01-10 11:43:05 - central_logger - INFO - D-1015059-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:43:05 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:43:05 - central_logger - INFO - D-136405-1 * Traitement terminé.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 2.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat 1-3077015436.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-136405-1.
+2025-01-10 11:43:05 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat 1-3077015436.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 3.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-136405-1.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-136405-1.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 4.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat 1-3077015436.
+2025-01-10 11:43:06 - central_logger - INFO - Contrat 1-3077015436 traité avec succès.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 5.
+2025-01-10 11:43:06 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-136405-1.
+2025-01-10 11:43:06 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:43:06 - central_logger - INFO - Contrat D-136405-1 traité avec succès.
+2025-01-10 11:43:08 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:43:08 - central_logger - INFO - D-424658-1 * Traitement terminé.
+2025-01-10 11:43:08 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:43:08 - central_logger - INFO - D-402478-1 * Traitement terminé.
+2025-01-10 11:43:08 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-424658-1.
+2025-01-10 11:43:08 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-402478-1.
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-998247-1.
+2025-01-10 11:43:09 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:43:09 - central_logger - INFO - Soumission du numéro de contrat D-998247-1...
+2025-01-10 11:43:09 - central_logger - DEBUG - D-1015059-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-1025019-2.
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 4.
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-424658-1.
+2025-01-10 11:43:09 - central_logger - INFO - D-1015059-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:43:09 - central_logger - DEBUG - D-1015059-1 * Attente de la redirection...
+2025-01-10 11:43:09 - central_logger - DEBUG - D-1015059-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 5.
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-402478-1.
+2025-01-10 11:43:09 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-424658-1.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-402478-1.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 6.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-424658-1.
+2025-01-10 11:43:10 - central_logger - INFO - Contrat D-424658-1 traité avec succès.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 7.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-402478-1.
+2025-01-10 11:43:10 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:43:10 - central_logger - INFO - Contrat D-402478-1 traité avec succès.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-958890-1.
+2025-01-10 11:43:10 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:43:10 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-4151309220.
+2025-01-10 11:43:29 - central_logger - WARNING - Timeout lors de la soumission du contrat D-998247-1, la page pourrait ne pas avoir réagi à temps.
+2025-01-10 11:43:29 - central_logger - INFO - D-998247-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:43:29 - central_logger - INFO - Soumission du numéro de contrat D-1025019-2...
+2025-01-10 11:43:29 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:43:29 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:43:29 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:43:29 - central_logger - INFO - Numéro de contrat D-1025019-2 soumis avec succès.
+2025-01-10 11:43:29 - central_logger - INFO - D-1025019-2 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:43:29 - central_logger - INFO - Soumission du numéro de contrat D-958890-1...
+2025-01-10 11:43:29 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:43:29 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:43:29 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:43:29 - central_logger - INFO - Numéro de contrat D-958890-1 soumis avec succès.
+2025-01-10 11:43:29 - central_logger - INFO - D-958890-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:43:29 - central_logger - INFO - Soumission du numéro de contrat 1-4151309220...
+2025-01-10 11:43:29 - central_logger - WARNING - D-1015059-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:43:29 - central_logger - DEBUG - D-1015059-1 * Réessai 1/2 après échec.
+2025-01-10 11:43:29 - central_logger - DEBUG - D-1015059-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:43:30 - central_logger - DEBUG - D-1015059-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:43:30 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:43:30 - central_logger - DEBUG - D-1025019-2 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:43:31 - central_logger - INFO - D-1025019-2 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:43:31 - central_logger - DEBUG - D-1025019-2 * Attente de la redirection...
+2025-01-10 11:43:31 - central_logger - DEBUG - D-1025019-2 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:43:32 - central_logger - DEBUG - D-958890-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:43:33 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:43:33 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:43:33 - central_logger - INFO - D-1015059-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:43:33 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:33 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:33 - central_logger - INFO - D-958890-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:43:33 - central_logger - DEBUG - D-958890-1 * Attente de la redirection...
+2025-01-10 11:43:33 - central_logger - DEBUG - D-958890-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:43:35 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:43:35 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:43:35 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:43:35 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:43:35 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:43:35 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:43:35 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:43:40 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:43:40 - central_logger - INFO - D-1015059-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:43:40 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:43:40 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:43:40 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:40 - central_logger - INFO - D-1015059-1 * Ancienne première valeur Régate 673150
+2025-01-10 11:43:40 - central_logger - INFO - D-1015059-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:43:40 - central_logger - INFO - D-1015059-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:43:42 - central_logger - DEBUG - Modification de traitement: de 673150 à 572040
+2025-01-10 11:43:42 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:43:42 - central_logger - DEBUG - D-1015059-1 * Nouveau code régate attribué 572040
+2025-01-10 11:43:42 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b6654f7b8883e1eb5191e8402f59e874", element="f.9489BDEAC3D1A7A5EE16D9F08F79457D.d.9AFCAEB29E5AA21119EF269BFFDE7D42.e.1170")>
+2025-01-10 11:43:42 - central_logger - DEBUG - D-1015059-1 * Selection actuelle dans le select: None
+2025-01-10 11:43:43 - central_logger - INFO - D-1015059-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:43:45 - central_logger - DEBUG - D-1015059-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:43:45 - central_logger - INFO - D-1015059-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-10 11:43:45 - central_logger - INFO - D-1015059-1 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-10 11:43:46 - central_logger - INFO - D-1015059-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:43:46 - central_logger - INFO - D-1015059-1 * Formulaire soumis avec succès.
+2025-01-10 11:43:47 - central_logger - DEBUG - D-998247-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:43:48 - central_logger - INFO - D-998247-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:43:48 - central_logger - DEBUG - D-998247-1 * Attente de la redirection...
+2025-01-10 11:43:48 - central_logger - DEBUG - D-998247-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:43:50 - central_logger - WARNING - Timeout lors de la soumission du contrat 1-4151309220, la page pourrait ne pas avoir réagi à temps.
+2025-01-10 11:43:50 - central_logger - INFO - 1-4151309220 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:43:50 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:43:50 - central_logger - INFO - D-1015059-1 * Traitement terminé.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-1015059-1.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 6.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-1015059-1.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-1015059-1.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 7.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-1015059-1.
+2025-01-10 11:43:50 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:43:50 - central_logger - INFO - Contrat D-1015059-1 traité avec succès.
+2025-01-10 11:43:50 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat 1-311207752.
+2025-01-10 11:43:50 - central_logger - INFO - Soumission du numéro de contrat 1-311207752...
+2025-01-10 11:43:51 - central_logger - DEBUG - D-958890-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:43:51 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:43:52 - central_logger - WARNING - D-1025019-2 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:43:52 - central_logger - DEBUG - D-1025019-2 * Réessai 1/2 après échec.
+2025-01-10 11:43:52 - central_logger - DEBUG - D-1025019-2 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:43:52 - central_logger - DEBUG - D-1025019-2 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:43:52 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:43:54 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:43:54 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:43:54 - central_logger - INFO - D-958890-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:43:54 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:54 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:55 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:43:55 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:43:55 - central_logger - INFO - D-1025019-2 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:43:55 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:55 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:43:56 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:43:56 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:43:56 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:43:56 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:43:56 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:43:56 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:43:56 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:43:57 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:43:57 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:43:57 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:43:57 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:43:57 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:43:57 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:43:57 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:44:01 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:44:01 - central_logger - INFO - D-958890-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:44:01 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:44:01 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:01 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:01 - central_logger - INFO - D-958890-1 * Ancienne première valeur Régate 670270
+2025-01-10 11:44:01 - central_logger - INFO - D-958890-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:44:01 - central_logger - INFO - D-958890-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:44:02 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:44:02 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:44:02 - central_logger - INFO - D-1025019-2 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:44:02 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:44:02 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:44:02 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:44:02 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:44:02 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:44:02 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:44:02 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:02 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:02 - central_logger - INFO - D-1025019-2 * Ancienne première valeur Régate 670270
+2025-01-10 11:44:02 - central_logger - INFO - D-1025019-2 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:44:02 - central_logger - INFO - D-1025019-2 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:44:03 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:44:03 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:44:04 - central_logger - DEBUG - D-958890-1 * Nouveau code régate attribué 572040
+2025-01-10 11:44:04 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="b2e0b98a667874cc2d9271e14ee1b759", element="f.DC7DDD325CE5071AAEC7CA917141F096.d.EC452FF020075DE6B2FAA1D7F28874EB.e.1025")>
+2025-01-10 11:44:04 - central_logger - DEBUG - D-958890-1 * Selection actuelle dans le select: None
+2025-01-10 11:44:04 - central_logger - INFO - D-958890-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:44:04 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:44:04 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:44:05 - central_logger - DEBUG - D-1025019-2 * Nouveau code régate attribué 572040
+2025-01-10 11:44:05 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="f7c014588ff1a50ef88ea65a76470b82", element="f.58A3C6B04E575AD0E19BF1C8F60F703E.d.C70515097A6919B0843F1551E3FB902A.e.934")>
+2025-01-10 11:44:05 - central_logger - DEBUG - D-1025019-2 * Selection actuelle dans le select: None
+2025-01-10 11:44:05 - central_logger - INFO - D-1025019-2 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:44:06 - central_logger - DEBUG - D-958890-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:44:06 - central_logger - INFO - D-958890-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-10 11:44:06 - central_logger - INFO - D-958890-1 * L'heure est déjà sélectionnée: '17H00'.
+2025-01-10 11:44:07 - central_logger - DEBUG - D-1025019-2 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:44:07 - central_logger - INFO - D-1025019-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-10 11:44:07 - central_logger - INFO - D-958890-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:44:07 - central_logger - INFO - D-958890-1 * Formulaire soumis avec succès.
+2025-01-10 11:44:07 - central_logger - INFO - D-1025019-2 * L'heure est déjà sélectionnée: '16H00'.
+2025-01-10 11:44:08 - central_logger - WARNING - D-998247-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:08 - central_logger - DEBUG - D-998247-1 * Réessai 1/2 après échec.
+2025-01-10 11:44:08 - central_logger - DEBUG - D-998247-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:44:08 - central_logger - INFO - D-1025019-2 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:44:08 - central_logger - INFO - D-1025019-2 * Formulaire soumis avec succès.
+2025-01-10 11:44:10 - central_logger - DEBUG - 1-4151309220 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:44:10 - central_logger - INFO - 1-4151309220 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:44:10 - central_logger - DEBUG - 1-4151309220 * Attente de la redirection...
+2025-01-10 11:44:10 - central_logger - DEBUG - 1-4151309220 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:44:10 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:44:10 - central_logger - INFO - D-958890-1 * Traitement terminé.
+2025-01-10 11:44:11 - central_logger - WARNING - Timeout lors de la soumission du contrat 1-311207752, la page pourrait ne pas avoir réagi à temps.
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-958890-1.
+2025-01-10 11:44:11 - central_logger - INFO - 1-311207752 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 7.
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-958890-1.
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-958890-1.
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 8.
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-958890-1.
+2025-01-10 11:44:11 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:44:11 - central_logger - INFO - Contrat D-958890-1 traité avec succès.
+2025-01-10 11:44:11 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-739417-1.
+2025-01-10 11:44:11 - central_logger - INFO - Soumission du numéro de contrat D-739417-1...
+2025-01-10 11:44:11 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:44:11 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:44:11 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:44:11 - central_logger - INFO - Numéro de contrat D-739417-1 soumis avec succès.
+2025-01-10 11:44:11 - central_logger - INFO - D-739417-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:12 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:44:12 - central_logger - INFO - D-1025019-2 * Traitement terminé.
+2025-01-10 11:44:12 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-1025019-2.
+2025-01-10 11:44:12 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 8.
+2025-01-10 11:44:12 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-1025019-2.
+2025-01-10 11:44:12 - central_logger - DEBUG - D-739417-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:44:12 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-1025019-2.
+2025-01-10 11:44:13 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 9.
+2025-01-10 11:44:13 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-1025019-2.
+2025-01-10 11:44:13 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:44:13 - central_logger - INFO - Contrat D-1025019-2 traité avec succès.
+2025-01-10 11:44:13 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-216871-1.
+2025-01-10 11:44:13 - central_logger - INFO - Soumission du numéro de contrat D-216871-1...
+2025-01-10 11:44:13 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:44:13 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:44:13 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:44:13 - central_logger - INFO - Numéro de contrat D-216871-1 soumis avec succès.
+2025-01-10 11:44:13 - central_logger - INFO - D-216871-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:13 - central_logger - INFO - D-739417-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:44:13 - central_logger - DEBUG - D-739417-1 * Attente de la redirection...
+2025-01-10 11:44:13 - central_logger - DEBUG - D-739417-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:44:14 - central_logger - DEBUG - D-216871-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:44:15 - central_logger - INFO - D-216871-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:44:15 - central_logger - DEBUG - D-216871-1 * Attente de la redirection...
+2025-01-10 11:44:15 - central_logger - DEBUG - D-216871-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:44:29 - central_logger - WARNING - D-998247-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:29 - central_logger - DEBUG - D-998247-1 * Réessai 2/2 après échec.
+2025-01-10 11:44:29 - central_logger - ERROR - D-998247-1 * Toutes les tentatives ont échoué. Contrat marqué comme non modifiable.
+2025-01-10 11:44:29 - central_logger - DEBUG - Le fichier n'existe pas, il sera créé.
+2025-01-10 11:44:29 - central_logger - INFO - Contrat numéro D-998247-1 ajouté aux non modifiables.
+2025-01-10 11:44:29 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-998247-1.
+2025-01-10 11:44:29 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 9.
+2025-01-10 11:44:29 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-998247-1.
+2025-01-10 11:44:29 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:44:30 - central_logger - WARNING - 1-4151309220 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:30 - central_logger - DEBUG - 1-4151309220 * Réessai 1/2 après échec.
+2025-01-10 11:44:30 - central_logger - DEBUG - 1-4151309220 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:44:31 - central_logger - WARNING - 1-311207752 * Timeout lors de l'attente ou du clic sur le bouton de modification : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:31 - central_logger - DEBUG - 1-311207752 * Réessai 1/2 après échec.
+2025-01-10 11:44:31 - central_logger - DEBUG - 1-311207752 * Revenu au contenu principal pour réessai.
+2025-01-10 11:44:33 - central_logger - WARNING - D-739417-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:33 - central_logger - DEBUG - D-739417-1 * Réessai 1/2 après échec.
+2025-01-10 11:44:33 - central_logger - DEBUG - D-739417-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:44:33 - central_logger - DEBUG - D-739417-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:44:33 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:44:35 - central_logger - WARNING - D-216871-1 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:35 - central_logger - DEBUG - D-216871-1 * Réessai 1/2 après échec.
+2025-01-10 11:44:35 - central_logger - DEBUG - D-216871-1 * La page est complètement chargée. Tentative 2/2.
+2025-01-10 11:44:35 - central_logger - DEBUG - D-216871-1 * L'élément cible a été cliqué avec succès.
+2025-01-10 11:44:35 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:44:36 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:44:36 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:44:36 - central_logger - INFO - D-739417-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:44:36 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:36 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:38 - central_logger - INFO - Texte de l'en-tête H1: Affranchigo Premium
+2025-01-10 11:44:38 - central_logger - INFO - Contrat Affranchigo Premium
+2025-01-10 11:44:38 - central_logger - INFO - D-216871-1 * Traitement du contrat Affranchigo Premium
+2025-01-10 11:44:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:44:38 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:44:38 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:40 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:44:40 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:44:40 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:44:40 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:44:40 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:44:40 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:44:40 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:43 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:44:43 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:44:43 - central_logger - INFO - D-739417-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:44:43 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:44:43 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:44:43 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:44:43 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:44:44 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:44:44 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:44:44 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:44 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:44 - central_logger - INFO - D-739417-1 * Ancienne première valeur Régate NIEDERBRONN
+2025-01-10 11:44:44 - central_logger - INFO - D-739417-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:44:44 - central_logger - INFO - D-739417-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:44:45 - central_logger - DEBUG - Valeur actuelle Premier Rôle: Dépôt
+2025-01-10 11:44:45 - central_logger - DEBUG - Valeur actuelle Second Rôle: Traitement
+2025-01-10 11:44:45 - central_logger - INFO - D-216871-1 * 'traitement_diff_non_égaux' Rôle à l'arrivée un bloc Traitement et un bloc Dépôt
+2025-01-10 11:44:45 - central_logger - DEBUG - Initialisation des sélecteurs.
+2025-01-10 11:44:45 - central_logger - DEBUG - Sélecteur input_first_regate initialisé.
+2025-01-10 11:44:45 - central_logger - DEBUG - Sélecteur select_first_etablissement initialisé.
+2025-01-10 11:44:45 - central_logger - DEBUG - Sélecteur select_first_role  (1er) initialisé.
+2025-01-10 11:44:45 - central_logger - DEBUG - Sélecteur input_second_regate initialisé.
+2025-01-10 11:44:45 - central_logger - DEBUG - Sélecteur select_second_etablissement initialisé.
+2025-01-10 11:44:45 - central_logger - DEBUG - Sélecteur select_second_role initialisé.
+2025-01-10 11:44:45 - central_logger - DEBUG - Fichier Excel chargé.
+2025-01-10 11:44:45 - central_logger - INFO - D-216871-1 * Ancienne première valeur Régate 670270
+2025-01-10 11:44:45 - central_logger - INFO - D-216871-1 * Ancienne seconde valeur Régate 670270
+2025-01-10 11:44:45 - central_logger - INFO - D-216871-1 * Futur valeur du fichier Excel traitement 572040
+2025-01-10 11:44:46 - central_logger - DEBUG - Modification de traitement: de NIEDERBRONN à 572040
+2025-01-10 11:44:46 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:44:46 - central_logger - DEBUG - D-739417-1 * Nouveau code régate attribué 572040
+2025-01-10 11:44:46 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="4a7eda3c8b0d9c8fa067a6a0567d6bef", element="f.A4D51A236CF738A0B6475B8C7D91F93C.d.07ED9DB311923CB07E22E100AB9E6928.e.1702")>
+2025-01-10 11:44:46 - central_logger - DEBUG - D-739417-1 * Selection actuelle dans le select: None
+2025-01-10 11:44:46 - central_logger - INFO - D-739417-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:44:47 - central_logger - DEBUG - Modification de traitement: de 670270 à 572040
+2025-01-10 11:44:47 - central_logger - DEBUG - Tentative de mise à jour de l'input avec la nouvelle valeur: 572040
+2025-01-10 11:44:48 - central_logger - DEBUG - D-216871-1 * Nouveau code régate attribué 572040
+2025-01-10 11:44:48 - central_logger - DEBUG - Mise à jour de l'élément select: <selenium.webdriver.remote.webelement.WebElement (session="80f654db99c27e38d52701af02f8a721", element="f.21227E764117D6D3EAE6770AE540A67A.d.2DF53626BDB2BEF765D858232D312D8F.e.1016")>
+2025-01-10 11:44:48 - central_logger - DEBUG - D-216871-1 * Selection actuelle dans le select: None
+2025-01-10 11:44:48 - central_logger - INFO - D-216871-1 * Nouveau Libellé d'établissement : 572040 PAGNY LES GOIN LORRAINE PIC
+2025-01-10 11:44:48 - central_logger - DEBUG - D-739417-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:44:48 - central_logger - INFO - D-739417-1 * L'heure est déjà sélectionnée: '15H00'.
+2025-01-10 11:44:48 - central_logger - INFO - D-739417-1 * L'heure est déjà sélectionnée: '16H30'.
+2025-01-10 11:44:49 - central_logger - INFO - D-739417-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:44:49 - central_logger - INFO - D-739417-1 * Formulaire soumis avec succès.
+2025-01-10 11:44:50 - central_logger - DEBUG - D-216871-1 * Mise à jour des inputs et sélecteurs effectuée.
+2025-01-10 11:44:50 - central_logger - INFO - D-216871-1 * L'heure est déjà sélectionnée: '15H00'.
+2025-01-10 11:44:50 - central_logger - INFO - D-216871-1 * L'heure est déjà sélectionnée: '15H00'.
+2025-01-10 11:44:51 - central_logger - WARNING - 1-4151309220 * Timeout lors de l'attente ou du clic sur l'élément cible : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:51 - central_logger - DEBUG - 1-4151309220 * Réessai 2/2 après échec.
+2025-01-10 11:44:51 - central_logger - ERROR - 1-4151309220 * Toutes les tentatives ont échoué. Contrat marqué comme non modifiable.
+2025-01-10 11:44:51 - central_logger - INFO - Contrat numéro 1-4151309220 ajouté aux non modifiables.
+2025-01-10 11:44:51 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat 1-4151309220.
+2025-01-10 11:44:51 - central_logger - WARNING - 1-311207752 * Timeout lors de l'attente ou du clic sur le bouton de modification : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:51 - central_logger - DEBUG - 1-311207752 * Réessai 2/2 après échec.
+2025-01-10 11:44:51 - central_logger - DEBUG - 1-311207752 * Revenu au contenu principal pour réessai.
+2025-01-10 11:44:51 - central_logger - ERROR - 1-311207752 * Toutes les tentatives ont échoué. Contrat marqué comme non modifiable.
+2025-01-10 11:44:51 - central_logger - DEBUG - L'élément 'detailsCategorieV' introuvable pour le contrat 1-311207752.
+2025-01-10 11:44:51 - central_logger - ERROR - Erreur lors du traitement du contrat 1-311207752: AffranchigoRPA.handle_driver_cleanup() missing 1 required positional argument: 'numero_contrat'
+2025-01-10 11:44:51 - central_logger - INFO - Contrat numéro 1-311207752 ajouté aux non modifiables.
+2025-01-10 11:44:51 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 10.
+2025-01-10 11:44:51 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat 1-4151309220.
+2025-01-10 11:44:51 - central_logger - INFO - D-216871-1 * Clic sur le bouton de soumission avec succès.
+2025-01-10 11:44:51 - central_logger - DEBUG - La page est complètement chargée
+2025-01-10 11:44:51 - central_logger - INFO - D-216871-1 * Formulaire soumis avec succès.
+2025-01-10 11:44:51 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat 1-311207752.
+2025-01-10 11:44:52 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 11.
+2025-01-10 11:44:52 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat 1-311207752.
+2025-01-10 11:44:52 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat 1-311207752.
+2025-01-10 11:44:52 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 12.
+2025-01-10 11:44:52 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat 1-311207752.
+2025-01-10 11:44:52 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:44:52 - central_logger - WARNING - Échec du traitement du contrat 1-311207752.
+2025-01-10 11:44:52 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-801955-1.
+2025-01-10 11:44:52 - central_logger - INFO - Soumission du numéro de contrat D-801955-1...
+2025-01-10 11:44:52 - central_logger - ERROR - Service non reconnu : Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+Traceback (most recent call last):
+  File "c:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\data\rpa_modules\affranchigo.py", line 406, in modifications_conditions_ventes
+    h1_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#header_offre_descr > h1")))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PHSX095\OneDrive - LA POSTE GROUPE\Documents\GUI\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C128672E]
+	(No symbol) [0x00007FF6C12867B5]
+	(No symbol) [0x00007FF6C12C4ED7]
+	(No symbol) [0x00007FF6C12A7F8F]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:52 - central_logger - ERROR - Erreur lors du traitement du contrat D-998247-1: AffranchigoRPA.handle_driver_cleanup() missing 1 required positional argument: 'numero_contrat'
+2025-01-10 11:44:52 - central_logger - DEBUG - Contrat numéro D-998247-1 déjà présent, non ajouté.
+2025-01-10 11:44:53 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:44:53 - central_logger - INFO - D-739417-1 * Traitement terminé.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-998247-1.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 12.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-998247-1.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-739417-1.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-998247-1.
+2025-01-10 11:44:53 - central_logger - ERROR - Erreur inattendue lors de la soumission du contrat D-801955-1: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=130.0.2849.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C124F59E]
+	(No symbol) [0x00007FF6C12500EC]
+	(No symbol) [0x00007FF6C124593B]
+	(No symbol) [0x00007FF6C125012A]
+	(No symbol) [0x00007FF6C124593B]
+	(No symbol) [0x00007FF6C1243E0A]
+	(No symbol) [0x00007FF6C1247068]
+	(No symbol) [0x00007FF6C12C3165]
+	(No symbol) [0x00007FF6C12A7F4A]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 13.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-739417-1.
+2025-01-10 11:44:53 - central_logger - INFO - D-801955-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 14.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-998247-1.
+2025-01-10 11:44:53 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:44:53 - central_logger - WARNING - Échec du traitement du contrat D-998247-1.
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-69447-1.
+2025-01-10 11:44:53 - central_logger - INFO - Soumission du numéro de contrat D-69447-1...
+2025-01-10 11:44:53 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-739417-1.
+2025-01-10 11:44:54 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 14.
+2025-01-10 11:44:54 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-739417-1.
+2025-01-10 11:44:54 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:44:54 - central_logger - INFO - Contrat D-739417-1 traité avec succès.
+2025-01-10 11:44:54 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat D-1038376-1.
+2025-01-10 11:44:54 - central_logger - DEBUG - Retour à l'URL de départ réussi.
+2025-01-10 11:44:54 - central_logger - INFO - D-216871-1 * Traitement terminé.
+2025-01-10 11:44:54 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-216871-1.
+2025-01-10 11:44:55 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 14.
+2025-01-10 11:44:55 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-216871-1.
+2025-01-10 11:44:55 - central_logger - DEBUG - WebDriver réinitialisé à l'URL de départ pour le contrat D-216871-1.
+2025-01-10 11:44:55 - central_logger - DEBUG - WebDriver remis dans le pool. Taille actuelle: 15.
+2025-01-10 11:44:55 - central_logger - DEBUG - WebDriver retourné au pool pour le contrat D-216871-1.
+2025-01-10 11:44:55 - central_logger - DEBUG - Réutilisation d'une instance WebDriver existante.
+2025-01-10 11:44:55 - central_logger - INFO - Contrat D-216871-1 traité avec succès.
+2025-01-10 11:44:55 - central_logger - DEBUG - WebDriver récupéré avec succès pour le contrat F27079.
+2025-01-10 11:44:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:44:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:44:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:44:55 - central_logger - INFO - Numéro de contrat D-69447-1 soumis avec succès.
+2025-01-10 11:44:55 - central_logger - INFO - D-69447-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:55 - central_logger - INFO - Soumission du numéro de contrat D-1038376-1...
+2025-01-10 11:44:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:44:55 - central_logger - DEBUG - Bouton de soumission trouvé et cliquable.
+2025-01-10 11:44:55 - central_logger - DEBUG - La page est complètement chargée.
+2025-01-10 11:44:55 - central_logger - INFO - Numéro de contrat D-1038376-1 soumis avec succès.
+2025-01-10 11:44:55 - central_logger - INFO - D-1038376-1 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:55 - central_logger - INFO - Soumission du numéro de contrat F27079...
+2025-01-10 11:44:55 - central_logger - DEBUG - Champ de texte trouvé et cliquable.
+2025-01-10 11:44:56 - central_logger - DEBUG - D-69447-1 * Passé à l'iframe avec succès (tentative 1/2).
+2025-01-10 11:44:56 - central_logger - INFO - D-69447-1 * Clic sur le bouton de modification effectué avec succès.
+2025-01-10 11:44:56 - central_logger - DEBUG - D-69447-1 * Attente de la redirection...
+2025-01-10 11:44:56 - central_logger - DEBUG - D-69447-1 * La page est complètement chargée. Tentative 1/2.
+2025-01-10 11:44:56 - central_logger - ERROR - Erreur inattendue lors de la soumission du contrat F27079: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=130.0.2849.56); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6C148CEF5+12997]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C170BD24+1897988]
+	(No symbol) [0x00007FF6C123F1CC]
+	(No symbol) [0x00007FF6C124F59E]
+	(No symbol) [0x00007FF6C12500EC]
+	(No symbol) [0x00007FF6C124593B]
+	(No symbol) [0x00007FF6C1243E0A]
+	(No symbol) [0x00007FF6C1246D41]
+	(No symbol) [0x00007FF6C1246DE0]
+	(No symbol) [0x00007FF6C1288137]
+	(No symbol) [0x00007FF6C127DBFD]
+	(No symbol) [0x00007FF6C12A7F4A]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C127BF6D]
+	(No symbol) [0x00007FF6C12A8230]
+	(No symbol) [0x00007FF6C127C09D]
+	(No symbol) [0x00007FF6C12C2887]
+	(No symbol) [0x00007FF6C12A7BB3]
+	(No symbol) [0x00007FF6C127B5AC]
+	(No symbol) [0x00007FF6C127AA8D]
+	(No symbol) [0x00007FF6C127B171]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1639E04+1038052]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13B095F+56655]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6C13A3103+1267]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6C1638B8D+1033325]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1429761+327729]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425BE4+312500]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C1425D19+312809]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6C141C28C+273244]
+	BaseThreadInitThunk [0x00007FFDC2157374+20]
+	RtlUserThreadStart [0x00007FFDC2A3CC91+33]
+
+2025-01-10 11:44:57 - central_logger - INFO - F27079 * Changement vers iframe et tentative de clic sur 'Modification'...
+2025-01-10 11:44:57 - central_logger - DEBUG - D-1038376-1 * Passé à l'iframe avec succès (tentative 1/2).

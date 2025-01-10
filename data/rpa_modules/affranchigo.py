@@ -587,12 +587,12 @@ class AffranchigoRPA:
 
     
 
-    def main(self, progress_callback=None, max_workers=2):
+    def main(self, progress_callback=None, max_workers=5):
         """
         Méthode principale pour le traitement du RPA avec multi-threading.
         """
         self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
-        excel_path="data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx"
+        excel_path="data/data_traitement/HAGUENAU PPDC - Transfert des contrats Affranchigo 080125.xlsx"
         # Extraction des numéros de contrat
         json_path = 'data/numeros_contrat_robot.json'
         extract_contrat_numbers_to_json(excel_path, json_path)

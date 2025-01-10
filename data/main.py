@@ -12,7 +12,7 @@ from rpa_modules.seres import SeresRPA
 logger = setup_logger('Affranchigo_ROYE.log')
 
 # Initialisation du pool de WebDrivers
-DEFAULT_MAX_WORKERS = 2
+DEFAULT_MAX_WORKERS = 5
 pool = WebDriverPool(initial_size=DEFAULT_MAX_WORKERS, max_size=30, idle_timeout=100, logger=None)
 
 def main_rpa(rpa_name, max_workers=DEFAULT_MAX_WORKERS):
