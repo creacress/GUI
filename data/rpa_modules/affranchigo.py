@@ -274,67 +274,38 @@ class AffranchigoRPA:
         
 
 
-    def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number, retry_attempts=3):
+    def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number):
         """
         Change vers un iframe et clique sur un bouton de modification.
 
         :param driver: Instance WebDriver.
         :param wait: Instance WebDriverWait.
         :param contrat_number: Numéro du contrat en cours.
-        :param retry_attempts: Nombre de tentatives en cas d'échec.
         """
         self.logger.info(f"{contrat_number} * Changement vers iframe et tentative de clic sur 'Modification'...")
         iframe_selector = "#modalRefContrat > div > div > div.modal-body > iframe"
         modification_button_selector = "//permission/a[@href='#amendment']//div[@id='detailsModificationButton']"
-        attempts = 0
 
-        while attempts < retry_attempts:
-            try:
-                # Passage à l'iframe
-                iframe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, iframe_selector)))
-                driver.switch_to.frame(iframe)
-                self.logger.debug(f"{contrat_number} * Passé à l'iframe avec succès (tentative {attempts + 1}/{retry_attempts}).")
+        try:
+            # Passer à l'iframe
+            iframe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, iframe_selector)))
+            driver.switch_to.frame(iframe)
+            self.logger.debug(f"{contrat_number} * Passé à l'iframe avec succès.")
 
-                # Tentative de clic sur le bouton de modification
-                bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
-                driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
-                driver.execute_script("arguments[0].click();", bouton_modification)
-                self.logger.info(f"{contrat_number} * Clic sur le bouton de modification effectué avec succès.")
+            # Cliquer sur le bouton de modification
+            bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
+            driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
+            driver.execute_script("arguments[0].click();", bouton_modification)
+            self.logger.info(f"{contrat_number} * Clic sur le bouton de modification effectué avec succès.")
+        except Exception as e:
+            self.logger.error(f"{contrat_number} * Erreur lors du traitement de l'iframe : {e}")
+            self.handle_non_clickable_element(driver, contrat_number)
+        finally:
+            # Toujours revenir au contenu principal
+            driver.switch_to.default_content()
+            self.logger.debug(f"{contrat_number} * Retour au contenu principal effectué.")
 
-                # Attente après le clic pour vérifier le changement d'état ou de redirection
-                WebDriverWait(driver, 10).until(
-                    lambda d: d.execute_script("return document.readyState") == "complete"
-                )
-                self.logger.debug(f"{contrat_number} * Changement de page détecté après le clic.")
-                return  # Succès, sortir de la méthode
-
-            except TimeoutException as e:
-                self.logger.warning(f"{contrat_number} * Timeout lors de l'attente après le clic : {e}")
-            except NoSuchElementException as e:
-                self.logger.error(f"{contrat_number} * Élément iframe ou bouton introuvable : {e}")
-            except Exception as e:
-                self.logger.error(f"{contrat_number} * Erreur inattendue lors du traitement de l'iframe : {e}")
-
-            # Incrémenter les tentatives
-            attempts += 1
-            self.logger.debug(f"{contrat_number} * Réessai {attempts}/{retry_attempts} après échec.")
-
-            # Sortir de l'iframe avant de réessayer
-            try:
-                driver.switch_to.default_content()
-                self.logger.debug(f"{contrat_number} * Revenu au contenu principal pour réessai.")
-            except Exception as switch_error:
-                self.logger.error(f"{contrat_number} * Erreur lors du retour au contenu principal : {switch_error}")
-
-        # Si toutes les tentatives échouent, traiter le contrat comme non modifiable
-        self.logger.error(f"{contrat_number} * Toutes les tentatives ont échoué. Contrat marqué comme non modifiable.")
-        self.handle_non_clickable_element(driver, contrat_number)
-
-        # Nettoyer le WebDriver après échec
-        self.handle_driver_cleanup(driver, contrat_number)
-
-
-    def wait_for_complete_redirection(self, driver, wait, numero_contrat, timeout=20, retry_attempts=2):
+    def wait_for_complete_redirection(self, driver, wait, numero_contrat, timeout=20):
         """
         Attend la redirection complète et clique sur un élément cible.
 
@@ -342,47 +313,27 @@ class AffranchigoRPA:
         :param wait: Instance WebDriverWait.
         :param numero_contrat: Numéro du contrat en cours.
         :param timeout: Temps maximal d'attente pour le chargement de l'élément cible.
-        :param retry_attempts: Nombre de tentatives avant d'abandonner en cas d'échec.
         """
         self.logger.debug(f"{numero_contrat} * Attente de la redirection...")
         target_selector = "#content_offre > ul > li:nth-child(2) > a"
-        attempts = 0
 
-        while attempts < retry_attempts:
-            try:
-                # Attendre que le document soit prêt
-                WebDriverWait(driver, timeout).until(
-                    lambda d: d.execute_script("return document.readyState") == "complete"
-                )
-                self.logger.debug(f"{numero_contrat} * La page est complètement chargée. Tentative {attempts + 1}/{retry_attempts}.")
+        try:
+            # Vérifier que la page est complètement chargée
+            WebDriverWait(driver, timeout).until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
+            self.logger.debug(f"{numero_contrat} * La page est complètement chargée.")
 
-                # Vérifier si l'élément cible est cliquable
-                element = WebDriverWait(driver, timeout).until(
-                    EC.element_to_be_clickable((By.CSS_SELECTOR, target_selector))
-                )
-                element.click()
-                self.logger.debug(f"{numero_contrat} * L'élément cible a été cliqué avec succès.")
-                return  # Succès, sortir de la méthode
+            # Cliquer sur l'élément cible
+            element = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, target_selector)))
+            element.click()
+            self.logger.info(f"{numero_contrat} * L'élément cible a été cliqué avec succès.")
+        except Exception as e:
+            self.logger.error(f"{numero_contrat} * Erreur lors de la redirection ou du clic sur l'élément cible : {e}")
+            self.save_non_modifiable(numero_contrat)
+        finally:
+            self.logger.debug(f"{numero_contrat} * Fin de la tentative de redirection.")
 
-            except TimeoutException as e:
-                self.logger.warning(f"{numero_contrat} * Timeout lors de l'attente ou du clic sur l'élément cible : {e}")
-            except NoSuchElementException as e:
-                self.logger.error(f"{numero_contrat} * Élément cible introuvable : {e}")
-            except Exception as e:
-                self.logger.error(f"{numero_contrat} * Erreur inattendue lors de l'attente de la redirection : {e}")
-
-            # Incrémenter les tentatives et recharger la page si nécessaire
-            attempts += 1
-            self.logger.debug(f"{numero_contrat} * Réessai {attempts}/{retry_attempts} après échec.")
-
-        # Si toutes les tentatives échouent, marquer le contrat comme non modifiable
-        self.logger.error(f"{numero_contrat} * Toutes les tentatives ont échoué. Contrat marqué comme non modifiable.")
-        self.save_non_modifiable(numero_contrat)
-
-        # Nettoyer le WebDriver après échec
-        self.handle_driver_cleanup(driver, numero_contrat)
-
-    
     def modifications_conditions_ventes(self, driver, wait, numero_contrat, dictionnaire, dictionnaire_original):
         # Importer les modules localement pour éviter les boucles d'importation circulaire
         from rpa_modules.affranchigo_forfait_case import AffranchigoForfaitCase
