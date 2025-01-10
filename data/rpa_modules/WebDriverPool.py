@@ -90,9 +90,6 @@ class WebDriverPool:
             return driver
 
     def return_driver(self, driver):
-        """
-        Retourne un WebDriver actif au pool.
-        """
         with self.lock:
             if driver:
                 try:
@@ -107,6 +104,14 @@ class WebDriverPool:
                     self.logger.warning(f"Driver inactif, suppression: {e}")
                     driver.quit()
                     self.current_size -= 1
+                    self.logger.debug(f"Taille du pool décrémentée : {self.current_size}")
+                    # Recréer un driver pour maintenir la taille du pool
+                    if self.current_size < self.max_size:
+                        new_driver = self.create_driver()
+                        self.pool.put(new_driver)
+                        self.current_size += 1
+                        self.logger.debug(f"Nouvelle instance créée après suppression d'une défectueuse.")
+
 
     def close_all(self):
         """
