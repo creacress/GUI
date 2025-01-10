@@ -274,9 +274,9 @@ class AffranchigoRPA:
         
 
 
-    def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number, retry_attempts=2):
+    def switch_to_iframe_and_click_modification(self, driver, wait, contrat_number, retry_attempts=3):
         """
-        Change vers un iframe et tente de cliquer sur un bouton de modification.
+        Change vers un iframe et clique sur un bouton de modification.
 
         :param driver: Instance WebDriver.
         :param wait: Instance WebDriverWait.
@@ -300,10 +300,16 @@ class AffranchigoRPA:
                 driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
                 driver.execute_script("arguments[0].click();", bouton_modification)
                 self.logger.info(f"{contrat_number} * Clic sur le bouton de modification effectué avec succès.")
-                return  # Succès, sortie de la méthode
+
+                # Attente après le clic pour vérifier le changement d'état ou de redirection
+                WebDriverWait(driver, 10).until(
+                    lambda d: d.execute_script("return document.readyState") == "complete"
+                )
+                self.logger.debug(f"{contrat_number} * Changement de page détecté après le clic.")
+                return  # Succès, sortir de la méthode
 
             except TimeoutException as e:
-                self.logger.warning(f"{contrat_number} * Timeout lors de l'attente ou du clic sur le bouton de modification : {e}")
+                self.logger.warning(f"{contrat_number} * Timeout lors de l'attente après le clic : {e}")
             except NoSuchElementException as e:
                 self.logger.error(f"{contrat_number} * Élément iframe ou bouton introuvable : {e}")
             except Exception as e:
