@@ -308,10 +308,10 @@ class AffranchigoRPA:
                 try:
                     # Réinitialiser le WebDriver à l'URL de départ
                     driver.get(self.url)
-                    self.logger.debug(f"WebDriver réinitialisé à l'URL de départ pour le contrat {numero_contrat}.")
+                    self.logger.debug(f"WebDriver réinitialisé à l'URL de départ pour le contrat {contrat_number}.")
                 except Exception as reset_error:
                     # Si la réinitialisation échoue, détruire le driver
-                    self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
+                    self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {contrat_number}: {reset_error}")
                     try:
                         driver.quit()
                         self.logger.debug("WebDriver défectueux fermé avec succès.")
@@ -324,9 +324,9 @@ class AffranchigoRPA:
                 if driver:
                     try:
                         self.pool.return_driver(driver)
-                        self.logger.debug(f"WebDriver retourné au pool pour le contrat {numero_contrat}.")
+                        self.logger.debug(f"WebDriver retourné au pool pour le contrat {contrat_number}.")
                     except Exception as pool_error:
-                        self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {pool_error}")
+                        self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {contrat_number}: {pool_error}")
                         try:
                             driver.quit()
                             self.logger.debug("WebDriver fermé après échec de retour au pool.")
