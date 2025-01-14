@@ -266,11 +266,11 @@ class AffranchigoRPA:
         
         except NoSuchElementException:
             self.logger.debug(f"L'élément 'detailsCategorieV' introuvable pour le contrat {numero_contrat}.")
-            self.handle_driver_cleanup(numero_contrat)
+            self.handle_driver_cleanup(driver, numero_contrat)
         
         except Exception as e:
             self.logger.error(f"Erreur lors de la gestion des contrats multi-sites pour {numero_contrat} : {e}")
-            self.handle_driver_cleanup(numero_contrat)
+            self.handle_driver_cleanup(driver, numero_contrat)
         
 
 
@@ -291,7 +291,7 @@ class AffranchigoRPA:
             iframe = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, iframe_selector)))
             driver.switch_to.frame(iframe)
             self.logger.debug(f"{contrat_number} * Passé à l'iframe avec succès.")
-
+            time.sleep(2)
             # Cliquer sur le bouton de modification
             bouton_modification = wait.until(EC.element_to_be_clickable((By.XPATH, modification_button_selector)))
             driver.execute_script("arguments[0].scrollIntoView(true);", bouton_modification)
@@ -318,12 +318,6 @@ class AffranchigoRPA:
         target_selector = "#content_offre > ul > li:nth-child(2) > a"
 
         try:
-            # Vérifier que la page est complètement chargée
-            WebDriverWait(driver, timeout).until(
-                lambda d: d.execute_script("return document.readyState") == "complete"
-            )
-            self.logger.debug(f"{numero_contrat} * La page est complètement chargée.")
-
             # Cliquer sur l'élément cible
             element = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, target_selector)))
             element.click()
@@ -405,7 +399,7 @@ class AffranchigoRPA:
                 return "Inconnu"
         except Exception as e:
             self.logger.exception(f"Service non reconnu : {e}")
-            self.handle_driver_cleanup(numero_contrat)
+            self.handle_driver_cleanup(driver, numero_contrat)
             return "Erreur"
 
     def process_contract(self, driver, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
@@ -419,6 +413,7 @@ class AffranchigoRPA:
             # Traitement du contrat (soumission, modifications, etc.)
             self.submit_contract_number(driver, wait, numero_contrat)
             self.switch_to_iframe_and_click_modification(driver, wait, numero_contrat)
+            time.sleep(3)
             self.wait_for_complete_redirection(driver, wait, numero_contrat)
             contrat_type = self.modifications_conditions_ventes(driver, wait, numero_contrat, dictionnaire, dictionnaire_original)
 
@@ -445,46 +440,6 @@ class AffranchigoRPA:
             end_time = time.time()
             duration = int(end_time - start_time)
             return (numero_contrat, False, "Erreur", duration)
-        finally:
-            if driver:
-                try:
-                    # Réinitialiser le WebDriver à l'URL de départ
-                    driver.get(self.url)
-                    self.logger.debug(f"WebDriver réinitialisé à l'URL de départ pour le contrat {numero_contrat}.")
-                except Exception as reset_error:
-                    # Si la réinitialisation échoue, détruire le driver
-                    self.logger.error(f"Erreur lors de la réinitialisation du WebDriver pour {numero_contrat}: {reset_error}")
-                    try:
-                        driver.quit()
-                        self.logger.debug("WebDriver défectueux fermé avec succès.")
-                    except Exception as quit_error:
-                        self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                    finally:
-                        driver = None  # Forcer la création d'un nouveau WebDriver
-
-                # Retourner le WebDriver au pool ou en créer un nouveau
-                if driver:
-                    try:
-                        self.pool.return_driver(driver)
-                        self.logger.debug(f"WebDriver retourné au pool pour le contrat {numero_contrat}.")
-                    except Exception as pool_error:
-                        self.logger.error(f"Erreur lors du retour du WebDriver au pool pour {numero_contrat}: {pool_error}")
-                        try:
-                            driver.quit()
-                            self.logger.debug("WebDriver fermé après échec de retour au pool.")
-                        except Exception as quit_error:
-                            self.logger.error(f"Erreur lors de la fermeture du WebDriver: {quit_error}")
-                        finally:
-                            driver = None
-                else:
-                    # Créer un nouveau WebDriver si le précédent a échoué
-                    try:
-                        new_driver = self.pool.create_driver()
-                        self.pool.return_driver(new_driver)
-                        self.logger.debug("Nouveau WebDriver créé et ajouté au pool après défaillance.")
-                    except Exception as creation_error:
-                        self.logger.critical(f"Erreur critique lors de la création d'un nouveau WebDriver: {creation_error}")
-
         
     def process_single_contract(self, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
         """
@@ -542,14 +497,13 @@ class AffranchigoRPA:
                     except Exception as creation_error:
                         self.logger.critical(f"Erreur critique lors de la création d'un nouveau WebDriver: {creation_error}")
 
-    
 
     def main(self, progress_callback=None, max_workers=5):
         """
         Méthode principale pour le traitement du RPA avec multi-threading.
         """
         self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
-        excel_path="data/data_traitement/HAGUENAU PPDC - Transfert des contrats Affranchigo 080125.xlsx"
+        excel_path="data/data_traitement/DIGNE PPDC - Transfert des contrats Affranchigo 130125.xlsx"
         # Extraction des numéros de contrat
         json_path = 'data/numeros_contrat_robot.json'
         extract_contrat_numbers_to_json(excel_path, json_path)

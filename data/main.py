@@ -9,7 +9,7 @@ from rpa_modules.extraction_odysse import ExtractionRPA
 from rpa_modules.seres import SeresRPA
 
 # Configuration du logger centralisé
-logger = setup_logger('Affranchigo_ROYE.log')
+logger = setup_logger('Affranchigo_DIGNE_2.log')
 
 # Initialisation du pool de WebDrivers
 DEFAULT_MAX_WORKERS = 5

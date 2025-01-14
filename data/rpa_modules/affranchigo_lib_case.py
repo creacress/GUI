@@ -310,7 +310,7 @@ class AffranchigoLibCase:
         """
         try:
             # Charger le fichier Excel
-            df = pd.read_excel('data/data_traitement/HAGUENAU PPDC - Transfert des contrats Affranchigo 080125.xlsx')
+            df = pd.read_excel('data/data_traitement/DIGNE PPDC - Transfert des contrats Affranchigo 130125.xlsx')
             self.logger.debug("Fichier Excel chargé.")
             
             # Trouver la ligne correspondant au numéro de contrat
@@ -343,7 +343,7 @@ class AffranchigoLibCase:
         self.logger.info(f"{numero_contrat} * Traitement du contrat Affranchigo Liberté")
 
         # Charger le fichier Excel
-        df = pd.read_excel('data/data_traitement/HAGUENAU PPDC - Transfert des contrats Affranchigo 080125.xlsx')
+        df = pd.read_excel('data/data_traitement/DIGNE PPDC - Transfert des contrats Affranchigo 130125.xlsx')
         self.logger.debug("Fichier Excel chargé.")
 
         # Sélectionner les éléments radio
