@@ -504,7 +504,7 @@ class AffranchigoRPA:
         Méthode principale pour le traitement du RPA avec multi-threading.
         """
         self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
-        excel_path = "data/data_traitement/DIGNE PPDC - Transfert des contrats Affranchigo 130125.xlsx"
+        excel_path = "data/data_traitement/ROYE PIC - Transfert des contrats Affranchigo 070125 V2.xlsx"
         json_path = 'data/numeros_contrat_robot.json'
 
         # Extraction des numéros de contrat
