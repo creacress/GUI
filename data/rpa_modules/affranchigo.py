@@ -440,7 +440,8 @@ class AffranchigoRPA:
             end_time = time.time()
             duration = int(end_time - start_time)
             return (numero_contrat, False, "Erreur", duration)
-        
+
+
     def process_single_contract(self, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe):
         """
         Fonction qui traite un contrat individuel dans un thread séparé.
@@ -456,7 +457,7 @@ class AffranchigoRPA:
         except Exception as e:
             self.logger.error(f"Erreur lors du traitement du contrat {numero_contrat}: {e}", exc_info=True)
             return (numero_contrat, False, "Erreur", 0)
-        
+
         finally:
             if driver:
                 try:
@@ -503,9 +504,10 @@ class AffranchigoRPA:
         Méthode principale pour le traitement du RPA avec multi-threading.
         """
         self.logger.debug("Démarrage du RPA Affranchigo en multi-threading...")
-        excel_path="data/data_traitement/DIGNE PPDC - Transfert des contrats Affranchigo 130125.xlsx"
-        # Extraction des numéros de contrat
+        excel_path = "data/data_traitement/DIGNE PPDC - Transfert des contrats Affranchigo 130125.xlsx"
         json_path = 'data/numeros_contrat_robot.json'
+
+        # Extraction des numéros de contrat
         extract_contrat_numbers_to_json(excel_path, json_path)
 
         dictionnaire_original = self.create_dictionnaire(excel_path)
@@ -516,12 +518,18 @@ class AffranchigoRPA:
         identifiant = os.getenv("IDENTIFIANT")
         mot_de_passe = os.getenv("MOT_DE_PASSE")
 
+        # Variables pour collecter les statistiques
+        results = []
+        contrat_types_count = {}
+        multisites_count = 0
+        non_modifiables_count = 0
+
         # Utilisation d'un ThreadPoolExecutor pour le traitement multi-threading
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             futures = []
             for numero_contrat in contract_numbers:
                 self.logger.debug(f"Préparation pour traiter le contrat suivant: {numero_contrat}")
-                
+
                 # Planification du traitement de chaque contrat dans un thread séparé
                 future = executor.submit(self.process_single_contract, numero_contrat, dictionnaire, dictionnaire_original, identifiant, mot_de_passe)
                 futures.append(future)
@@ -530,6 +538,18 @@ class AffranchigoRPA:
             for future in as_completed(futures):
                 try:
                     numero_contrat, result, contrat_type, duration = future.result()
+                    results.append((numero_contrat, result, duration, contrat_type))
+
+                    # Mettre à jour les statistiques
+                    if contrat_type not in contrat_types_count:
+                        contrat_types_count[contrat_type] = 0
+                    contrat_types_count[contrat_type] += 1
+
+                    if contrat_type == "Multisites":
+                        multisites_count += 1
+                    if not result:
+                        non_modifiables_count += 1
+
                     if result:
                         self.logger.info(f"Contrat {numero_contrat} traité avec succès.")
                     else:
@@ -537,14 +557,26 @@ class AffranchigoRPA:
                 except Exception as e:
                     self.logger.error(f"Erreur dans le thread de traitement: {e}")
 
+        # Enregistrer les statistiques dans un fichier CSV
+        csv_file_path = "resultats_traitement.csv"
+        self.save_results_to_csv(
+            results,
+            contrat_types_count,
+            multisites_count,
+            non_modifiables_count,
+            csv_file_path
+        )
+
         self.logger.info("Tous les contrats ont été traités avec multi-threading.")
 
-    def start(self ):
+
+        self.logger.info("Tous les contrats ont été traités avec multi-threading.")
+
+    def start(self):
         """
         Démarre le RPA avec un fichier Excel par défaut ou personnalisé.
         """
         self.main()
-
 
     def stop(self):
         """
